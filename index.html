@@ -175,6 +175,26 @@
     <script src="js/Chart.min.js"></script>
     <script src="js/angular-chart.js"></script>
     <script src="js/angular-chart.less"></script>
+
+    <script type="text/javascript">       
+        var pieData = [
+                        { 
+                          value: 3,
+                          color: '#F7464A',
+                        },
+                        {
+                          value: 40,
+                          color: '#46BFBD',
+                        }
+        ];
+
+        jQuery(document).ready = function () { 
+                var ctx = document.getElementById('chart1').getContext('2d');
+                var apiChart= new Chart(ctx).Pie(pieData);
+        };      
+    </script> 
+
+
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
   </body>
 </html>
