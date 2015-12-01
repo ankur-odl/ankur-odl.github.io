@@ -13,28 +13,7 @@
     <script src="js/Chart.js"></script>
     <script src="js/Chart.min.js"></script>
 
-    <script>
-    function createChart()
-    {
-        var ctx = document.getElementById("chart-1").getContext("2d");
-        var data = [
-                        { 
-                          value:3,
-                          color:"#F7464A",
-                          label: "Failed"
-                        },
-                        {
-                          value:40,
-                          color:"#46BFBD",
-                          label: "Passed
-                        }
-              ];
-    
-        new Chart(ctx).Pie(data);
-    }
-    </script>
-
-<!--    <script>       
+    <script>       
         var pieData = [
                         { 
                           value:3,
@@ -49,13 +28,13 @@
         ];
 
         window.onload = function () { 
-                var ctx = document.getElementById("chart-1").getContext("2d");
-                window.myPie = new Chart(ctx).Pie(pieData, { responsive : true});
+                var ctx = document.getElementById('chart-1').getContext('2d');
+                var skillsChart= new Chart(ctx).Pie(pieData);
         };      
-    </script> -->
+    </script> 
   </head>
 
-  <body onload="createChart();">
+  <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
