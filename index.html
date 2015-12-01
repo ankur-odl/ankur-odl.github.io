@@ -9,6 +9,27 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
+    <script src="js/Chart.js"></script>
+    <script>
+       
+        var pieData = [
+                        { 
+                          value:3,
+                          color:"#F7464A",
+                          label: "Failed"
+                        },
+                        {
+                          value:40,
+                          color:"#46BFBD",
+                          label: "Passed
+                        }
+        ];
+
+        window.onload = function () { 
+                var ctx = document.getElementById("chart-1").getContext("2d");
+                window.myPie = new Chart(ctx).Pie(pieData, { responsive : true});
+        };      
+    </script>
   </head>
 
   <body>
@@ -149,26 +170,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/Chart.js"</script>
-    <script>
-
-	var pieData = [
-			{ 
-			  value:3,
-			  color:"#F7464A",
-                          label: "Failed"
-			},
-			{
-			  value:40,
-		          color:"#46BFBD",
-		          label: "Passed
-			}
-	];
-
-	window.onload = function () { 
-		var ctx = document.getElementById("chart-1").getContext("2d");
-		window.myPie = new Chart(ctx).Pie(pieData);
- 	};	
-    </script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
   </body>
 </html>
