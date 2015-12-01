@@ -9,6 +9,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
+    <script src="js/Chart.js"</script>
   </head>
 
   <body>
@@ -64,23 +65,27 @@
           <h1 class="page-header">Dashboard</h1>
 
           <div class="row placeholders">
+
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Master v. Master</h4>
+		<canvas id="chart-1" width="200" height="300" />              
+		<h4>Master v. Master</h4>
               <span class="text-muted">Api</span>
             </div>
+
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img src="" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
               <h4>Master v. Master</h4>
               <span class="text-muted">Basic Ops</span>
             </div>
+
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img src="" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
               <h4>Master v. Master</h4>
               <span class="text-muted">IPv6</span>
             </div>
+
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img src="" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
               <h4>Master v. Master</h4>
               <span class="text-muted">Advanced Ops</span>
             </div>
@@ -144,6 +149,27 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+	var pieData = [
+			{ 
+			  value:3,
+			  color:"#F7464A",
+                          label: "Failed"
+			},
+			{
+			  value:40,
+		          color:"#46BFBD",
+		          label: "Passed
+			}
+	];
+
+	window.onload = function () { 
+		var ctx = document.getElementById("chart-1").getContext("2d");
+		window.myPie = new Chart(ctx).Pie(pieData);
+ 	};	
+    </script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
   </body>
 </html>
