@@ -17,8 +17,7 @@
     function createChart()
     {
         var ctx = document.getElementById("chart-1").getContext("2d");
-        var data = {
-              datasets : [
+        var data = [
                         { 
                           value:3,
                           color:"#F7464A",
@@ -30,8 +29,8 @@
                           label: "Passed
                         }
               ];
-        };
-        new Chart(ctx).Pie(data, {responsive : true});
+    
+        new Chart(ctx).Pie(data);
     }
     </script>
 
