@@ -55,8 +55,48 @@
                         }
         ];
 
+        var pieData5 = [
+                        { 
+                          value: 3,
+                          color: '#F7464A',
+                        },
+                        {
+                          value: 258,
+                          color: '#46BFBD',
+                        }
+        ];
+       var pieData6 = [
+                        { 
+                          value: 1,
+                          color: '#F7464A',
+                        },
+                        {
+                          value: 7,
+                          color: '#46BFBD',
+                        }
+        ];
+        var pieData7 = [
+                        { 
+                          value: 6,
+                          color: '#F7464A',
+                        },
+                        {
+                          value: 2,
+                          color: '#46BFBD',
+                        }
+        ];
+        var pieData8 = [
+                        { 
+                          value: 0,
+                          color: '#F7464A',
+                        },
+                        {
+                          value: 6,
+                          color: '#46BFBD',
+        		}
+	];
 
-        window.onload = function () { 
+	window.onload = function () { 
                 var ctx = document.getElementById('chart1').getContext('2d');
                 var apiChart1= new Chart(ctx).Pie(pieData1);
                 var ctx = document.getElementById('chart2').getContext('2d');
@@ -65,6 +105,16 @@
                 var apiChart3= new Chart(ctx).Pie(pieData3);
                 var ctx = document.getElementById('chart4').getContext('2d');
                 var apiChart4= new Chart(ctx).Pie(pieData4);
+
+                var ctx = document.getElementById('chart5').getContext('2d');
+                var apiChart5= new Chart(ctx).Pie(pieData5);
+                var ctx = document.getElementById('chart6').getContext('2d');
+                var apiChart6= new Chart(ctx).Pie(pieData6);
+                var ctx = document.getElementById('chart7').getContext('2d');
+                var apiChart7= new Chart(ctx).Pie(pieData7);
+                var ctx = document.getElementById('chart8').getContext('2d');
+                var apiChart8= new Chart(ctx).Pie(pieData8);
+
         };      
     </script> 
   </head>
@@ -151,7 +201,6 @@
             </div>
           </div>
 
-          <h2 class="sub-header">Builds</h2>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -197,7 +246,61 @@
                   <td>Advanced Ops</td>
                   <td><a class="btn btn-default" href="master/advops/index.html">Adv Ops Results</a></td>
                 </tr>
+              </tbody>
+            </table>
+          </div>
+	  <br>
+
+          <div class="row placeholders">
+
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <div id="canvas-holder">
+                    <canvas id="chart5" width="200" height="200">Blank</canvas>
+                </div>
+                <h4>Liberty v. Master</h4>
+              <span class="text-muted">Api</span>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <div id="canvas-holder">
+                    <canvas id="chart6" width="200" height="200">Blank</canvas>
+              </div>
+              <h4>Liberty v. Master</h4>
+              <span class="text-muted">Basic Ops</span>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <div id="canvas-holder">
+                    <canvas id="chart7" width="200" height="200">Blank</canvas>
+              </div>
+              <h4>Liberty v. Master</h4>
+              <span class="text-muted">IPv6</span>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <div id="canvas-holder">
+                    <canvas id="chart8" width="200" height="200">Blank</canvas>
+              </div>
+              <h4>Liberty v. Master</h4>
+              <span class="text-muted">Advanced Ops</span>
+            </div>
+          </div>
+
+
+
+         <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
                 <tr>
+                  <th>#</th>
+                  <th>Openstack Version</th>
+                  <th>OpenDaylight Version</th>
+                  <th>OpenDaylight Provider</th>
+                  <th>Tempest Test</th>
+                  <th>Results</th>
+                </tr>
+              </thead>
+       <tr>
                   <td>5</td>
                   <td>Liberty</td>
                   <td>Master</td>
@@ -287,6 +390,46 @@
                           color: '#46BFBD',
                         }
         ];
+        var pieData5 = [
+                        { 
+                          value: 3,
+                          color: '#F7464A',
+                        },
+                        {
+                          value: 258,
+                          color: '#46BFBD',
+                        }
+        ];
+       var pieData6 = [
+                        { 
+                          value: 1,
+                          color: '#F7464A',
+                        },
+                        {
+                          value: 7,
+                          color: '#46BFBD',
+                        }
+        ];
+        var pieData7 = [
+                        { 
+                          value: 6,
+                          color: '#F7464A',
+                        },
+                        {
+                          value: 2,
+                          color: '#46BFBD',
+                        }
+        ];
+        var pieData8 = [
+                        { 
+                          value: 0,
+                          color: '#F7464A',
+                        },
+                        {
+                          value: 6,
+		          color: '#46BFBD',
+			}
+	];
 
         jQuery(document).ready = function () { 
                 var ctx = document.getElementById('chart1').getContext('2d');
