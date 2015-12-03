@@ -254,17 +254,17 @@ onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
         <pre>
         
 ft1.1: setUpClass (tempest.api.network.test_metering_extensions.MeteringIpV6TestJSON)_StringException: Traceback (most recent call last):
-  File "tempest/test.py", line 274, in setUpClass
+  File "tempest/test.py", line 275, in setUpClass
     six.reraise(etype, value, trace)
-  File "tempest/test.py", line 267, in setUpClass
+  File "tempest/test.py", line 268, in setUpClass
     cls.resource_setup()
-  File "tempest/api/network/test_metering_extensions.py", line 46, in resource_setup
+  File "tempest/api/network/test_metering_extensions.py", line 44, in resource_setup
     cls.metering_label = cls.create_metering_label(name, description)
-  File "tempest/api/network/base.py", line 280, in create_metering_label
+  File "tempest/api/network/base.py", line 281, in create_metering_label
     name=data_utils.rand_name("metering-label"))
-  File "tempest/services/network/json/network_client.py", line 62, in create_metering_label
+  File "tempest/services/network/json/network_client.py", line 41, in create_metering_label
     return self.create_resource(uri, post_data)
-  File "tempest/services/network/json/base.py", line 59, in create_resource
+  File "tempest/services/network/json/base.py", line 60, in create_resource
     resp, body = self.post(req_uri, req_post_data)
   File "/usr/local/lib/python2.7/dist-packages/tempest_lib/common/rest_client.py", line 259, in post
     return self.request('POST', url, extra_headers, headers, body)
@@ -304,17 +304,17 @@ onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
         <pre>
         
 ft1.2: setUpClass (tempest.api.network.test_metering_extensions.MeteringTestJSON)_StringException: Traceback (most recent call last):
-  File "tempest/test.py", line 274, in setUpClass
+  File "tempest/test.py", line 275, in setUpClass
     six.reraise(etype, value, trace)
-  File "tempest/test.py", line 267, in setUpClass
+  File "tempest/test.py", line 268, in setUpClass
     cls.resource_setup()
-  File "tempest/api/network/test_metering_extensions.py", line 46, in resource_setup
+  File "tempest/api/network/test_metering_extensions.py", line 44, in resource_setup
     cls.metering_label = cls.create_metering_label(name, description)
-  File "tempest/api/network/base.py", line 280, in create_metering_label
+  File "tempest/api/network/base.py", line 281, in create_metering_label
     name=data_utils.rand_name("metering-label"))
-  File "tempest/services/network/json/network_client.py", line 62, in create_metering_label
+  File "tempest/services/network/json/network_client.py", line 41, in create_metering_label
     return self.create_resource(uri, post_data)
-  File "tempest/services/network/json/base.py", line 59, in create_resource
+  File "tempest/services/network/json/base.py", line 60, in create_resource
     resp, body = self.post(req_uri, req_post_data)
   File "/usr/local/lib/python2.7/dist-packages/tempest_lib/common/rest_client.py", line 259, in post
     return self.request('POST', url, extra_headers, headers, body)
@@ -1568,125 +1568,125 @@ ft13.1: tempest.api.network.test_extensions.ExtensionsTestJSON.test_list_show_ex
   stdout
 
 pythonlogging:'': {{{
-2015-11-18 16:35:53,145 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions 0.154s
-2015-11-18 16:35:53,146 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:45,984 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions 0.159s
+2015-12-03 01:13:45,984 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '4074', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-3428c7b1-1108-4ea2-8388-b650483109cc'}
+    Response - Headers: {'status': '200', 'content-length': '4074', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:45 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-253b8b2c-0cb9-4ee5-ac14-6fa9144b9e6e'}
         Body: {"extensions": [{"alias": "dns-integration", "updated": "2015-08-15T18:00:00-00:00", "name": "DNS Integration", "links": [], "description": "Provides integration with internal DNS."}, {"alias": "ext-gw-mode", "updated": "2013-03-28T10:00:00-00:00", "name": "Neutron L3 Configurable external gateway mode", "links": [], "description": "Extension of the router abstraction for specifying whether SNAT should occur on the external gateway"}, {"alias": "binding", "updated": "2014-02-03T10:00:00-00:00", "name": "Port Binding", "links": [], "description": "Expose port bindings of a virtual port to external application"}, {"alias": "agent", "updated": "2013-02-03T10:00:00-00:00", "name": "agent", "links": [], "description": "The agent management extension."}, {"alias": "subnet_allocation", "updated": "2015-03-30T10:00:00-00:00", "name": "Subnet Allocation", "links": [], "description": "Enables allocation of subnets from a subnet pool"}, {"alias": "l3_agent_scheduler", "updated": "2013-02-07T10:00:00-00:00", "name": "L3 Agent Scheduler", "links": [], "description": "Schedule routers among l3 agents"}, {"alias": "external-net", "updated": "2013-01-14T10:00:00-00:00", "name": "Neutron external network", "links": [], "description": "Adds external network attribute to network resource."}, {"alias": "flavors", "updated": "2014-07-06T10:00:00-00:00", "name": "Neutron Service Flavors", "links": [], "description": "Service specification for advanced services"}, {"alias": "net-mtu", "updated": "2015-03-25T10:00:00-00:00", "name": "Network MTU", "links": [], "description": "Provides MTU attribute for a network resource."}, {"alias": "quotas", "updated": "2012-07-29T10:00:00-00:00", "name": "Quota management support", "links": [], "description": "Expose functions for quotas management per tenant"}, {"alias": "l3-ha", "updated": "2014-04-26T00:00:00-00:00", "name": "HA Router extension", "links": [], "description": "Add HA capability to routers."}, {"alias": "provider", "updated": "2012-09-07T10:00:00-00:00", "name": "Provider Network", "links": [], "description": "Expose mapping of virtual networks to physical networks"}, {"alias": "multi-provider", "updated": "2013-06-27T10:00:00-00:00", "name": "Multi Provider Network", "links": [], "description": "Expose mapping of virtual networks to multiple physical networks"}, {"alias": "extraroute", "updated": "2013-02-01T10:00:00-00:00", "name": "Neutron Extra Route", "links": [], "description": "Extra routes configuration for L3 router"}, {"alias": "router", "updated": "2012-07-20T10:00:00-00:00", "name": "Neutron L3 Router", "links": [], "description": "Router abstraction for basic L3 forwarding between L2 Neutron networks and access to external networks via a NAT gateway."}, {"alias": "extra_dhcp_opt", "updated": "2013-03-17T12:00:00-00:00", "name": "Neutron Extra DHCP opts", "links": [], "description": "Extra options configuration for DHCP. For example PXE boot options to DHCP clients can be specified (e.g. tftp-server, server-ip-address, bootfile-name)"}, {"alias": "security-group", "updated": "2012-10-05T10:00:00-00:00", "name": "security-group", "links": [], "description": "The security groups extension."}, {"alias": "dhcp_agent_scheduler", "updated": "2013-02-07T10:00:00-00:00", "name": "DHCP Agent Scheduler", "links": [], "description": "Schedule networks among dhcp agents"}, {"alias": "rbac-policies", "updated": "2015-06-17T12:15:12-30:00", "name": "RBAC Policies", "links": [], "description": "Allows creation and modification of policies that control tenant access to resources."}, {"alias": "port-security", "updated": "2012-07-23T10:00:00-00:00", "name": "Port Security", "links": [], "description": "Provides port security"}, {"alias": "allowed-address-pairs", "updated": "2013-07-23T10:00:00-00:00", "name": "Allowed Address Pairs", "links": [], "description": "Provides allowed address pairs"}, {"alias": "dvr", "updated": "2014-06-1T10:00:00-00:00", "name": "Distributed Virtual Router", "links": [], "description": "Enables configuration of Distributed Virtual Routers."}]}
-2015-11-18 16:35:53,155 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/dns-integration 0.008s
-2015-11-18 16:35:53,156 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:45,991 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/dns-integration 0.006s
+2015-12-03 01:13:45,991 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '181', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/dns-integration', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-0dc0f1fc-1475-45d1-979d-d555d89a76e1'}
+    Response - Headers: {'status': '200', 'content-length': '181', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/dns-integration', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:45 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-5ff07ba7-2764-4e9d-b8d5-0edfa78ff290'}
         Body: {"extension": {"alias": "dns-integration", "updated": "2015-08-15T18:00:00-00:00", "name": "DNS Integration", "links": [], "description": "Provides integration with internal DNS."}}
-2015-11-18 16:35:53,312 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/ext-gw-mode 0.156s
-2015-11-18 16:35:53,313 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,139 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/ext-gw-mode 0.146s
+2015-12-03 01:13:46,139 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '268', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/ext-gw-mode', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-5f5f3414-00c2-44ac-9cd7-5bf4373a5d1a'}
+    Response - Headers: {'status': '200', 'content-length': '268', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/ext-gw-mode', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8a1308cf-229d-443d-9ef3-49b2ee1f13ae'}
         Body: {"extension": {"alias": "ext-gw-mode", "updated": "2013-03-28T10:00:00-00:00", "name": "Neutron L3 Configurable external gateway mode", "links": [], "description": "Extension of the router abstraction for specifying whether SNAT should occur on the external gateway"}}
-2015-11-18 16:35:53,320 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/binding 0.006s
-2015-11-18 16:35:53,320 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,145 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/binding 0.005s
+2015-12-03 01:13:46,146 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '193', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/binding', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-4168d66e-78fd-4c5b-afb4-84b787ec2b1d'}
+    Response - Headers: {'status': '200', 'content-length': '193', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/binding', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-2e172c65-02d9-43f9-bd9b-62ab78568f7b'}
         Body: {"extension": {"alias": "binding", "updated": "2014-02-03T10:00:00-00:00", "name": "Port Binding", "links": [], "description": "Expose port bindings of a virtual port to external application"}}
-2015-11-18 16:35:53,328 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/agent 0.007s
-2015-11-18 16:35:53,328 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,154 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/agent 0.007s
+2015-12-03 01:13:46,155 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '153', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/agent', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-3e070abd-e618-423b-91a2-ad3a09dd5d75'}
+    Response - Headers: {'status': '200', 'content-length': '153', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/agent', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-59f93f28-015c-4a62-83c8-3bfd7503b523'}
         Body: {"extension": {"alias": "agent", "updated": "2013-02-03T10:00:00-00:00", "name": "agent", "links": [], "description": "The agent management extension."}}
-2015-11-18 16:35:53,336 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/subnet_allocation 0.007s
-2015-11-18 16:35:53,337 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,163 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/subnet_allocation 0.008s
+2015-12-03 01:13:46,164 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '194', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/subnet_allocation', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-15070487-067b-4f0c-8b7a-08c5ab5f7a94'}
+    Response - Headers: {'status': '200', 'content-length': '194', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/subnet_allocation', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-7e14c7ec-a66c-4428-97ef-daa26b9dcc4d'}
         Body: {"extension": {"alias": "subnet_allocation", "updated": "2015-03-30T10:00:00-00:00", "name": "Subnet Allocation", "links": [], "description": "Enables allocation of subnets from a subnet pool"}}
-2015-11-18 16:35:53,347 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/l3_agent_scheduler 0.009s
-2015-11-18 16:35:53,347 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,173 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/l3_agent_scheduler 0.008s
+2015-12-03 01:13:46,173 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '180', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/l3_agent_scheduler', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-d0a4c458-d10f-494d-bc1d-835e6c9c6c18'}
+    Response - Headers: {'status': '200', 'content-length': '180', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/l3_agent_scheduler', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-e6218037-3b37-4d9f-922a-3c7db63ff645'}
         Body: {"extension": {"alias": "l3_agent_scheduler", "updated": "2013-02-07T10:00:00-00:00", "name": "L3 Agent Scheduler", "links": [], "description": "Schedule routers among l3 agents"}}
-2015-11-18 16:35:53,358 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/external-net 0.011s
-2015-11-18 16:35:53,359 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,181 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/external-net 0.007s
+2015-12-03 01:13:46,182 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '200', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/external-net', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-7f41faad-af4a-4ee8-be69-22ac3acd9eec'}
+    Response - Headers: {'status': '200', 'content-length': '200', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/external-net', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-e18c7949-859b-4581-af72-0e946e5f7807'}
         Body: {"extension": {"alias": "external-net", "updated": "2013-01-14T10:00:00-00:00", "name": "Neutron external network", "links": [], "description": "Adds external network attribute to network resource."}}
-2015-11-18 16:35:53,372 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/flavors 0.013s
-2015-11-18 16:35:53,372 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,189 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/flavors 0.006s
+2015-12-03 01:13:46,189 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '185', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/flavors', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-293655ae-60f3-454e-af71-f2f7ce48562b'}
+    Response - Headers: {'status': '200', 'content-length': '185', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/flavors', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-dd65dcc0-1670-4852-a289-1a50e93751dd'}
         Body: {"extension": {"alias": "flavors", "updated": "2014-07-06T10:00:00-00:00", "name": "Neutron Service Flavors", "links": [], "description": "Service specification for advanced services"}}
-2015-11-18 16:35:53,378 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/net-mtu 0.005s
-2015-11-18 16:35:53,378 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,198 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/net-mtu 0.008s
+2015-12-03 01:13:46,199 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '176', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/net-mtu', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-e1850df1-66c0-4b22-aa58-82cf258fea1b'}
+    Response - Headers: {'status': '200', 'content-length': '176', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/net-mtu', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-63e90934-1ebc-4b62-bd42-8bc283dace89'}
         Body: {"extension": {"alias": "net-mtu", "updated": "2015-03-25T10:00:00-00:00", "name": "Network MTU", "links": [], "description": "Provides MTU attribute for a network resource."}}
-2015-11-18 16:35:53,384 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/quotas 0.005s
-2015-11-18 16:35:53,384 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,208 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/quotas 0.008s
+2015-12-03 01:13:46,208 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '191', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/quotas', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-1994c7ec-dd65-488f-b59b-ea41a3858922'}
+    Response - Headers: {'status': '200', 'content-length': '191', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/quotas', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-1455a533-9fe2-4508-8d06-dd168838463c'}
         Body: {"extension": {"alias": "quotas", "updated": "2012-07-29T10:00:00-00:00", "name": "Quota management support", "links": [], "description": "Expose functions for quotas management per tenant"}}
-2015-11-18 16:35:53,390 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/l3-ha 0.005s
-2015-11-18 16:35:53,390 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,216 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/l3-ha 0.007s
+2015-12-03 01:13:46,216 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '165', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/l3-ha', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-63cb6f0a-ae49-480e-81eb-e5f29a171d99'}
+    Response - Headers: {'status': '200', 'content-length': '165', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/l3-ha', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-ab506018-31af-49de-98ae-4799dfac77a8'}
         Body: {"extension": {"alias": "l3-ha", "updated": "2014-04-26T00:00:00-00:00", "name": "HA Router extension", "links": [], "description": "Add HA capability to routers."}}
-2015-11-18 16:35:53,397 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/provider 0.006s
-2015-11-18 16:35:53,397 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,230 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/provider 0.012s
+2015-12-03 01:13:46,230 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '191', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/provider', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-b73d70b4-ec31-4d80-97a6-b24e71618943'}
+    Response - Headers: {'status': '200', 'content-length': '191', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/provider', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-4e23271c-8939-4e7c-b237-42143782b0d0'}
         Body: {"extension": {"alias": "provider", "updated": "2012-09-07T10:00:00-00:00", "name": "Provider Network", "links": [], "description": "Expose mapping of virtual networks to physical networks"}}
-2015-11-18 16:35:53,405 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/multi-provider 0.007s
-2015-11-18 16:35:53,405 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,240 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/multi-provider 0.008s
+2015-12-03 01:13:46,240 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '212', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/multi-provider', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-2a826d4d-bed9-4243-9ba7-a6455d798f9d'}
+    Response - Headers: {'status': '200', 'content-length': '212', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/multi-provider', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-aa12e397-fc2e-4bf4-8d06-13bd76b10ea1'}
         Body: {"extension": {"alias": "multi-provider", "updated": "2013-06-27T10:00:00-00:00", "name": "Multi Provider Network", "links": [], "description": "Expose mapping of virtual networks to multiple physical networks"}}
-2015-11-18 16:35:53,462 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/extraroute 0.008s
-2015-11-18 16:35:53,462 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,248 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/extraroute 0.007s
+2015-12-03 01:13:46,248 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '181', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/extraroute', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-e79390a6-27e3-4b84-b140-b2bd53333269'}
+    Response - Headers: {'status': '200', 'content-length': '181', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/extraroute', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-c74831e2-f1ad-4f47-9f31-c539335a7a4b'}
         Body: {"extension": {"alias": "extraroute", "updated": "2013-02-01T10:00:00-00:00", "name": "Neutron Extra Route", "links": [], "description": "Extra routes configuration for L3 router"}}
-2015-11-18 16:35:53,470 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/router 0.007s
-2015-11-18 16:35:53,470 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,256 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/router 0.007s
+2015-12-03 01:13:46,257 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '256', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/router', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-fef398d5-a45b-49c6-9066-33a5c0ab195a'}
+    Response - Headers: {'status': '200', 'content-length': '256', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/router', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-87d6a441-12c8-421d-b432-8a7439e56281'}
         Body: {"extension": {"alias": "router", "updated": "2012-07-20T10:00:00-00:00", "name": "Neutron L3 Router", "links": [], "description": "Router abstraction for basic L3 forwarding between L2 Neutron networks and access to external networks via a NAT gateway."}}
-2015-11-18 16:35:53,478 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/extra_dhcp_opt 0.006s
-2015-11-18 16:35:53,478 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,266 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/extra_dhcp_opt 0.009s
+2015-12-03 01:13:46,267 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '301', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/extra_dhcp_opt', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-6e1d4c98-f186-4552-b678-2067aababf22'}
+    Response - Headers: {'status': '200', 'content-length': '301', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/extra_dhcp_opt', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-6f11a585-771d-464a-a5ca-d7fcc2920da8'}
         Body: {"extension": {"alias": "extra_dhcp_opt", "updated": "2013-03-17T12:00:00-00:00", "name": "Neutron Extra DHCP opts", "links": [], "description": "Extra options configuration for DHCP. For example PXE boot options to DHCP clients can be specified (e.g. tftp-server, server-ip-address, bootfile-name)"}}
-2015-11-18 16:35:53,489 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/security-group 0.011s
-2015-11-18 16:35:53,490 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,278 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/security-group 0.010s
+2015-12-03 01:13:46,279 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '170', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/security-group', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8cd5ddcd-6bcf-492a-a9f7-5349f1e63924'}
+    Response - Headers: {'status': '200', 'content-length': '170', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/security-group', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-d192b48a-7d1f-4621-85b2-c11a88c68685'}
         Body: {"extension": {"alias": "security-group", "updated": "2012-10-05T10:00:00-00:00", "name": "security-group", "links": [], "description": "The security groups extension."}}
-2015-11-18 16:35:53,497 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/dhcp_agent_scheduler 0.006s
-2015-11-18 16:35:53,497 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,287 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/dhcp_agent_scheduler 0.007s
+2015-12-03 01:13:46,287 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '187', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/dhcp_agent_scheduler', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-bc14c101-7cda-421d-9c48-07b81ede94b2'}
+    Response - Headers: {'status': '200', 'content-length': '187', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/dhcp_agent_scheduler', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-f1483827-57a4-4b3a-aa1c-13c3987d813f'}
         Body: {"extension": {"alias": "dhcp_agent_scheduler", "updated": "2013-02-07T10:00:00-00:00", "name": "DHCP Agent Scheduler", "links": [], "description": "Schedule networks among dhcp agents"}}
-2015-11-18 16:35:53,506 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/rbac-policies 0.008s
-2015-11-18 16:35:53,506 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,295 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/rbac-policies 0.007s
+2015-12-03 01:13:46,295 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '223', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/rbac-policies', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-f41c8cc8-f7e3-429c-ae83-3474fa5ffefc'}
+    Response - Headers: {'status': '200', 'content-length': '223', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/rbac-policies', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-05252281-d70d-4648-b006-22fb65eff796'}
         Body: {"extension": {"alias": "rbac-policies", "updated": "2015-06-17T12:15:12-30:00", "name": "RBAC Policies", "links": [], "description": "Allows creation and modification of policies that control tenant access to resources."}}
-2015-11-18 16:35:53,516 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/port-security 0.008s
-2015-11-18 16:35:53,516 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,304 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/port-security 0.007s
+2015-12-03 01:13:46,304 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '160', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/port-security', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-e30f7ada-584c-464a-9c88-b1b51c4b1c02'}
+    Response - Headers: {'status': '200', 'content-length': '160', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/port-security', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-cad407b4-c256-4567-9d9f-c3559445f57d'}
         Body: {"extension": {"alias": "port-security", "updated": "2012-07-23T10:00:00-00:00", "name": "Port Security", "links": [], "description": "Provides port security"}}
-2015-11-18 16:35:53,523 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/allowed-address-pairs 0.006s
-2015-11-18 16:35:53,524 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,311 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/allowed-address-pairs 0.006s
+2015-12-03 01:13:46,311 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '184', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/allowed-address-pairs', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-b9b0e106-0dc0-411d-9787-c575c562b470'}
+    Response - Headers: {'status': '200', 'content-length': '184', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/allowed-address-pairs', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-a33c954d-f6db-4036-8835-5b90e04bf0d9'}
         Body: {"extension": {"alias": "allowed-address-pairs", "updated": "2013-07-23T10:00:00-00:00", "name": "Allowed Address Pairs", "links": [], "description": "Provides allowed address pairs"}}
-2015-11-18 16:35:53,533 25953 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/dvr 0.007s
-2015-11-18 16:35:53,533 25953 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-03 01:13:46,319 27531 INFO     [tempest_lib.common.rest_client] Request (ExtensionsTestJSON:test_list_show_extensions): 200 GET http://10.0.2.15:9696/v2.0/extensions/dvr 0.007s
+2015-12-03 01:13:46,320 27531 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '193', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/dvr', 'connection': 'close', 'date': 'Wed, 18 Nov 2015 16:35:53 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-e0f6112e-802c-4e35-a6af-a16069d08c48'}
+    Response - Headers: {'status': '200', 'content-length': '193', 'content-location': 'http://10.0.2.15:9696/v2.0/extensions/dvr', 'connection': 'close', 'date': 'Thu, 03 Dec 2015 01:13:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-90136482-752a-4f55-a519-45a7a1d20118'}
         Body: {"extension": {"alias": "dvr", "updated": "2014-06-1T10:00:00-00:00", "name": "Distributed Virtual Router", "links": [], "description": "Enables configuration of Distributed Virtual Routers."}}
 }}}
 
 Traceback (most recent call last):
-  File "tempest/api/network/test_extensions.py", line 71, in test_list_show_extensions
+  File "tempest/api/network/test_extensions.py", line 68, in test_list_show_extensions
     self.assertIn(e, actual_alias)
   File "/usr/local/lib/python2.7/dist-packages/testtools/testcase.py", line 356, in assertIn
     self.assertThat(haystack, Contains(needle), message)
