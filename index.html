@@ -448,6 +448,12 @@
                 var apiChart3= new Chart(ctx).Pie(pieData3);
                 var ctx = document.getElementById('chart4').getContext('2d');
                 var apiChart4= new Chart(ctx).Pie(pieData4);
+
+                
+                $.get('master/basicops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        alert(data);
+                });
                 
         };      
     </script> 
