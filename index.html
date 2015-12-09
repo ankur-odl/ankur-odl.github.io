@@ -16,23 +16,8 @@
     <script type="text/javascript">       
 	
 	window.onload = function () { 
-                var ctx = document.getElementById('chart1').getContext('2d');
-                var apiChart1= new Chart(ctx).Pie(pieData1);
-                var ctx = document.getElementById('chart2').getContext('2d');
-                var apiChart2= new Chart(ctx).Pie(pieData2);
-                var ctx = document.getElementById('chart3').getContext('2d');
-                var apiChart3= new Chart(ctx).Pie(pieData3);
-                var ctx = document.getElementById('chart4').getContext('2d');
-                var apiChart4= new Chart(ctx).Pie(pieData4);
-
-                var ctx = document.getElementById('chart5').getContext('2d');
-                var apiChart5= new Chart(ctx).Pie(pieData5);
-                var ctx = document.getElementById('chart6').getContext('2d');
-                var apiChart6= new Chart(ctx).Pie(pieData6);
-                var ctx = document.getElementById('chart7').getContext('2d');
-                var apiChart7= new Chart(ctx).Pie(pieData7);
-                var ctx = document.getElementById('chart8').getContext('2d');
-                var apiChart8= new Chart(ctx).Pie(pieData8);
+       		var masterbasicopsFailed = 0;
+		var masterbasicopsPass = 0;
                 
                 $.get('master/basicops/test.txt', function ( data ) {
                         $(".result").html(data);
@@ -50,6 +35,58 @@
 			    }
 			} 			
 
+		        var pieData1 = [
+       		 	                { 
+		                          value: 0,
+        	                	  color: '#F7464A',
+               		 	        },
+        	       		        {
+	                        	  value: 256,
+	                        	  color: '#46BFBD',
+        	        	        }
+        		];
+	       		var pieData2 = [
+	                	        { 
+                        		  value: masterbasicopsFailed,
+                	       		  color: '#F7464A',
+	        	                },
+		                        {
+                	        	  value: masterbasicopsPass,
+                		          color: '#46BFBD',
+	        	                }
+		        ];
+		        var pieData3 = [
+		                        { 
+		                          value: 6,
+		                          color: '#F7464A',
+		                        },
+                		        {
+		                          value: 2,
+		                          color: '#46BFBD',
+		                        }
+		        ];
+		        var pieData4 = [
+		                        { 
+                		          value: 0,
+		                          color: '#F7464A',
+                		        },
+		                        {
+		                          value: 6,
+                       			   color: '#46BFBD',
+                		        }
+		        ];
+
+
+           	     	var ctx = document.getElementById('chart1').getContext('2d');
+               	    	var apiChart1= new Chart(ctx).Pie(pieData1);
+               	     	var ctx = document.getElementById('chart2').getContext('2d');
+                	var apiChart2= new Chart(ctx).Pie(pieData2);
+	                var ctx = document.getElementById('chart3').getContext('2d');
+       	        	var apiChart3= new Chart(ctx).Pie(pieData3);
+       		        var ctx = document.getElementById('chart4').getContext('2d');
+	    	        var apiChart4= new Chart(ctx).Pie(pieData4);
+
+           
 			alert(masterbasicopsFailed + "And" + masterbasicopsPass);
                 });
 
@@ -287,6 +324,27 @@
 	var masterbasicopsPass = 0
 	var masterbasicopsFailed = 0
 
+        jQuery(document).ready = function () { 
+
+
+                $.get('master/basicops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                masterbasicopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                masterbasicopsPass += parseInt(temp[i+1]);              
+                            }
+                            if(temp[i] == 'Skip'){
+                                masterbasicopsPass += parseInt(temp[i+1]);
+                            }
+                        }                       
+
+                });
+
         var pieData1 = [
                         { 
                           value: 0,
@@ -364,31 +422,10 @@
                         },
                         {
                           value: 6,
-		          color: '#46BFBD',
-			}
-	];
+                          color: '#46BFBD',
+                        }
+        ];
 
-        jQuery(document).ready = function () { 
-
-
-                $.get('master/basicops/test.txt', function ( data ) {
-                        $(".result").html(data);
-                        var temp = data.split(' ');
-                        
-                        for(var i = 0; i < temp.length; i++){
-                            if(temp[i] == 'Failure'){
-                                masterbasicopsFailed += parseInt(temp[i+1]);
-                            }
-                            if(temp[i] == 'Pass' ){
-                                masterbasicopsPass += parseInt(temp[i+1]);              
-                            }
-                            if(temp[i] == 'Skip'){
-                                masterbasicopsPass += parseInt(temp[i+1]);
-                            }
-                        }                       
-
-        //                alert(masterbasicopsFailed + "And" + masterbasicopsPass);
-                });
 
 
                 var ctx = document.getElementById('chart1').getContext('2d');
