@@ -440,200 +440,201 @@ ft1.8: tempest.scenario.test_network_basic_ops.TestNetworkBasicOps.test_update_i
   stdout
 
 pythonlogging:'': {{{
-2015-12-08 20:44:56,478 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-groups 0.135s
-2015-12-08 20:44:56,479 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"security_group": {"tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "description": "tempest-secgroup-smoke-1069932254 description", "name": "tempest-secgroup-smoke-1069932254"}}
-    Response - Headers: {'status': '201', 'content-length': '888', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:56 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-1f044f0c-7ee0-453f-ae7c-b5d0c204569e'}
-        Body: {"security_group": {"tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "description": "tempest-secgroup-smoke-1069932254 description", "id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83", "security_group_rules": [{"remote_group_id": null, "direction": "egress", "remote_ip_prefix": null, "protocol": null, "ethertype": "IPv4", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_range_max": null, "port_range_min": null, "id": "1a5f8910-6b54-4764-b504-e5fa0d60a624", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83"}, {"remote_group_id": null, "direction": "egress", "remote_ip_prefix": null, "protocol": null, "ethertype": "IPv6", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_range_max": null, "port_range_min": null, "id": "f032897c-dab6-4c34-b3a1-60b5d7b9a57a", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83"}], "name": "tempest-secgroup-smoke-1069932254"}}
-2015-12-08 20:44:56,595 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.115s
-2015-12-08 20:44:56,596 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"security_group_rule": {"direction": "ingress", "protocol": "tcp", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_range_max": 22, "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83", "port_range_min": 22}}
-    Response - Headers: {'status': '201', 'content-length': '340', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:56 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-f12391b1-ed3c-4df9-b25a-af7cc31778c0'}
-        Body: {"security_group_rule": {"remote_group_id": null, "direction": "ingress", "remote_ip_prefix": null, "protocol": "tcp", "ethertype": "IPv4", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_range_max": 22, "port_range_min": 22, "id": "3e52e1c5-c5d2-4ff8-8962-2e9153b67c26", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83"}}
-2015-12-08 20:44:56,721 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.124s
-2015-12-08 20:44:56,721 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"security_group_rule": {"direction": "egress", "protocol": "tcp", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_range_max": 22, "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83", "port_range_min": 22}}
-    Response - Headers: {'status': '201', 'content-length': '339', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:56 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-3e7f3be1-9ab1-42bf-bb41-ead1dcc6d72b'}
-        Body: {"security_group_rule": {"remote_group_id": null, "direction": "egress", "remote_ip_prefix": null, "protocol": "tcp", "ethertype": "IPv4", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_range_max": 22, "port_range_min": 22, "id": "7c59792b-446a-4d59-a23c-a239939e2933", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83"}}
-2015-12-08 20:44:56,831 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.107s
-2015-12-08 20:44:56,832 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"security_group_rule": {"tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "direction": "ingress", "protocol": "icmp", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83"}}
-    Response - Headers: {'status': '201', 'content-length': '345', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:56 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-7442943a-9b75-4303-9da7-cd1499eb1bff'}
-        Body: {"security_group_rule": {"remote_group_id": null, "direction": "ingress", "remote_ip_prefix": null, "protocol": "icmp", "ethertype": "IPv4", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_range_max": null, "port_range_min": null, "id": "0db38544-e885-48eb-9fea-6371e64a4fbe", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83"}}
-2015-12-08 20:44:56,946 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.111s
-2015-12-08 20:44:56,946 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"security_group_rule": {"tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "direction": "egress", "protocol": "icmp", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83"}}
-    Response - Headers: {'status': '201', 'content-length': '344', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:56 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-003e1a5c-bb29-4207-a389-035a2a04dbe0'}
-        Body: {"security_group_rule": {"remote_group_id": null, "direction": "egress", "remote_ip_prefix": null, "protocol": "icmp", "ethertype": "IPv4", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_range_max": null, "port_range_min": null, "id": "c212178e-fe0d-4543-8f44-c17c58e6f5a5", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83"}}
-2015-12-08 20:44:57,059 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.111s
-2015-12-08 20:44:57,060 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"security_group_rule": {"tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "direction": "ingress", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83", "protocol": "icmp", "ethertype": "IPv6"}}
-    Response - Headers: {'status': '201', 'content-length': '345', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:57 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-0d4866b0-ff2e-43b3-af25-4c3ca955d38f'}
-        Body: {"security_group_rule": {"remote_group_id": null, "direction": "ingress", "remote_ip_prefix": null, "protocol": "icmp", "ethertype": "IPv6", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_range_max": null, "port_range_min": null, "id": "d451179e-0b6a-466e-b568-5c7e4fdc408e", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83"}}
-2015-12-08 20:44:57,174 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.113s
-2015-12-08 20:44:57,174 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"security_group_rule": {"tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "direction": "egress", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83", "protocol": "icmp", "ethertype": "IPv6"}}
-    Response - Headers: {'status': '201', 'content-length': '344', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:57 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-df6cb6f4-9f7c-46c8-ae71-579480df0867'}
-        Body: {"security_group_rule": {"remote_group_id": null, "direction": "egress", "remote_ip_prefix": null, "protocol": "icmp", "ethertype": "IPv6", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_range_max": null, "port_range_min": null, "id": "881986cb-b931-4812-8b1a-5f9a19b712d9", "security_group_id": "1763c7b1-ddbf-46fc-9633-99dbad0cdf83"}}
-2015-12-08 20:44:57,305 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/networks 0.129s
-2015-12-08 20:44:57,306 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"network": {"tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "name": "tempest-network-smoke--32123973"}}
-    Response - Headers: {'status': '201', 'content-length': '294', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:57 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-e9933bb6-aa6d-4d18-93d5-02ea326e4e3a'}
-        Body: {"network": {"status": "ACTIVE", "subnets": [], "name": "tempest-network-smoke--32123973", "admin_state_up": true, "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "mtu": 0, "router:external": false, "shared": false, "port_security_enabled": true, "id": "851afad0-3a8a-4f36-97fb-f545bd6e4bce"}}
-2015-12-08 20:44:57,383 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/routers 0.076s
-2015-12-08 20:44:57,384 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"router": {"tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "name": "tempest-router-smoke-53082853", "admin_state_up": true}}
-    Response - Headers: {'status': '201', 'content-length': '237', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:57 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-73bba2cc-6b68-4739-bed1-ecd1263e6dd8'}
-        Body: {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "tempest-router-smoke-53082853", "admin_state_up": true, "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "routes": [], "id": "76e6bbcb-000e-4284-8a40-278909dd23b5"}}
-2015-12-08 20:44:57,431 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/routers/76e6bbcb-000e-4284-8a40-278909dd23b5 0.045s
-2015-12-08 20:44:57,431 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:27:58,531 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-groups 0.103s
+2015-12-09 03:27:58,532 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"security_group": {"tenant_id": "3673b47fae71484c81e42d59ae4c8030", "description": "tempest-secgroup-smoke-931937808 description", "name": "tempest-secgroup-smoke-931937808"}}
+    Response - Headers: {'status': '201', 'content-length': '886', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-bc8021c0-bc4c-4af8-8cd1-06d3b90b69e4'}
+        Body: {"security_group": {"tenant_id": "3673b47fae71484c81e42d59ae4c8030", "description": "tempest-secgroup-smoke-931937808 description", "id": "4762ba55-b417-45fa-a67e-418a493bc67e", "security_group_rules": [{"remote_group_id": null, "direction": "egress", "remote_ip_prefix": null, "protocol": null, "ethertype": "IPv4", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_range_max": null, "port_range_min": null, "id": "0b2af0a9-e0da-4402-bcfa-c01f7c693e75", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e"}, {"remote_group_id": null, "direction": "egress", "remote_ip_prefix": null, "protocol": null, "ethertype": "IPv6", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_range_max": null, "port_range_min": null, "id": "89595b97-b66b-4d70-b751-d100d3c19ab5", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e"}], "name": "tempest-secgroup-smoke-931937808"}}
+2015-12-09 03:27:58,636 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.103s
+2015-12-09 03:27:58,636 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"security_group_rule": {"direction": "ingress", "protocol": "tcp", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_range_max": 22, "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e", "port_range_min": 22}}
+    Response - Headers: {'status': '201', 'content-length': '340', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-40eba21b-d844-499e-a917-01cec754f280'}
+        Body: {"security_group_rule": {"remote_group_id": null, "direction": "ingress", "remote_ip_prefix": null, "protocol": "tcp", "ethertype": "IPv4", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_range_max": 22, "port_range_min": 22, "id": "d16e6283-88d7-455d-be36-6ca8c63fe1af", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e"}}
+2015-12-09 03:27:58,742 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.104s
+2015-12-09 03:27:58,742 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"security_group_rule": {"direction": "egress", "protocol": "tcp", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_range_max": 22, "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e", "port_range_min": 22}}
+    Response - Headers: {'status': '201', 'content-length': '339', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-fb54fa9a-83c1-499a-b380-9849ad407118'}
+        Body: {"security_group_rule": {"remote_group_id": null, "direction": "egress", "remote_ip_prefix": null, "protocol": "tcp", "ethertype": "IPv4", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_range_max": 22, "port_range_min": 22, "id": "0b2021cd-7449-4afb-9d75-1bfe6e697155", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e"}}
+2015-12-09 03:27:58,846 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.103s
+2015-12-09 03:27:58,847 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"security_group_rule": {"tenant_id": "3673b47fae71484c81e42d59ae4c8030", "direction": "ingress", "protocol": "icmp", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e"}}
+    Response - Headers: {'status': '201', 'content-length': '345', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-08032cc3-9a9f-48b9-835c-855f44079bf8'}
+        Body: {"security_group_rule": {"remote_group_id": null, "direction": "ingress", "remote_ip_prefix": null, "protocol": "icmp", "ethertype": "IPv4", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_range_max": null, "port_range_min": null, "id": "1c274a97-f1c3-42e5-9773-a4612cc1c198", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e"}}
+2015-12-09 03:27:58,962 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.113s
+2015-12-09 03:27:58,963 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"security_group_rule": {"tenant_id": "3673b47fae71484c81e42d59ae4c8030", "direction": "egress", "protocol": "icmp", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e"}}
+    Response - Headers: {'status': '201', 'content-length': '344', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-c07a93c0-840a-4a73-b930-098d07c0abb5'}
+        Body: {"security_group_rule": {"remote_group_id": null, "direction": "egress", "remote_ip_prefix": null, "protocol": "icmp", "ethertype": "IPv4", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_range_max": null, "port_range_min": null, "id": "146ac382-86a0-4bb7-af54-f7ff6d3729b6", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e"}}
+2015-12-09 03:27:59,074 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.110s
+2015-12-09 03:27:59,075 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"security_group_rule": {"tenant_id": "3673b47fae71484c81e42d59ae4c8030", "direction": "ingress", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e", "protocol": "icmp", "ethertype": "IPv6"}}
+    Response - Headers: {'status': '201', 'content-length': '345', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:59 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-0e48e1de-2815-4462-afb3-6ef041bdeef6'}
+        Body: {"security_group_rule": {"remote_group_id": null, "direction": "ingress", "remote_ip_prefix": null, "protocol": "icmp", "ethertype": "IPv6", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_range_max": null, "port_range_min": null, "id": "2937b87d-3e57-488d-a676-48068e61adae", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e"}}
+2015-12-09 03:27:59,185 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/security-group-rules 0.109s
+2015-12-09 03:27:59,186 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"security_group_rule": {"tenant_id": "3673b47fae71484c81e42d59ae4c8030", "direction": "egress", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e", "protocol": "icmp", "ethertype": "IPv6"}}
+    Response - Headers: {'status': '201', 'content-length': '344', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:59 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-67c01080-173b-47db-b0d4-8f1b58826fa6'}
+        Body: {"security_group_rule": {"remote_group_id": null, "direction": "egress", "remote_ip_prefix": null, "protocol": "icmp", "ethertype": "IPv6", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_range_max": null, "port_range_min": null, "id": "09e9abbd-2979-4b2a-87ee-598fdbc5c099", "security_group_id": "4762ba55-b417-45fa-a67e-418a493bc67e"}}
+2015-12-09 03:27:59,312 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/networks 0.125s
+2015-12-09 03:27:59,313 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"network": {"tenant_id": "3673b47fae71484c81e42d59ae4c8030", "name": "tempest-network-smoke--1781440557"}}
+    Response - Headers: {'status': '201', 'content-length': '296', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:59 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-6d4e5eab-eae1-42f3-b7c0-1f3d6c93f986'}
+        Body: {"network": {"status": "ACTIVE", "subnets": [], "name": "tempest-network-smoke--1781440557", "admin_state_up": true, "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "mtu": 0, "router:external": false, "shared": false, "port_security_enabled": true, "id": "43b4f651-e299-4117-89c3-00b2386b26ca"}}
+2015-12-09 03:27:59,388 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/routers 0.074s
+2015-12-09 03:27:59,389 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"router": {"tenant_id": "3673b47fae71484c81e42d59ae4c8030", "name": "tempest-router-smoke-461939224", "admin_state_up": true}}
+    Response - Headers: {'status': '201', 'content-length': '238', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:59 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-73391e0c-d262-4b19-841f-4055a0c3a680'}
+        Body: {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "tempest-router-smoke-461939224", "admin_state_up": true, "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "routes": [], "id": "ac471172-e925-4881-8b2c-4f65ae53e9e7"}}
+2015-12-09 03:27:59,431 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/routers/ac471172-e925-4881-8b2c-4f65ae53e9e7 0.040s
+2015-12-09 03:27:59,431 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '237', 'content-location': 'http://10.0.2.15:9696/v2.0/routers/76e6bbcb-000e-4284-8a40-278909dd23b5', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:57 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-06905dc2-3b14-467d-84f0-80f59aace9b2'}
-        Body: {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "tempest-router-smoke-53082853", "admin_state_up": true, "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "routes": [], "id": "76e6bbcb-000e-4284-8a40-278909dd23b5"}}
-2015-12-08 20:44:58,021 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 PUT http://10.0.2.15:9696/v2.0/routers/76e6bbcb-000e-4284-8a40-278909dd23b5 0.588s
-2015-12-08 20:44:58,022 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"router": {"external_gateway_info": {"network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7"}, "name": "tempest-router-smoke-53082853", "admin_state_up": true}}
-    Response - Headers: {'status': '200', 'content-length': '501', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-f83c2baa-256f-47bb-a5d8-bb0ff5a6e2f5'}
-        Body: {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "3d4539ed-6c35-4866-9ec1-5f1a24007e44", "ip_address": "172.24.4.17"}, {"subnet_id": "a4897e1f-ed06-4e6e-9359-adf3f749960c", "ip_address": "2001:db8::12"}]}, "name": "tempest-router-smoke-53082853", "admin_state_up": true, "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "routes": [], "id": "76e6bbcb-000e-4284-8a40-278909dd23b5"}}
-2015-12-08 20:44:58,052 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/subnets?tenant_id=a1d0d7bdb17b41d0adae30a727d64ce4&amp;cidr=10.100.0.0%2F28 0.028s
-2015-12-08 20:44:58,052 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '238', 'content-location': 'http://10.0.2.15:9696/v2.0/routers/ac471172-e925-4881-8b2c-4f65ae53e9e7', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:59 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-2faa2fe1-e61e-46fc-88ea-25d66f1a11fc'}
+        Body: {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "tempest-router-smoke-461939224", "admin_state_up": true, "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "routes": [], "id": "ac471172-e925-4881-8b2c-4f65ae53e9e7"}}
+2015-12-09 03:27:59,960 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 PUT http://10.0.2.15:9696/v2.0/routers/ac471172-e925-4881-8b2c-4f65ae53e9e7 0.528s
+2015-12-09 03:27:59,961 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"router": {"external_gateway_info": {"network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7"}, "name": "tempest-router-smoke-461939224", "admin_state_up": true}}
+    Response - Headers: {'status': '200', 'content-length': '502', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:59 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-48b61b32-70f4-47b9-b0e8-fb9e1663ab31'}
+        Body: {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "e83c8aee-9886-4896-ace4-91f18d70e864", "ip_address": "172.24.4.17"}, {"subnet_id": "33c9889c-8117-461a-825c-73407933c28c", "ip_address": "2001:db8::11"}]}, "name": "tempest-router-smoke-461939224", "admin_state_up": true, "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "routes": [], "id": "ac471172-e925-4881-8b2c-4f65ae53e9e7"}}
+2015-12-09 03:27:59,992 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/subnets?tenant_id=3673b47fae71484c81e42d59ae4c8030&amp;cidr=10.100.0.0%2F28 0.030s
+2015-12-09 03:27:59,992 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '15', 'content-location': 'http://10.0.2.15:9696/v2.0/subnets?tenant_id=a1d0d7bdb17b41d0adae30a727d64ce4&amp;cidr=10.100.0.0%2F28', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-3e970d5c-34eb-4695-b58f-963e5d6673c1'}
+    Response - Headers: {'status': '200', 'content-length': '15', 'content-location': 'http://10.0.2.15:9696/v2.0/subnets?tenant_id=3673b47fae71484c81e42d59ae4c8030&amp;cidr=10.100.0.0%2F28', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:27:59 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8a20d7c5-9619-472a-9656-f307f3d30fba'}
         Body: {"subnets": []}
-2015-12-08 20:44:58,318 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/subnets 0.264s
-2015-12-08 20:44:58,318 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"subnet": {"ip_version": 4, "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "cidr": "10.100.0.0/28", "network_id": "851afad0-3a8a-4f36-97fb-f545bd6e4bce", "name": "tempest-subnet-smoke-22954779"}}
-    Response - Headers: {'status': '201', 'content-length': '476', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-b5816f7a-ed09-4b49-a655-ab44fbfcadfb'}
-        Body: {"subnet": {"name": "tempest-subnet-smoke-22954779", "enable_dhcp": true, "network_id": "851afad0-3a8a-4f36-97fb-f545bd6e4bce", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "dns_nameservers": [], "gateway_ip": "10.100.0.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.100.0.2", "end": "10.100.0.14"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.100.0.0/28", "id": "8e6c0cd5-9523-4585-b1e5-616ca284dc6f", "subnetpool_id": null}}
-2015-12-08 20:44:58,786 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 PUT http://10.0.2.15:9696/v2.0/routers/76e6bbcb-000e-4284-8a40-278909dd23b5/add_router_interface 0.466s
-2015-12-08 20:44:58,786 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"subnet_id": "8e6c0cd5-9523-4585-b1e5-616ca284dc6f"}
-    Response - Headers: {'status': '200', 'content-length': '255', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8fb5aea1-6a74-4312-9cdf-b74b9853fa60'}
-        Body: {"subnet_id": "8e6c0cd5-9523-4585-b1e5-616ca284dc6f", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "subnet_ids": ["8e6c0cd5-9523-4585-b1e5-616ca284dc6f"], "port_id": "78f466c5-9f72-406a-9e33-342584aad055", "id": "76e6bbcb-000e-4284-8a40-278909dd23b5"}
-2015-12-08 20:44:58,829 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/networks 0.042s
-2015-12-08 20:44:58,829 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:28:00,225 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/subnets 0.232s
+2015-12-09 03:28:00,225 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"subnet": {"ip_version": 4, "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "cidr": "10.100.0.0/28", "network_id": "43b4f651-e299-4117-89c3-00b2386b26ca", "name": "tempest-subnet-smoke-1340847515"}}
+    Response - Headers: {'status': '201', 'content-length': '478', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:00 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-91172f07-a3c2-416b-b2f8-1cb4a404dbf8'}
+        Body: {"subnet": {"name": "tempest-subnet-smoke-1340847515", "enable_dhcp": true, "network_id": "43b4f651-e299-4117-89c3-00b2386b26ca", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "dns_nameservers": [], "gateway_ip": "10.100.0.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.100.0.2", "end": "10.100.0.14"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.100.0.0/28", "id": "f1928663-4b84-430f-91ad-383c1f724287", "subnetpool_id": null}}
+2015-12-09 03:28:00,724 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 PUT http://10.0.2.15:9696/v2.0/routers/ac471172-e925-4881-8b2c-4f65ae53e9e7/add_router_interface 0.497s
+2015-12-09 03:28:00,725 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"subnet_id": "f1928663-4b84-430f-91ad-383c1f724287"}
+    Response - Headers: {'status': '200', 'content-length': '255', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:00 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-c1879f93-9a84-4fd8-b328-0c4518d4972b'}
+        Body: {"subnet_id": "f1928663-4b84-430f-91ad-383c1f724287", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "subnet_ids": ["f1928663-4b84-430f-91ad-383c1f724287"], "port_id": "aab04168-13ea-4a49-8c9e-73154f831b72", "id": "ac471172-e925-4881-8b2c-4f65ae53e9e7"}
+2015-12-09 03:28:00,776 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/networks 0.051s
+2015-12-09 03:28:00,777 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '1316', 'content-location': 'http://10.0.2.15:9696/v2.0/networks', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-ee2461ed-8618-4479-bdee-0ab68c0f0741'}
-        Body: {"networks": [{"status": "ACTIVE", "subnets": ["8e6c0cd5-9523-4585-b1e5-616ca284dc6f"], "name": "tempest-network-smoke--32123973", "provider:physical_network": null, "admin_state_up": true, "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "mtu": 0, "router:external": false, "shared": false, "port_security_enabled": true, "provider:network_type": "vxlan", "id": "851afad0-3a8a-4f36-97fb-f545bd6e4bce", "provider:segmentation_id": 1029}, {"status": "ACTIVE", "subnets": ["a4897e1f-ed06-4e6e-9359-adf3f749960c", "3d4539ed-6c35-4866-9ec1-5f1a24007e44"], "name": "public", "provider:physical_network": null, "admin_state_up": true, "tenant_id": "a0062a0d4df540c3834460858f591083", "mtu": 0, "router:external": true, "shared": false, "port_security_enabled": true, "provider:network_type": "vxlan", "id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "provider:segmentation_id": 1062}, {"status": "ACTIVE", "subnets": ["820e7a63-1106-4221-a89b-8e0417d510ac", "fa9f5084-0606-4854-a319-8d26a0f3c1c9"], "name": "private", "provider:physical_network": null, "admin_state_up": true, "tenant_id": "1be1e424271d426791db59e76a7364e3", "mtu": 0, "router:external": false, "shared": false, "port_security_enabled": true, "provider:network_type": "vxlan", "id": "6540b4d7-d1ff-4c87-bdea-89890cb9cd62", "provider:segmentation_id": 1050}]}
-2015-12-08 20:44:58,904 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/subnets 0.074s
-2015-12-08 20:44:58,905 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '1318', 'content-location': 'http://10.0.2.15:9696/v2.0/networks', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:00 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-5010cd21-3ac8-46e5-8cb7-45263d081b5f'}
+        Body: {"networks": [{"status": "ACTIVE", "subnets": ["e83c8aee-9886-4896-ace4-91f18d70e864", "33c9889c-8117-461a-825c-73407933c28c"], "name": "public", "provider:physical_network": null, "admin_state_up": true, "tenant_id": "ef5654b611074b2f9d946e10fc0dc7ab", "mtu": 0, "router:external": true, "shared": false, "port_security_enabled": true, "provider:network_type": "vxlan", "id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "provider:segmentation_id": 1101}, {"status": "ACTIVE", "subnets": ["f1928663-4b84-430f-91ad-383c1f724287"], "name": "tempest-network-smoke--1781440557", "provider:physical_network": null, "admin_state_up": true, "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "mtu": 0, "router:external": false, "shared": false, "port_security_enabled": true, "provider:network_type": "vxlan", "id": "43b4f651-e299-4117-89c3-00b2386b26ca", "provider:segmentation_id": 1053}, {"status": "ACTIVE", "subnets": ["0b6ce410-09f0-4a93-a37b-7dff296fdb7d", "39ec77f5-4c37-47a2-a9ad-7121d4671a43"], "name": "private", "provider:physical_network": null, "admin_state_up": true, "tenant_id": "dafa96289eaf4457a7b717d318a4eadc", "mtu": 0, "router:external": false, "shared": false, "port_security_enabled": true, "provider:network_type": "vxlan", "id": "e5ac8c98-7ea1-42bd-935b-4245e530f34e", "provider:segmentation_id": 1074}]}
+2015-12-09 03:28:00,856 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/subnets 0.078s
+2015-12-09 03:28:00,856 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '2406', 'content-location': 'http://10.0.2.15:9696/v2.0/subnets', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8e50aa1a-b834-4c51-a663-178b02a1fe13'}
-        Body: {"subnets": [{"name": "tempest-subnet-smoke-22954779", "enable_dhcp": true, "network_id": "851afad0-3a8a-4f36-97fb-f545bd6e4bce", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "dns_nameservers": [], "gateway_ip": "10.100.0.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.100.0.2", "end": "10.100.0.14"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.100.0.0/28", "id": "8e6c0cd5-9523-4585-b1e5-616ca284dc6f", "subnetpool_id": null}, {"name": "ipv6-public-subnet", "enable_dhcp": false, "network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "tenant_id": "a0062a0d4df540c3834460858f591083", "dns_nameservers": [], "gateway_ip": "2001:db8::2", "ipv6_ra_mode": null, "allocation_pools": [{"start": "2001:db8::3", "end": "2001:db8::ffff:ffff:ffff:ffff"}, {"start": "2001:db8::1", "end": "2001:db8::1"}], "host_routes": [], "ip_version": 6, "ipv6_address_mode": null, "cidr": "2001:db8::/64", "id": "a4897e1f-ed06-4e6e-9359-adf3f749960c", "subnetpool_id": null}, {"name": "public-subnet", "enable_dhcp": false, "network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "tenant_id": "a0062a0d4df540c3834460858f591083", "dns_nameservers": [], "gateway_ip": "172.24.4.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "172.24.4.2", "end": "172.24.4.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "172.24.4.0/24", "id": "3d4539ed-6c35-4866-9ec1-5f1a24007e44", "subnetpool_id": null}, {"name": "private-subnet", "enable_dhcp": true, "network_id": "6540b4d7-d1ff-4c87-bdea-89890cb9cd62", "tenant_id": "1be1e424271d426791db59e76a7364e3", "dns_nameservers": [], "gateway_ip": "10.0.0.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.0.0.2", "end": "10.0.0.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.0.0.0/24", "id": "820e7a63-1106-4221-a89b-8e0417d510ac", "subnetpool_id": null}, {"name": "ipv6-private-subnet", "enable_dhcp": true, "network_id": "6540b4d7-d1ff-4c87-bdea-89890cb9cd62", "tenant_id": "1be1e424271d426791db59e76a7364e3", "dns_nameservers": [], "gateway_ip": "fdde:eb8e:14d2::1", "ipv6_ra_mode": "slaac", "allocation_pools": [{"start": "fdde:eb8e:14d2::2", "end": "fdde:eb8e:14d2:0:ffff:ffff:ffff:ffff"}], "host_routes": [], "ip_version": 6, "ipv6_address_mode": "slaac", "cidr": "fdde:eb8e:14d2::/64", "id": "fa9f5084-0606-4854-a319-8d26a0f3c1c9", "subnetpool_id": null}]}
-2015-12-08 20:44:58,944 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/routers 0.038s
-2015-12-08 20:44:58,945 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '2408', 'content-location': 'http://10.0.2.15:9696/v2.0/subnets', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:00 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-627a69fb-422c-4c76-8abd-1e024bf7a02a'}
+        Body: {"subnets": [{"name": "ipv6-public-subnet", "enable_dhcp": false, "network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "tenant_id": "ef5654b611074b2f9d946e10fc0dc7ab", "dns_nameservers": [], "gateway_ip": "2001:db8::2", "ipv6_ra_mode": null, "allocation_pools": [{"start": "2001:db8::1", "end": "2001:db8::1"}, {"start": "2001:db8::3", "end": "2001:db8::ffff:ffff:ffff:ffff"}], "host_routes": [], "ip_version": 6, "ipv6_address_mode": null, "cidr": "2001:db8::/64", "id": "33c9889c-8117-461a-825c-73407933c28c", "subnetpool_id": null}, {"name": "tempest-subnet-smoke-1340847515", "enable_dhcp": true, "network_id": "43b4f651-e299-4117-89c3-00b2386b26ca", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "dns_nameservers": [], "gateway_ip": "10.100.0.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.100.0.2", "end": "10.100.0.14"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.100.0.0/28", "id": "f1928663-4b84-430f-91ad-383c1f724287", "subnetpool_id": null}, {"name": "ipv6-private-subnet", "enable_dhcp": true, "network_id": "e5ac8c98-7ea1-42bd-935b-4245e530f34e", "tenant_id": "dafa96289eaf4457a7b717d318a4eadc", "dns_nameservers": [], "gateway_ip": "fdf9:3ef1:c943::1", "ipv6_ra_mode": "slaac", "allocation_pools": [{"start": "fdf9:3ef1:c943::2", "end": "fdf9:3ef1:c943:0:ffff:ffff:ffff:ffff"}], "host_routes": [], "ip_version": 6, "ipv6_address_mode": "slaac", "cidr": "fdf9:3ef1:c943::/64", "id": "39ec77f5-4c37-47a2-a9ad-7121d4671a43", "subnetpool_id": null}, {"name": "private-subnet", "enable_dhcp": true, "network_id": "e5ac8c98-7ea1-42bd-935b-4245e530f34e", "tenant_id": "dafa96289eaf4457a7b717d318a4eadc", "dns_nameservers": [], "gateway_ip": "10.0.0.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.0.0.2", "end": "10.0.0.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.0.0.0/24", "id": "0b6ce410-09f0-4a93-a37b-7dff296fdb7d", "subnetpool_id": null}, {"name": "public-subnet", "enable_dhcp": false, "network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "tenant_id": "ef5654b611074b2f9d946e10fc0dc7ab", "dns_nameservers": [], "gateway_ip": "172.24.4.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "172.24.4.2", "end": "172.24.4.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "172.24.4.0/24", "id": "e83c8aee-9886-4896-ace4-91f18d70e864", "subnetpool_id": null}]}
+2015-12-09 03:28:00,923 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/routers 0.065s
+2015-12-09 03:28:00,924 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '1041', 'content-location': 'http://10.0.2.15:9696/v2.0/routers', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:58 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-9dad78e1-c38f-41ba-951a-6849c827949b'}
-        Body: {"routers": [{"status": "ACTIVE", "external_gateway_info": {"network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "3d4539ed-6c35-4866-9ec1-5f1a24007e44", "ip_address": "172.24.4.17"}, {"subnet_id": "a4897e1f-ed06-4e6e-9359-adf3f749960c", "ip_address": "2001:db8::12"}]}, "name": "tempest-router-smoke-53082853", "admin_state_up": true, "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "distributed": false, "routes": [], "ha": false, "id": "76e6bbcb-000e-4284-8a40-278909dd23b5"}, {"status": "ACTIVE", "external_gateway_info": {"network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "3d4539ed-6c35-4866-9ec1-5f1a24007e44", "ip_address": "172.24.4.2"}, {"subnet_id": "a4897e1f-ed06-4e6e-9359-adf3f749960c", "ip_address": "2001:db8::3"}]}, "name": "router1", "admin_state_up": true, "tenant_id": "1be1e424271d426791db59e76a7364e3", "distributed": false, "routes": [], "ha": false, "id": "7efd48fe-40f4-43f2-b697-4afb9d70c905"}]}
-2015-12-08 20:44:59,183 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 POST http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/os-keypairs 0.237s
-2015-12-08 20:44:59,183 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"keypair": {"name": "tempest-TestNetworkBasicOps-1316733939"}}
-    Response - Headers: {'status': '200', 'content-length': '2325', 'x-compute-request-id': 'req-e32d1217-27bc-4247-9809-21c09fbb6d3e', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:44:59 GMT', 'content-type': 'application/json'}
-        Body: {"keypair": {"public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCmDstzFZHsmxG5/nHTVtIYXG5nRd28sGzth4wkaGiyro8bfvq88gjVoerod/j1XGtOuPryL/bjvDfUQSVfHY4opftzGoDTVC6pO3tSYk0YGA0hsR67nPPpBJx1KXgyfDcGl904qAoIJKmt2a1gJlJKBjn2NOwDPD2Th4VkHrbQdBtvLsljRTztWcnRek3EPqoCR4IEuyVl7eRTs6q3s0eZtSlf34VJGp6x8JS2LSHUVKy4IXIQ9GEQzJ/8aXv+K/SDkj8+HwJKS9xs2saiyHMN2ZWrlwgfpJSvf/BLHx1wOaJ33aYD/plGQ4KaJkn3ApKxGoP3aIyt1f2TrRThTj/n Generated-by-Nova", "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEqgIBAAKCAQEApg7LcxWR7JsRuf5x01bSGFxuZ0XdvLBs7YeMJGhosq6PG376\nvPII1aHq6Hf49VxrTrj68i/247w31EElXx2OKKX7cxqA01QuqTt7UmJNGBgNIbEe\nu5zz6QScdSl4Mnw3BpfdOKgKCCSprdmtYCZSSgY59jTsAzw9k4eFZB620HQbby7J\nY0U87VnJ0XpNxD6qAkeCBLslZe3kU7Oqt7NHmbUpX9+FSRqesfCUti0h1FSsuCFy\nEPRhEMyf/Gl7/iv0g5I/Ph8CSkvcbNrGoshzDdmVq5cIH6SUr3/wSx8dcDmid92m\nA/6ZRkOCmiZJ9wKSsRqD92iMrdX9k60U4U4/5wIDAQABAoIBAE5T0jGBrig96Pmj\nhItce5NUHhuGgBYd3fOYqUkPGruVzRj6J0lynSovyv9Gf980bcVfSbdtWnaHdIoh\nBIC+Dy0rRdVAXh3QqoXW8c+lYJoJ1j/bLRTv7rkuHKLDIdgmcUoh3g54bOr0aDkB\n4V7mFJCoKTTyN5U7GAx7szbLqg3ew9HIfzoGDiVZsxhAJA8/94AV4wKBKHwnxW2T\nyQNbKkqUrOIQJtLHGSZZ2exwRoNBNETNZx14Bdf/0tD9GcclgA9s1SVO/A0AkZ+z\nMjAJiIFo2Rhk9y/KJ6NOwfW+D8DxPuyMS7OR2yBcm2xswnryFtWMbkZGorCMfrIm\nzq3eXxECggCBAMUpmw2xH6ULRn+d/z38DG2r87W2dePx43WTjt6fHJOT9MUlWrqV\nsQ8AOv9McUCyZG3KnCF0LFFWe14Gif/rxGXeNGxAFpEAjMCP9Wdqm0NMnTl3o47v\nIz8ZQow63JtqgeB5S/UgOGOHeWTrdxiORH+IxpsVKaoj2aN+bpHldN3fAoIAgQDX\nnOraOYkbvBT9+vm0gJItO099skQSUEFO2RwwJk0RmnNwErGR28jMAvDNDX69K7Z2\neo/5PudJo4evFbLgDM/1OiQbZyNjDXhU5N01H6ZLz/cdsZHXHBsD548XjoIUUeGH\noSVYNvJzgWTlNB6YCrQbIIynmKzehWNaTR0uSQfO+QKCAIEAigwSm6icDpRxfSNk\nNsNG9HdEQcQKkVqpN4bkru1bNd2PsYXxG9l5ypYPuPeOCI2fkdweK7JK4XybDn+n\nmkA7GFRYAj9xTX/EDYP+gLV9FscLAtTI+WhpFmIaXVNNaahOXZywWWaA9PdDQS05\nC0F5po5e+PD9ZjqJxVbeFltB06MCggCBAKmLPKmpAIWMmj01M1GaoFdtAg7nNNvp\nu9ESrDW4iHXFK+z+5h654uV5knzLldOPIgV8TuZBboHbU4B74ZKIwKYmt+nMamkj\nWHH5HXD+mDeZKspwrSuncB7b4Qs3BlaQJHYQY1tAqdnl777EAyKvl/yU1cWcKqM3\n5G5HoSCaUMeRAoIAgQCk9kRdAq8O9iK/KXlglSuM5r2k1TE+3SR5/qA7hKBMemVm\nyvYcfTsy2YpcilIcDrfkEg6JEN5+US0WtzzMhZ6n7fN1fLcb/EpW7HpB25PtZlY+\nuf297UN8l2KKdUNQA5aJg5ywQhpHnGZgfuE7vuos0wneN/tpf/M/2XqCHox/DA==\n-----END RSA PRIVATE KEY-----\n", "user_id": "118a621812a144f3aed445a4f073977a", "name": "tempest-TestNetworkBasicOps-1316733939", "fingerprint": "bd:70:24:03:2a:33:5f:c0:4d:f5:92:82:fa:7a:6f:a2"}}
-2015-12-08 20:44:59,309 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 POST http://10.0.2.15:5000/v2.0/tokens
-2015-12-08 20:44:59,310 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}
+    Response - Headers: {'status': '200', 'content-length': '1042', 'content-location': 'http://10.0.2.15:9696/v2.0/routers', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:00 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-56c865ea-26c5-40e5-a7c0-397fb13be7a1'}
+        Body: {"routers": [{"status": "ACTIVE", "external_gateway_info": {"network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "e83c8aee-9886-4896-ace4-91f18d70e864", "ip_address": "172.24.4.2"}, {"subnet_id": "33c9889c-8117-461a-825c-73407933c28c", "ip_address": "2001:db8::1"}]}, "name": "router1", "admin_state_up": true, "tenant_id": "dafa96289eaf4457a7b717d318a4eadc", "distributed": false, "routes": [], "ha": false, "id": "816123b0-17f0-4c1d-b5a4-8cbdd67c7d7f"}, {"status": "ACTIVE", "external_gateway_info": {"network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "e83c8aee-9886-4896-ace4-91f18d70e864", "ip_address": "172.24.4.17"}, {"subnet_id": "33c9889c-8117-461a-825c-73407933c28c", "ip_address": "2001:db8::11"}]}, "name": "tempest-router-smoke-461939224", "admin_state_up": true, "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "distributed": false, "routes": [], "ha": false, "id": "ac471172-e925-4881-8b2c-4f65ae53e9e7"}]}
+2015-12-09 03:28:01,047 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 POST http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/os-keypairs 0.122s
+2015-12-09 03:28:01,048 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"keypair": {"name": "tempest-TestNetworkBasicOps-1199365393"}}
+    Response - Headers: {'status': '200', 'content-length': '2321', 'x-compute-request-id': 'req-16ce58cc-91d0-4cbb-a6b7-6526c37233a8', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:28:01 GMT', 'content-type': 'application/json'}
+        Body: {"keypair": {"public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1CPUgYXYzOCjJEwpMBpm0NFsQYpVrjXKWoYxNhFImTBUOj1nQwLbVy5wKYdWmBNs+m7v2dpSs7fGkIwCyrCvgNqOq4IiYPgaAMIFJTjjkBHMJ0Clt5UIktA+LrpAYupjsBpj617hldsDR8ozEvqmN2SfOVyjNBS37j3ci4RIR/Bwk0BVNaHC6MCMYuw1kC2gCDWTQ4tSKh7+WSWDwRqJpIHlo3Qs3RxnVaXAG/2YXXXL7faiZ8Ocsdsk7TBvDR9nv31ZkAqVT7l39ujdkQMQu0kgp6uDBoeGZNlKZ8xhbHkPXrtGQZhEK+IDVkAOvlAWh1j+DmYOCzRJ1593gwPSF Generated-by-Nova", "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEqAIBAAKCAQEAtQj1IGF2MzgoyRMKTAaZtDRbEGKVa41ylqGMTYRSJkwVDo9Z\n0MC21cucCmHVpgTbPpu79naUrO3xpCMAsqwr4DajquCImD4GgDCBSU445ARzCdAp\nbeVCJLQPi66QGLqY7AaY+te4ZXbA0fKMxL6pjdknzlcozQUt+493IuESEfwcJNAV\nTWhwujAjGLsNZAtoAg1k0OLUioe/lklg8EaiaSB5aN0LN0cZ1WlwBv9mF11y+32o\nmfDnLHbJO0wbw0fZ799WZAKlU+5d/bo3ZEDELtJIKergwaHhmTZSmfMYWx5D167R\nkGYRCviA1ZADr5QFodY/g5mDgs0Sdefd4MD0hQIDAQABAoIBAQCjkOVRDV3rZylK\ni155VFlZfRhuFHRmiZVnzaxjeVNz8LfxwMlomEZZoq5onv6XEro4tiK8y2UHXbE/\nGLUPugmmehekU1x3GUtsVObrIba7Jd3+lspn1YTOfrWxAdaF0UpLrqZXtcKQQhxz\nVI+lT5MIa5TQlOVzX+Os73G33N0jyz1OcH+Y16Nq7nLfF+eoviSg6u26EJhpzzMv\nSWmH+Hn0zxloJMW+4yYoQPgf4wdZv5UGb7j5CMhrfC8enqoRLKcUXZNf9fbLn8sw\nRfTDu1C/DzQpqqq2d4DoRY9quV/EXvIBoSQ+9QfqDxMwl97MDjVLa7bHg9qtWBg0\nsIhAxmAhAoIAgQDSQsd0AMsuJ/G9S4tBvHHZ2TUF7IuVz8TDJzudW4gJOeu71S88\nnuBNvVI9dteLcI+YxAFzx4jAGbiisF5qzDQJi5Y1JU5DaBNKdr1b2GvOPJ9G9EVi\nilcu8slYVjI4lyvH25DG/1GZSqIm4JRZFXhtx5KDZdk32lef3if/sQU7+QKCAIEA\n3GqeXZ2IrOKJvNZco333cca9t/ZPyhrQ1Xgthje8WKF/ntYtDZWDlQM3gSQdJxk0\nibGc62dFNYraJ568G5swiZVbgniTavaYyE8V+war7O4jyjDbXW5mokYtPC+uTrD8\ncrRSn2lUY7Hd9RFwc7nH4wU4uyEmoiEGldRHIjNRp+0CggCAGZON94pxLLgnK8OY\nuPJXVwyY6pOPlzWi1apcEhQkRBsLldmk2VbqKgqxilB+f7O9g/OzyYWoGNYII6IY\nmh0k51RXfTeAgaqTTieLeTSmSHwPU+460nXJjShzXY9+pGufI7yNq+c64c62UsxW\nv09hStlP9TPabHTe28+GRhAeduECggCAZmn3yYGwBrx/yUlE5AZcmfYBIuAEtOB+\n1iEv7eQp1Hi9ppzXdC9bYzqKaKvSC9+vRKdNRSfHxZgNw0kDGESkadkHGvlRberE\nlJYCnY+9BKql4IWQ97mbYJ0A2a1B7XhY5CcbGMzFFEmJ2xvOR0c0NCyx7mj53W1A\n9Q8cOizkLQUCggCAO6zUOP+69BXv0Px41oiizSGklW0fXQb3Gbp1mNKhLVEH+Qu9\nbNL1gAeoIAZDrm3rsuxa2bH6T1U3RL04oM2pD+LYd7OGOxWSjdbPina925pNy//y\nNH3ZzRTIQD9s8ZDa3EaAebawZEElaHu+GzsEuZeG5QnKUXr2GGnxtVlL35w=\n-----END RSA PRIVATE KEY-----\n", "user_id": "8d75de1de4b14acfa3e6b8c56ef43427", "name": "tempest-TestNetworkBasicOps-1199365393", "fingerprint": "de:9b:75:eb:05:c0:97:0e:91:2b:40:10:ff:6f:99:15"}}
+2015-12-09 03:28:01,161 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 POST http://10.0.2.15:5000/v2.0/tokens
+2015-12-09 03:28:01,161 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}
         Body: &lt;omitted&gt;
-    Response - Headers: {'status': '200', 'content-length': '2526', 'vary': 'X-Auth-Token', 'server': 'Apache/2.4.7 (Ubuntu)', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:44:59 GMT', 'content-type': 'application/json', 'x-openstack-request-id': 'req-09c1d82c-c719-468d-8113-60723ba272b0'}
-        Body: {"access": {"token": {"issued_at": "2015-12-08T20:44:59.295665", "expires": "2015-12-08T21:44:59Z", "id": "5f16c68ad5d347c6b4b7dc1bfbdbb411", "tenant": {"description": "tempest-TestNetworkBasicOps-972936126-desc", "enabled": true, "id": "a1d0d7bdb17b41d0adae30a727d64ce4", "name": "tempest-TestNetworkBasicOps-972936126"}, "audit_ids": ["_cbLiQ8iSJ6pEcCqi0F1zg"]}, "serviceCatalog": [{"endpoints": [{"adminURL": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4", "region": "RegionOne", "internalURL": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4", "id": "2a70377bc1ae4949aaf9d7d326227598", "publicURL": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4"}], "endpoints_links": [], "type": "compute", "name": "nova"}, {"endpoints": [{"adminURL": "http://10.0.2.15:9696/", "region": "RegionOne", "internalURL": "http://10.0.2.15:9696/", "id": "438450ad912c459abf82eabe39722236", "publicURL": "http://10.0.2.15:9696/"}], "endpoints_links": [], "type": "network", "name": "neutron"}, {"endpoints": [{"adminURL": "http://10.0.2.15:9292", "region": "RegionOne", "internalURL": "http://10.0.2.15:9292", "id": "320076d89b8f415ca3dd9e42d6a4504f", "publicURL": "http://10.0.2.15:9292"}], "endpoints_links": [], "type": "image", "name": "glance"}, {"endpoints": [{"adminURL": "http://10.0.2.15:8774/v2/a1d0d7bdb17b41d0adae30a727d64ce4", "region": "RegionOne", "internalURL": "http://10.0.2.15:8774/v2/a1d0d7bdb17b41d0adae30a727d64ce4", "id": "6665d1d61375426689a9496dd4742b27", "publicURL": "http://10.0.2.15:8774/v2/a1d0d7bdb17b41d0adae30a727d64ce4"}], "endpoints_links": [], "type": "compute_legacy", "name": "nova_legacy"}, {"endpoints": [{"adminURL": "http://10.0.2.15:8773/", "region": "RegionOne", "internalURL": "http://10.0.2.15:8773/", "id": "57763143bd9145769a25310480e751b2", "publicURL": "http://10.0.2.15:8773/"}], "endpoints_links": [], "type": "ec2", "name": "ec2"}, {"endpoints": [{"adminURL": "http://10.0.2.15:35357/v2.0", "region": "RegionOne", "internalURL": "http://10.0.2.15:5000/v2.0", "id": "69cd017b8975441c91fdfee6e039c8b1", "publicURL": "http://10.0.2.15:5000/v2.0"}], "endpoints_links": [], "type": "identity", "name": "keystone"}], "user": {"username": "tempest-TestNetworkBasicOps-523815322", "roles_links": [], "id": "118a621812a144f3aed445a4f073977a", "roles": [{"name": "_member_"}, {"name": "Member"}], "name": "tempest-TestNetworkBasicOps-523815322"}, "metadata": {"is_admin": 0, "roles": ["9fe2ff9ee4384b1894a90878d3e92bab", "df7cf88cba58401c8118cd68e45ecaf1"]}}}
-2015-12-08 20:44:59,317 27633 DEBUG    [tempest.common.fixed_network] (TestNetworkBasicOps:test_update_instance_port_admin_state) No valid network provided or created, defaulting to fixed_network_name
-2015-12-08 20:44:59,638 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/os-networks 0.320s
-2015-12-08 20:44:59,639 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '2528', 'vary': 'X-Auth-Token', 'server': 'Apache/2.4.7 (Ubuntu)', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:01 GMT', 'content-type': 'application/json', 'x-openstack-request-id': 'req-ad834420-59e3-4111-a040-f3ca04887bc9'}
+        Body: {"access": {"token": {"issued_at": "2015-12-09T03:28:01.148308", "expires": "2015-12-09T04:28:01Z", "id": "f81c0212ca1f40b2947f40b04afbfd76", "tenant": {"description": "tempest-TestNetworkBasicOps-1628634719-desc", "enabled": true, "id": "3673b47fae71484c81e42d59ae4c8030", "name": "tempest-TestNetworkBasicOps-1628634719"}, "audit_ids": ["TFcBickGSnKZ2usLWJeXvw"]}, "serviceCatalog": [{"endpoints": [{"adminURL": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030", "region": "RegionOne", "internalURL": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030", "id": "30d70a800b5f482980629fba7be8d236", "publicURL": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030"}], "endpoints_links": [], "type": "compute", "name": "nova"}, {"endpoints": [{"adminURL": "http://10.0.2.15:9696/", "region": "RegionOne", "internalURL": "http://10.0.2.15:9696/", "id": "2219f0f5141f4f47867f02ee442cd807", "publicURL": "http://10.0.2.15:9696/"}], "endpoints_links": [], "type": "network", "name": "neutron"}, {"endpoints": [{"adminURL": "http://10.0.2.15:9292", "region": "RegionOne", "internalURL": "http://10.0.2.15:9292", "id": "67849bef5b62475abc74402f11ef6e22", "publicURL": "http://10.0.2.15:9292"}], "endpoints_links": [], "type": "image", "name": "glance"}, {"endpoints": [{"adminURL": "http://10.0.2.15:8774/v2/3673b47fae71484c81e42d59ae4c8030", "region": "RegionOne", "internalURL": "http://10.0.2.15:8774/v2/3673b47fae71484c81e42d59ae4c8030", "id": "330d7be9eb5b413c995bdeb9974cd8bf", "publicURL": "http://10.0.2.15:8774/v2/3673b47fae71484c81e42d59ae4c8030"}], "endpoints_links": [], "type": "compute_legacy", "name": "nova_legacy"}, {"endpoints": [{"adminURL": "http://10.0.2.15:8773/", "region": "RegionOne", "internalURL": "http://10.0.2.15:8773/", "id": "0a76369da2834a528253b87b2de0486b", "publicURL": "http://10.0.2.15:8773/"}], "endpoints_links": [], "type": "ec2", "name": "ec2"}, {"endpoints": [{"adminURL": "http://10.0.2.15:35357/v2.0", "region": "RegionOne", "internalURL": "http://10.0.2.15:5000/v2.0", "id": "32861fc274be4cc69db9561677d103f5", "publicURL": "http://10.0.2.15:5000/v2.0"}], "endpoints_links": [], "type": "identity", "name": "keystone"}], "user": {"username": "tempest-TestNetworkBasicOps-460279595", "roles_links": [], "id": "8d75de1de4b14acfa3e6b8c56ef43427", "roles": [{"name": "_member_"}, {"name": "Member"}], "name": "tempest-TestNetworkBasicOps-460279595"}, "metadata": {"is_admin": 0, "roles": ["9fe2ff9ee4384b1894a90878d3e92bab", "064014c2020a49c698a43689ad1db574"]}}}
+2015-12-09 03:28:01,170 32668 DEBUG    [tempest.common.fixed_network] (TestNetworkBasicOps:test_update_instance_port_admin_state) No valid network provided or created, defaulting to fixed_network_name
+2015-12-09 03:28:01,501 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/os-networks 0.330s
+2015-12-09 03:28:01,502 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '477', 'content-location': 'http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/os-networks', 'x-compute-request-id': 'req-c6664dcc-80c0-4bb6-a392-75b3a01aa569', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:44:59 GMT', 'content-type': 'application/json'}
-        Body: {"networks": [{"cidr_v6": null, "dns2": null, "dns1": null, "gateway": null, "broadcast": null, "netmask": null, "gateway_v6": null, "cidr": null, "label": "tempest-network-smoke--32123973", "id": "851afad0-3a8a-4f36-97fb-f545bd6e4bce", "netmask_v6": null}, {"cidr_v6": null, "dns2": null, "dns1": null, "gateway": null, "broadcast": null, "netmask": null, "gateway_v6": null, "cidr": null, "label": "public", "id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "netmask_v6": null}]}
-2015-12-08 20:44:59,639 27633 WARNING  [tempest.common.fixed_network] (TestNetworkBasicOps:test_update_instance_port_admin_state) Network with name: private not found
-2015-12-08 20:44:59,640 27633 INFO     [tempest.common.fixed_network] (TestNetworkBasicOps:test_update_instance_port_admin_state) Found network {} available for tenant
-2015-12-08 20:45:00,258 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 202 POST http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers 0.616s
-2015-12-08 20:45:00,258 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"server": {"name": "tempest.common.compute-instance-1872437584", "imageRef": "eb463a7b-fb86-47cd-a354-5cc4e350b304", "key_name": "tempest-TestNetworkBasicOps-1316733939", "flavorRef": "42", "networks": [{"uuid": "851afad0-3a8a-4f36-97fb-f545bd6e4bce"}], "security_groups": [{"name": "tempest-secgroup-smoke-1069932254"}]}}
-    Response - Headers: {'status': '202', 'content-length': '462', 'x-compute-request-id': 'req-b81d40cf-9daf-49bc-9cb4-3b1444bed1fb', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'location': 'http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:45:00 GMT', 'content-type': 'application/json'}
-        Body: {"server": {"security_groups": [{"name": "tempest-secgroup-smoke-1069932254"}], "OS-DCF:diskConfig": "MANUAL", "id": "3e7fe0db-8c09-4486-bd47-553377a45927", "links": [{"href": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "self"}, {"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "bookmark"}], "adminPass": "KixqxjEXXnX6"}}
-2015-12-08 20:45:00,380 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927 0.119s
-2015-12-08 20:45:00,380 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '479', 'content-location': 'http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/os-networks', 'x-compute-request-id': 'req-1b62904a-a9bd-4f6d-9614-00559516dee6', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:28:01 GMT', 'content-type': 'application/json'}
+        Body: {"networks": [{"cidr_v6": null, "dns2": null, "dns1": null, "gateway": null, "broadcast": null, "netmask": null, "gateway_v6": null, "cidr": null, "label": "public", "id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "netmask_v6": null}, {"cidr_v6": null, "dns2": null, "dns1": null, "gateway": null, "broadcast": null, "netmask": null, "gateway_v6": null, "cidr": null, "label": "tempest-network-smoke--1781440557", "id": "43b4f651-e299-4117-89c3-00b2386b26ca", "netmask_v6": null}]}
+2015-12-09 03:28:01,502 32668 WARNING  [tempest.common.fixed_network] (TestNetworkBasicOps:test_update_instance_port_admin_state) Network with name: private not found
+2015-12-09 03:28:01,503 32668 INFO     [tempest.common.fixed_network] (TestNetworkBasicOps:test_update_instance_port_admin_state) Found network {} available for tenant
+2015-12-09 03:28:02,089 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 202 POST http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers 0.585s
+2015-12-09 03:28:02,089 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"server": {"name": "tempest.common.compute-instance-1532565690", "imageRef": "08f3306b-f95b-430a-b7cf-14c7b9431b85", "key_name": "tempest-TestNetworkBasicOps-1199365393", "flavorRef": "42", "networks": [{"uuid": "43b4f651-e299-4117-89c3-00b2386b26ca"}], "security_groups": [{"name": "tempest-secgroup-smoke-931937808"}]}}
+    Response - Headers: {'status': '202', 'content-length': '461', 'x-compute-request-id': 'req-a14616a6-6ac5-4039-a370-5528e208e758', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'location': 'http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:28:02 GMT', 'content-type': 'application/json'}
+        Body: {"server": {"security_groups": [{"name": "tempest-secgroup-smoke-931937808"}], "OS-DCF:diskConfig": "MANUAL", "id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "links": [{"href": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "self"}, {"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "bookmark"}], "adminPass": "Bm29QwydtqZg"}}
+2015-12-09 03:28:02,213 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.120s
+2015-12-09 03:28:02,213 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '1356', 'content-location': 'http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927', 'x-compute-request-id': 'req-64e760f1-baef-4222-86c2-6a7d0a0d9fed', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:45:00 GMT', 'content-type': 'application/json'}
-        Body: {"server": {"status": "BUILD", "updated": "2015-12-08T20:45:00Z", "hostId": "", "addresses": {}, "links": [{"href": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "self"}, {"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1316733939", "image": {"id": "eb463a7b-fb86-47cd-a354-5cc4e350b304", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/images/eb463a7b-fb86-47cd-a354-5cc4e350b304", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "scheduling", "OS-EXT-STS:vm_state": "building", "OS-SRV-USG:launched_at": null, "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/flavors/42", "rel": "bookmark"}]}, "id": "3e7fe0db-8c09-4486-bd47-553377a45927", "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "", "user_id": "118a621812a144f3aed445a4f073977a", "name": "tempest.common.compute-instance-1872437584", "created": "2015-12-08T20:45:00Z", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 0, "config_drive": "", "metadata": {}}}
-2015-12-08 20:45:01,639 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927 0.249s
-2015-12-08 20:45:01,640 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '1356', 'content-location': 'http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8', 'x-compute-request-id': 'req-33750b07-612b-43d3-aacd-358e76a3a740', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:28:02 GMT', 'content-type': 'application/json'}
+        Body: {"server": {"status": "BUILD", "updated": "2015-12-09T03:28:02Z", "hostId": "", "addresses": {}, "links": [{"href": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "self"}, {"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1199365393", "image": {"id": "08f3306b-f95b-430a-b7cf-14c7b9431b85", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/images/08f3306b-f95b-430a-b7cf-14c7b9431b85", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "scheduling", "OS-EXT-STS:vm_state": "building", "OS-SRV-USG:launched_at": null, "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/flavors/42", "rel": "bookmark"}]}, "id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "", "user_id": "8d75de1de4b14acfa3e6b8c56ef43427", "name": "tempest.common.compute-instance-1532565690", "created": "2015-12-09T03:28:02Z", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 0, "config_drive": "", "metadata": {}}}
+2015-12-09 03:28:03,508 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.284s
+2015-12-09 03:28:03,508 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '1482', 'content-location': 'http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927', 'x-compute-request-id': 'req-2eca65e5-ddc1-442c-98e4-941645d375f2', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:45:01 GMT', 'content-type': 'application/json'}
-        Body: {"server": {"status": "BUILD", "updated": "2015-12-08T20:45:01Z", "hostId": "af5d5dd1e68bed381e5777909d18c14aa6b40451549b65f843ee2e93", "addresses": {}, "links": [{"href": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "self"}, {"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1316733939", "image": {"id": "eb463a7b-fb86-47cd-a354-5cc4e350b304", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/images/eb463a7b-fb86-47cd-a354-5cc4e350b304", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "spawning", "OS-EXT-STS:vm_state": "building", "OS-SRV-USG:launched_at": null, "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/flavors/42", "rel": "bookmark"}]}, "id": "3e7fe0db-8c09-4486-bd47-553377a45927", "security_groups": [{"name": "tempest-secgroup-smoke-1069932254"}], "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "118a621812a144f3aed445a4f073977a", "name": "tempest.common.compute-instance-1872437584", "created": "2015-12-08T20:45:00Z", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 0, "config_drive": "", "metadata": {}}}
-2015-12-08 20:45:01,649 27633 INFO     [tempest.common.waiters] State transition "BUILD/scheduling" ==&gt; "BUILD/spawning" after 1 second wait
-2015-12-08 20:45:02,859 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927 0.207s
-2015-12-08 20:45:02,859 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '1481', 'content-location': 'http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8', 'x-compute-request-id': 'req-692bcf24-da41-4c58-b99d-8376f933a5dc', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:28:03 GMT', 'content-type': 'application/json'}
+        Body: {"server": {"status": "BUILD", "updated": "2015-12-09T03:28:02Z", "hostId": "b8c42b300d9696164d2051df4bd26011cf225388a629c0bc203fcc7f", "addresses": {}, "links": [{"href": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "self"}, {"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1199365393", "image": {"id": "08f3306b-f95b-430a-b7cf-14c7b9431b85", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/images/08f3306b-f95b-430a-b7cf-14c7b9431b85", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "spawning", "OS-EXT-STS:vm_state": "building", "OS-SRV-USG:launched_at": null, "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/flavors/42", "rel": "bookmark"}]}, "id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "security_groups": [{"name": "tempest-secgroup-smoke-931937808"}], "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "8d75de1de4b14acfa3e6b8c56ef43427", "name": "tempest.common.compute-instance-1532565690", "created": "2015-12-09T03:28:02Z", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 0, "config_drive": "", "metadata": {}}}
+2015-12-09 03:28:03,518 32668 INFO     [tempest.common.waiters] State transition "BUILD/scheduling" ==&gt; "BUILD/spawning" after 1 second wait
+2015-12-09 03:28:04,721 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.201s
+2015-12-09 03:28:04,722 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '1482', 'content-location': 'http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927', 'x-compute-request-id': 'req-294b0d36-8794-465f-9448-829562d51e4a', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:45:02 GMT', 'content-type': 'application/json'}
-        Body: {"server": {"status": "BUILD", "updated": "2015-12-08T20:45:01Z", "hostId": "af5d5dd1e68bed381e5777909d18c14aa6b40451549b65f843ee2e93", "addresses": {}, "links": [{"href": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "self"}, {"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1316733939", "image": {"id": "eb463a7b-fb86-47cd-a354-5cc4e350b304", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/images/eb463a7b-fb86-47cd-a354-5cc4e350b304", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "spawning", "OS-EXT-STS:vm_state": "building", "OS-SRV-USG:launched_at": null, "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/flavors/42", "rel": "bookmark"}]}, "id": "3e7fe0db-8c09-4486-bd47-553377a45927", "security_groups": [{"name": "tempest-secgroup-smoke-1069932254"}], "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "118a621812a144f3aed445a4f073977a", "name": "tempest.common.compute-instance-1872437584", "created": "2015-12-08T20:45:00Z", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 0, "config_drive": "", "metadata": {}}}
-2015-12-08 20:45:04,057 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927 0.184s
-2015-12-08 20:45:04,058 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '1481', 'content-location': 'http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8', 'x-compute-request-id': 'req-2c34ea89-d9a1-44f1-9556-ffdcc585cfa9', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:28:04 GMT', 'content-type': 'application/json'}
+        Body: {"server": {"status": "BUILD", "updated": "2015-12-09T03:28:02Z", "hostId": "b8c42b300d9696164d2051df4bd26011cf225388a629c0bc203fcc7f", "addresses": {}, "links": [{"href": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "self"}, {"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1199365393", "image": {"id": "08f3306b-f95b-430a-b7cf-14c7b9431b85", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/images/08f3306b-f95b-430a-b7cf-14c7b9431b85", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "spawning", "OS-EXT-STS:vm_state": "building", "OS-SRV-USG:launched_at": null, "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/flavors/42", "rel": "bookmark"}]}, "id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "security_groups": [{"name": "tempest-secgroup-smoke-931937808"}], "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "8d75de1de4b14acfa3e6b8c56ef43427", "name": "tempest.common.compute-instance-1532565690", "created": "2015-12-09T03:28:02Z", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 0, "config_drive": "", "metadata": {}}}
+2015-12-09 03:28:05,947 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.208s
+2015-12-09 03:28:05,948 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '1652', 'content-location': 'http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927', 'x-compute-request-id': 'req-1516d986-83e2-4fb1-8aba-2cb49e41fd46', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:45:04 GMT', 'content-type': 'application/json'}
-        Body: {"server": {"status": "ACTIVE", "updated": "2015-12-08T20:45:02Z", "hostId": "af5d5dd1e68bed381e5777909d18c14aa6b40451549b65f843ee2e93", "addresses": {"tempest-network-smoke--32123973": [{"OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:27:c3:d5", "version": 4, "addr": "10.100.0.3", "OS-EXT-IPS:type": "fixed"}]}, "links": [{"href": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "self"}, {"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1316733939", "image": {"id": "eb463a7b-fb86-47cd-a354-5cc4e350b304", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/images/eb463a7b-fb86-47cd-a354-5cc4e350b304", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": null, "OS-EXT-STS:vm_state": "active", "OS-SRV-USG:launched_at": "2015-12-08T20:45:02.000000", "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/flavors/42", "rel": "bookmark"}]}, "id": "3e7fe0db-8c09-4486-bd47-553377a45927", "security_groups": [{"name": "tempest-secgroup-smoke-1069932254"}], "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "118a621812a144f3aed445a4f073977a", "name": "tempest.common.compute-instance-1872437584", "created": "2015-12-08T20:45:00Z", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 1, "config_drive": "True", "metadata": {}}}
-2015-12-08 20:45:04,067 27633 INFO     [tempest.common.waiters] State transition "BUILD/spawning" ==&gt; "ACTIVE/None" after 4 second wait
-2015-12-08 20:45:04,342 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927 0.274s
-2015-12-08 20:45:04,342 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '1653', 'content-location': 'http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8', 'x-compute-request-id': 'req-ac237a9f-7c09-440d-b05e-6d67e6fcd8fa', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:28:05 GMT', 'content-type': 'application/json'}
+        Body: {"server": {"status": "ACTIVE", "updated": "2015-12-09T03:28:04Z", "hostId": "b8c42b300d9696164d2051df4bd26011cf225388a629c0bc203fcc7f", "addresses": {"tempest-network-smoke--1781440557": [{"OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:b4:06:23", "version": 4, "addr": "10.100.0.3", "OS-EXT-IPS:type": "fixed"}]}, "links": [{"href": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "self"}, {"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1199365393", "image": {"id": "08f3306b-f95b-430a-b7cf-14c7b9431b85", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/images/08f3306b-f95b-430a-b7cf-14c7b9431b85", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": null, "OS-EXT-STS:vm_state": "active", "OS-SRV-USG:launched_at": "2015-12-09T03:28:04.000000", "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/flavors/42", "rel": "bookmark"}]}, "id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "security_groups": [{"name": "tempest-secgroup-smoke-931937808"}], "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "8d75de1de4b14acfa3e6b8c56ef43427", "name": "tempest.common.compute-instance-1532565690", "created": "2015-12-09T03:28:02Z", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 1, "config_drive": "True", "metadata": {}}}
+2015-12-09 03:28:05,961 32668 INFO     [tempest.common.waiters] State transition "BUILD/spawning" ==&gt; "ACTIVE/None" after 3 second wait
+2015-12-09 03:28:06,152 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.190s
+2015-12-09 03:28:06,152 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '1652', 'content-location': 'http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927', 'x-compute-request-id': 'req-ac052129-dbbf-416a-8635-98b6bf471114', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:45:04 GMT', 'content-type': 'application/json'}
-        Body: {"server": {"status": "ACTIVE", "updated": "2015-12-08T20:45:02Z", "hostId": "af5d5dd1e68bed381e5777909d18c14aa6b40451549b65f843ee2e93", "addresses": {"tempest-network-smoke--32123973": [{"OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:27:c3:d5", "version": 4, "addr": "10.100.0.3", "OS-EXT-IPS:type": "fixed"}]}, "links": [{"href": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "self"}, {"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1316733939", "image": {"id": "eb463a7b-fb86-47cd-a354-5cc4e350b304", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/images/eb463a7b-fb86-47cd-a354-5cc4e350b304", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": null, "OS-EXT-STS:vm_state": "active", "OS-SRV-USG:launched_at": "2015-12-08T20:45:02.000000", "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/flavors/42", "rel": "bookmark"}]}, "id": "3e7fe0db-8c09-4486-bd47-553377a45927", "security_groups": [{"name": "tempest-secgroup-smoke-1069932254"}], "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "118a621812a144f3aed445a4f073977a", "name": "tempest.common.compute-instance-1872437584", "created": "2015-12-08T20:45:00Z", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 1, "config_drive": "True", "metadata": {}}}
-2015-12-08 20:45:04,351 27633 INFO     [tempest.scenario.manager] Tenant networks not configured to be reachable.
-2015-12-08 20:45:04,381 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/ports?status=ACTIVE&amp;fixed_ip=None&amp;device_id=3e7fe0db-8c09-4486-bd47-553377a45927 0.030s
-2015-12-08 20:45:04,382 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '1653', 'content-location': 'http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8', 'x-compute-request-id': 'req-e80dea28-eebd-42e5-b6d0-b7ef3e2b7d23', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:28:06 GMT', 'content-type': 'application/json'}
+        Body: {"server": {"status": "ACTIVE", "updated": "2015-12-09T03:28:04Z", "hostId": "b8c42b300d9696164d2051df4bd26011cf225388a629c0bc203fcc7f", "addresses": {"tempest-network-smoke--1781440557": [{"OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:b4:06:23", "version": 4, "addr": "10.100.0.3", "OS-EXT-IPS:type": "fixed"}]}, "links": [{"href": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "self"}, {"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1199365393", "image": {"id": "08f3306b-f95b-430a-b7cf-14c7b9431b85", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/images/08f3306b-f95b-430a-b7cf-14c7b9431b85", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": null, "OS-EXT-STS:vm_state": "active", "OS-SRV-USG:launched_at": "2015-12-09T03:28:04.000000", "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/flavors/42", "rel": "bookmark"}]}, "id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "security_groups": [{"name": "tempest-secgroup-smoke-931937808"}], "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "8d75de1de4b14acfa3e6b8c56ef43427", "name": "tempest.common.compute-instance-1532565690", "created": "2015-12-09T03:28:02Z", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 1, "config_drive": "True", "metadata": {}}}
+2015-12-09 03:28:06,166 32668 INFO     [tempest.scenario.manager] Tenant networks not configured to be reachable.
+2015-12-09 03:28:06,199 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/ports?status=ACTIVE&amp;fixed_ip=None&amp;device_id=78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.033s
+2015-12-09 03:28:06,200 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '895', 'content-location': 'http://10.0.2.15:9696/v2.0/ports?status=ACTIVE&amp;fixed_ip=None&amp;device_id=3e7fe0db-8c09-4486-bd47-553377a45927', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:45:04 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-1688c7fd-1615-4e40-b656-45d033cae3fc'}
-        Body: {"ports": [{"status": "ACTIVE", "binding:host_id": "vagrant-ubuntu-trusty-64", "allowed_address_pairs": [], "extra_dhcp_opts": [], "dns_assignment": [{"hostname": "host-10-100-0-3", "ip_address": "10.100.0.3", "fqdn": "host-10-100-0-3.openstacklocal."}], "device_owner": "compute:None", "port_security_enabled": true, "binding:profile": {}, "fixed_ips": [{"subnet_id": "8e6c0cd5-9523-4585-b1e5-616ca284dc6f", "ip_address": "10.100.0.3"}], "id": "ae1892b2-9194-43a6-9221-3bd1c531beda", "security_groups": ["1763c7b1-ddbf-46fc-9633-99dbad0cdf83"], "device_id": "3e7fe0db-8c09-4486-bd47-553377a45927", "name": "", "admin_state_up": true, "network_id": "851afad0-3a8a-4f36-97fb-f545bd6e4bce", "dns_name": "", "binding:vif_details": {"port_filter": true}, "binding:vnic_type": "normal", "binding:vif_type": "ovs", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "mac_address": "fa:16:3e:27:c3:d5"}]}
-2015-12-08 20:45:04,878 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/floatingips 0.496s
-2015-12-08 20:45:04,879 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"floatingip": {"floating_network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "fixed_ip_address": "10.100.0.3", "port_id": "ae1892b2-9194-43a6-9221-3bd1c531beda"}}
-    Response - Headers: {'status': '201', 'content-length': '368', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:45:04 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-a4d34ed1-080a-4598-8156-6b77e8a12a59'}
-        Body: {"floatingip": {"floating_network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "router_id": "76e6bbcb-000e-4284-8a40-278909dd23b5", "fixed_ip_address": "10.100.0.3", "floating_ip_address": "172.24.4.18", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "status": "DOWN", "port_id": "ae1892b2-9194-43a6-9221-3bd1c531beda", "id": "c701b802-9c40-4872-95ce-a2c89fb96000"}}
-2015-12-08 20:45:04,925 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/ports?device_id=3e7fe0db-8c09-4486-bd47-553377a45927 0.045s
-2015-12-08 20:45:04,925 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '895', 'content-location': 'http://10.0.2.15:9696/v2.0/ports?status=ACTIVE&amp;fixed_ip=None&amp;device_id=78d832f7-a972-4fcf-b96d-9de1f3c25fb8', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:06 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-e18672c3-6c46-49a3-81e7-fc843f3ebd12'}
+        Body: {"ports": [{"status": "ACTIVE", "binding:host_id": "vagrant-ubuntu-trusty-64", "allowed_address_pairs": [], "extra_dhcp_opts": [], "dns_assignment": [{"hostname": "host-10-100-0-3", "ip_address": "10.100.0.3", "fqdn": "host-10-100-0-3.openstacklocal."}], "device_owner": "compute:None", "port_security_enabled": true, "binding:profile": {}, "fixed_ips": [{"subnet_id": "f1928663-4b84-430f-91ad-383c1f724287", "ip_address": "10.100.0.3"}], "id": "cca25bd1-8892-4f55-b010-37d27cec0b98", "security_groups": ["4762ba55-b417-45fa-a67e-418a493bc67e"], "device_id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "name": "", "admin_state_up": true, "network_id": "43b4f651-e299-4117-89c3-00b2386b26ca", "dns_name": "", "binding:vif_details": {"port_filter": true}, "binding:vnic_type": "normal", "binding:vif_type": "ovs", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "mac_address": "fa:16:3e:b4:06:23"}]}
+2015-12-09 03:28:06,701 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 201 POST http://10.0.2.15:9696/v2.0/floatingips 0.500s
+2015-12-09 03:28:06,701 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"floatingip": {"floating_network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "fixed_ip_address": "10.100.0.3", "port_id": "cca25bd1-8892-4f55-b010-37d27cec0b98"}}
+    Response - Headers: {'status': '201', 'content-length': '368', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:06 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-cafad30a-5bbc-40bd-8b06-c53020468bef'}
+        Body: {"floatingip": {"floating_network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "router_id": "ac471172-e925-4881-8b2c-4f65ae53e9e7", "fixed_ip_address": "10.100.0.3", "floating_ip_address": "172.24.4.18", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "status": "DOWN", "port_id": "cca25bd1-8892-4f55-b010-37d27cec0b98", "id": "001f5723-a868-4019-94f7-ca84f80c3ff8"}}
+2015-12-09 03:28:06,733 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/ports?device_id=78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.031s
+2015-12-09 03:28:06,733 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '895', 'content-location': 'http://10.0.2.15:9696/v2.0/ports?device_id=3e7fe0db-8c09-4486-bd47-553377a45927', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:45:04 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-bd1466dc-8d95-46b0-9796-e723d458d5fb'}
-        Body: {"ports": [{"status": "ACTIVE", "binding:host_id": "vagrant-ubuntu-trusty-64", "allowed_address_pairs": [], "extra_dhcp_opts": [], "dns_assignment": [{"hostname": "host-10-100-0-3", "ip_address": "10.100.0.3", "fqdn": "host-10-100-0-3.openstacklocal."}], "device_owner": "compute:None", "port_security_enabled": true, "binding:profile": {}, "fixed_ips": [{"subnet_id": "8e6c0cd5-9523-4585-b1e5-616ca284dc6f", "ip_address": "10.100.0.3"}], "id": "ae1892b2-9194-43a6-9221-3bd1c531beda", "security_groups": ["1763c7b1-ddbf-46fc-9633-99dbad0cdf83"], "device_id": "3e7fe0db-8c09-4486-bd47-553377a45927", "name": "", "admin_state_up": true, "network_id": "851afad0-3a8a-4f36-97fb-f545bd6e4bce", "dns_name": "", "binding:vif_details": {"port_filter": true}, "binding:vnic_type": "normal", "binding:vif_type": "ovs", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "mac_address": "fa:16:3e:27:c3:d5"}]}
-2015-12-08 20:45:04,942 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/floatingips/c701b802-9c40-4872-95ce-a2c89fb96000 0.016s
-2015-12-08 20:45:04,942 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '895', 'content-location': 'http://10.0.2.15:9696/v2.0/ports?device_id=78d832f7-a972-4fcf-b96d-9de1f3c25fb8', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:06 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-42755cea-011a-4b83-a8e5-fe1fd01833bb'}
+        Body: {"ports": [{"status": "ACTIVE", "binding:host_id": "vagrant-ubuntu-trusty-64", "allowed_address_pairs": [], "extra_dhcp_opts": [], "dns_assignment": [{"hostname": "host-10-100-0-3", "ip_address": "10.100.0.3", "fqdn": "host-10-100-0-3.openstacklocal."}], "device_owner": "compute:None", "port_security_enabled": true, "binding:profile": {}, "fixed_ips": [{"subnet_id": "f1928663-4b84-430f-91ad-383c1f724287", "ip_address": "10.100.0.3"}], "id": "cca25bd1-8892-4f55-b010-37d27cec0b98", "security_groups": ["4762ba55-b417-45fa-a67e-418a493bc67e"], "device_id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "name": "", "admin_state_up": true, "network_id": "43b4f651-e299-4117-89c3-00b2386b26ca", "dns_name": "", "binding:vif_details": {"port_filter": true}, "binding:vnic_type": "normal", "binding:vif_type": "ovs", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "mac_address": "fa:16:3e:b4:06:23"}]}
+2015-12-09 03:28:06,745 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/floatingips/001f5723-a868-4019-94f7-ca84f80c3ff8 0.010s
+2015-12-09 03:28:06,745 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '368', 'content-location': 'http://10.0.2.15:9696/v2.0/floatingips/c701b802-9c40-4872-95ce-a2c89fb96000', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:45:04 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-83960e98-63f3-4865-bb28-f88b5a3aa0a1'}
-        Body: {"floatingip": {"floating_network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "router_id": "76e6bbcb-000e-4284-8a40-278909dd23b5", "fixed_ip_address": "10.100.0.3", "floating_ip_address": "172.24.4.18", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "status": "DOWN", "port_id": "ae1892b2-9194-43a6-9221-3bd1c531beda", "id": "c701b802-9c40-4872-95ce-a2c89fb96000"}}
-2015-12-08 20:45:05,958 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/floatingips/c701b802-9c40-4872-95ce-a2c89fb96000 0.014s
-2015-12-08 20:45:05,959 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '368', 'content-location': 'http://10.0.2.15:9696/v2.0/floatingips/001f5723-a868-4019-94f7-ca84f80c3ff8', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:06 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-f3f50e8b-f0ea-4096-9a32-437931c999f3'}
+        Body: {"floatingip": {"floating_network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "router_id": "ac471172-e925-4881-8b2c-4f65ae53e9e7", "fixed_ip_address": "10.100.0.3", "floating_ip_address": "172.24.4.18", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "status": "DOWN", "port_id": "cca25bd1-8892-4f55-b010-37d27cec0b98", "id": "001f5723-a868-4019-94f7-ca84f80c3ff8"}}
+2015-12-09 03:28:07,759 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 GET http://10.0.2.15:9696/v2.0/floatingips/001f5723-a868-4019-94f7-ca84f80c3ff8 0.012s
+2015-12-09 03:28:07,760 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '370', 'content-location': 'http://10.0.2.15:9696/v2.0/floatingips/c701b802-9c40-4872-95ce-a2c89fb96000', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:45:05 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8fc26d9e-66b2-4bff-9816-a71be9b613a0'}
-        Body: {"floatingip": {"floating_network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "router_id": "76e6bbcb-000e-4284-8a40-278909dd23b5", "fixed_ip_address": "10.100.0.3", "floating_ip_address": "172.24.4.18", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "status": "ACTIVE", "port_id": "ae1892b2-9194-43a6-9221-3bd1c531beda", "id": "c701b802-9c40-4872-95ce-a2c89fb96000"}}
-2015-12-08 20:45:05,959 27633 INFO     [tempest.scenario.manager] FloatingIP: &lt;"FloatingIP" addr="172.24.4.18" id="c701b802-9c40-4872-95ce-a2c89fb96000"&gt; is at status: ACTIVE
-2015-12-08 20:45:05,960 27633 DEBUG    [tempest.scenario.manager] checking network connections to IP 172.24.4.18 with user: cirros
-2015-12-08 20:45:05,960 27633 DEBUG    [tempest.scenario.manager] TestNetworkBasicOps:test_update_instance_port_admin_state begins to ping 172.24.4.18 in 120 sec and the expected result is reachable
-2015-12-08 20:45:24,017 27633 DEBUG    [tempest.scenario.manager] TestNetworkBasicOps:test_update_instance_port_admin_state finishes ping 172.24.4.18 in 120 sec and the ping result is expected
-2015-12-08 20:45:24,019 27633 INFO     [tempest_lib.common.ssh] Creating ssh connection to '172.24.4.18' as 'cirros' with public key authentication
-2015-12-08 20:45:24,025 27633 WARNING  [tempest_lib.common.ssh] Failed to establish authenticated ssh connection to cirros@172.24.4.18 ([Errno None] Unable to connect to port 22 on  or 172.24.4.18). Number attempts: 1. Retry after 2 seconds.
-2015-12-08 20:45:26,678 27633 INFO     [paramiko.transport] Connected (version 2.0, client dropbear_2012.55)
-2015-12-08 20:45:27,042 27633 INFO     [paramiko.transport] Authentication (publickey) successful!
-2015-12-08 20:45:27,052 27633 INFO     [tempest_lib.common.ssh] ssh connection to cirros@172.24.4.18 successfuly created
-2015-12-08 20:45:27,376 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 PUT http://10.0.2.15:9696/v2.0/ports/ae1892b2-9194-43a6-9221-3bd1c531beda 0.207s
-2015-12-08 20:45:27,377 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '370', 'content-location': 'http://10.0.2.15:9696/v2.0/floatingips/001f5723-a868-4019-94f7-ca84f80c3ff8', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:07 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-7cebffcd-b742-4d77-bc5f-8c3402c04bee'}
+        Body: {"floatingip": {"floating_network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "router_id": "ac471172-e925-4881-8b2c-4f65ae53e9e7", "fixed_ip_address": "10.100.0.3", "floating_ip_address": "172.24.4.18", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "status": "ACTIVE", "port_id": "cca25bd1-8892-4f55-b010-37d27cec0b98", "id": "001f5723-a868-4019-94f7-ca84f80c3ff8"}}
+2015-12-09 03:28:07,760 32668 INFO     [tempest.scenario.manager] FloatingIP: &lt;"FloatingIP" addr="172.24.4.18" id="001f5723-a868-4019-94f7-ca84f80c3ff8"&gt; is at status: ACTIVE
+2015-12-09 03:28:07,760 32668 DEBUG    [tempest.scenario.manager] checking network connections to IP 172.24.4.18 with user: cirros
+2015-12-09 03:28:07,760 32668 DEBUG    [tempest.scenario.manager] TestNetworkBasicOps:test_update_instance_port_admin_state begins to ping 172.24.4.18 in 120 sec and the expected result is reachable
+2015-12-09 03:28:27,818 32668 DEBUG    [tempest.scenario.manager] TestNetworkBasicOps:test_update_instance_port_admin_state finishes ping 172.24.4.18 in 120 sec and the ping result is expected
+2015-12-09 03:28:27,820 32668 INFO     [tempest_lib.common.ssh] Creating ssh connection to '172.24.4.18' as 'cirros' with public key authentication
+2015-12-09 03:28:27,824 32668 WARNING  [tempest_lib.common.ssh] Failed to establish authenticated ssh connection to cirros@172.24.4.18 ([Errno None] Unable to connect to port 22 on  or 172.24.4.18). Number attempts: 1. Retry after 2 seconds.
+2015-12-09 03:28:30,332 32668 WARNING  [tempest_lib.common.ssh] Failed to establish authenticated ssh connection to cirros@172.24.4.18 ([Errno None] Unable to connect to port 22 on  or 172.24.4.18). Number attempts: 2. Retry after 3 seconds.
+2015-12-09 03:28:33,882 32668 INFO     [paramiko.transport] Connected (version 2.0, client dropbear_2012.55)
+2015-12-09 03:28:34,249 32668 INFO     [paramiko.transport] Authentication (publickey) successful!
+2015-12-09 03:28:34,252 32668 INFO     [tempest_lib.common.ssh] ssh connection to cirros@172.24.4.18 successfuly created
+2015-12-09 03:28:34,562 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 PUT http://10.0.2.15:9696/v2.0/ports/cca25bd1-8892-4f55-b010-37d27cec0b98 0.194s
+2015-12-09 03:28:34,563 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: {"port": {"admin_state_up": false}}
-    Response - Headers: {'status': '200', 'content-length': '750', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:45:27 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-89635fb9-0df5-4107-8fa4-b12b91fdc0ae'}
-        Body: {"port": {"status": "ACTIVE", "name": "", "allowed_address_pairs": [], "admin_state_up": false, "network_id": "851afad0-3a8a-4f36-97fb-f545bd6e4bce", "dns_name": "", "extra_dhcp_opts": [], "mac_address": "fa:16:3e:27:c3:d5", "dns_assignment": [{"hostname": "host-10-100-0-3", "ip_address": "10.100.0.3", "fqdn": "host-10-100-0-3.openstacklocal."}], "binding:vnic_type": "normal", "device_owner": "compute:None", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "port_security_enabled": true, "fixed_ips": [{"subnet_id": "8e6c0cd5-9523-4585-b1e5-616ca284dc6f", "ip_address": "10.100.0.3"}], "id": "ae1892b2-9194-43a6-9221-3bd1c531beda", "security_groups": ["1763c7b1-ddbf-46fc-9633-99dbad0cdf83"], "device_id": "3e7fe0db-8c09-4486-bd47-553377a45927"}}
-2015-12-08 20:45:27,377 27633 DEBUG    [tempest.scenario.manager] checking network connections to IP 172.24.4.18 with user: cirros
-2015-12-08 20:45:27,378 27633 DEBUG    [tempest.scenario.manager] TestNetworkBasicOps:test_update_instance_port_admin_state begins to ping 172.24.4.18 in 120 sec and the expected result is unreachable
-2015-12-08 20:47:27,901 27633 DEBUG    [tempest.scenario.manager] TestNetworkBasicOps:test_update_instance_port_admin_state finishes ping 172.24.4.18 in 120 sec and the ping result is unexpected
-2015-12-08 20:47:27,903 27633 ERROR    [tempest.scenario.manager] Public network connectivity check failed: after updating admin_state_up of instance port to False
-2015-12-08 20:47:27.903 27633 ERROR tempest.scenario.manager Traceback (most recent call last):
-2015-12-08 20:47:27.903 27633 ERROR tempest.scenario.manager   File "tempest/scenario/manager.py", line 606, in check_public_network_connectivity
-2015-12-08 20:47:27.903 27633 ERROR tempest.scenario.manager     should_connect=should_connect)
-2015-12-08 20:47:27.903 27633 ERROR tempest.scenario.manager   File "tempest/scenario/manager.py", line 590, in check_vm_connectivity
-2015-12-08 20:47:27.903 27633 ERROR tempest.scenario.manager     msg=msg)
-2015-12-08 20:47:27.903 27633 ERROR tempest.scenario.manager   File "/usr/local/lib/python2.7/dist-packages/unittest2/case.py", line 702, in assertTrue
-2015-12-08 20:47:27.903 27633 ERROR tempest.scenario.manager     raise self.failureException(msg)
-2015-12-08 20:47:27.903 27633 ERROR tempest.scenario.manager AssertionError: False is not true : ip address 172.24.4.18 is reachable
-2015-12-08 20:47:27.903 27633 ERROR tempest.scenario.manager 
-2015-12-08 20:47:28,119 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 POST http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927/action 0.212s
-2015-12-08 20:47:28,120 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '750', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:28:34 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-55aba969-2cd6-443f-a246-7824072b84f1'}
+        Body: {"port": {"status": "ACTIVE", "name": "", "allowed_address_pairs": [], "admin_state_up": false, "network_id": "43b4f651-e299-4117-89c3-00b2386b26ca", "dns_name": "", "extra_dhcp_opts": [], "mac_address": "fa:16:3e:b4:06:23", "dns_assignment": [{"hostname": "host-10-100-0-3", "ip_address": "10.100.0.3", "fqdn": "host-10-100-0-3.openstacklocal."}], "binding:vnic_type": "normal", "device_owner": "compute:None", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "port_security_enabled": true, "fixed_ips": [{"subnet_id": "f1928663-4b84-430f-91ad-383c1f724287", "ip_address": "10.100.0.3"}], "id": "cca25bd1-8892-4f55-b010-37d27cec0b98", "security_groups": ["4762ba55-b417-45fa-a67e-418a493bc67e"], "device_id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8"}}
+2015-12-09 03:28:34,564 32668 DEBUG    [tempest.scenario.manager] checking network connections to IP 172.24.4.18 with user: cirros
+2015-12-09 03:28:34,564 32668 DEBUG    [tempest.scenario.manager] TestNetworkBasicOps:test_update_instance_port_admin_state begins to ping 172.24.4.18 in 120 sec and the expected result is unreachable
+2015-12-09 03:30:35,171 32668 DEBUG    [tempest.scenario.manager] TestNetworkBasicOps:test_update_instance_port_admin_state finishes ping 172.24.4.18 in 120 sec and the ping result is unexpected
+2015-12-09 03:30:35,173 32668 ERROR    [tempest.scenario.manager] Public network connectivity check failed: after updating admin_state_up of instance port to False
+2015-12-09 03:30:35.173 32668 ERROR tempest.scenario.manager Traceback (most recent call last):
+2015-12-09 03:30:35.173 32668 ERROR tempest.scenario.manager   File "tempest/scenario/manager.py", line 606, in check_public_network_connectivity
+2015-12-09 03:30:35.173 32668 ERROR tempest.scenario.manager     should_connect=should_connect)
+2015-12-09 03:30:35.173 32668 ERROR tempest.scenario.manager   File "tempest/scenario/manager.py", line 590, in check_vm_connectivity
+2015-12-09 03:30:35.173 32668 ERROR tempest.scenario.manager     msg=msg)
+2015-12-09 03:30:35.173 32668 ERROR tempest.scenario.manager   File "/usr/local/lib/python2.7/dist-packages/unittest2/case.py", line 702, in assertTrue
+2015-12-09 03:30:35.173 32668 ERROR tempest.scenario.manager     raise self.failureException(msg)
+2015-12-09 03:30:35.173 32668 ERROR tempest.scenario.manager AssertionError: False is not true : ip address 172.24.4.18 is reachable
+2015-12-09 03:30:35.173 32668 ERROR tempest.scenario.manager 
+2015-12-09 03:30:35,378 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:test_update_instance_port_admin_state): 200 POST http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8/action 0.201s
+2015-12-09 03:30:35,380 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: {"os-getConsoleOutput": {}}
-    Response - Headers: {'status': '200', 'content-length': '19898', 'x-compute-request-id': 'req-99a3f393-d58f-40d2-af83-9d9ef9888d19', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:47:28 GMT', 'content-type': 'application/json'}
+    Response - Headers: {'status': '200', 'content-length': '19744', 'x-compute-request-id': 'req-c547fb36-70a2-4f99-bcc1-1a3b53c2cc66', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:30:35 GMT', 'content-type': 'application/json'}
         Body: {"output": "[    0.000000] Initializing cgroup subsys cpuset\n[    0.000000] Initializing cgroup subsys cpu\n[    0.000000] Linux version 3.2.0-80-virtual (buildd@batsu) (gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) ) #116-Ubuntu SMP Mon Mar 23 17:28:52 UTC 2015 (Ubuntu 3.2.0-80.116-virtual 3.2.68)\n[    0.000000] Command line: root=/dev/vda console=tty0 console=ttyS0 no_timer_check\n[    0.000000] KERNEL supported cpus:\n[    0.000000]   Intel GenuineIntel\n[    0.000000]   AMD AuthenticAMD\n[    0.000000]   Centaur CentaurHauls\n[    0.000000] BIOS-provided physical RAM map:\n[    0.000000]  BIOS-e820: 0000000000000000 - 000000000009fc00 (usable)\n[    0.000000]  BIOS-e820: 000000000009fc00 - 00000000000a0000 (reserved)\n[    0.000000]  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)\n[    0.000000]  BIOS-e820: 0000000000100000 - 0000000003ffe000 (usable)\n[    0.000000]  BIOS-e820: 0000000003ffe000 - 0000000004000000 (reserved)\n[    0.000000]  BIOS-e820: 00000000fffc0000 - 0000000100000000 (reserved)\n[    0.000000] NX (Execute Disable) protection: active\n[    0.000000] SMBIOS 2.4 present.\n[    0.000000] No AGP bridge found\n[    0.000000] last_pfn = 0x3ffe max_arch_pfn = 0x400000000\n[    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106\n[    0.000000] found SMP MP-table at [ffff8800000f0b00] f0b00\n[    0.000000] init_memory_mapping: 0000000000000000-0000000003ffe000\n[    0.000000] RAMDISK: 03c5e000 - 03ff0000\n[    0.000000] ACPI: RSDP 00000000000f0950 00014 (v00 BOCHS )\n[    0.000000] ACPI: RSDT 0000000003fffbc1 00034 (v01 BOCHS  BXPCRSDT 00000001 BXPC 00000001)\n[    0.000000] ACPI: FACP 0000000003fff1c0 00074 (v01 BOCHS  BXPCFACP 00000001 BXPC 00000001)\n[    0.000000] ACPI: DSDT 0000000003ffe040 01180 (v01 BOCHS  BXPCDSDT 00000001 BXPC 00000001)\n[    0.000000] ACPI: FACS 0000000003ffe000 00040\n[    0.000000] ACPI: SSDT 0000000003fff234 008DD (v01 BOCHS  BXPCSSDT 00000001 BXPC 00000001)\n[    0.000000] ACPI: APIC 0000000003fffb11 00078 (v01 BOCHS  BXPCAPIC 00000001 BXPC 00000001)\n[    0.000000] ACPI: HPET 0000000003fffb89 00038 (v01 BOCHS  BXPCHPET 00000001 BXPC 00000001)\n[    0.000000] No NUMA configuration found\n[    0.000000] Faking a node at 0000000000000000-0000000003ffe000\n[    0.000000] Initmem setup node 0 0000000000000000-0000000003ffe000\n[    0.000000]   NODE_DATA [0000000003ff6000 - 0000000003ffafff]\n[    0.000000] Zone PFN ranges:\n[    0.000000]   DMA      0x00000010 -&gt; 0x00001000\n[    0.000000]   DMA32    0x00001000 -&gt; 0x00100000\n[    0.000000]   Normal   empty\n[    0.000000] Movable zone start PFN for each node\n[    0.000000] early_node_map[2] active PFN ranges\n[    0.000000]     0: 0x00000010 -&gt; 0x0000009f\n[    0.000000]     0: 0x00000100 -&gt; 0x00003ffe\n[    0.000000] ACPI: PM-Timer IO Port: 0xb008\n[    0.000000] ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)\n[    0.000000] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])\n[    0.000000] ACPI: IOAPIC (id[0x00] address[0xfec00000] gsi_base[0])\n[    0.000000] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23\n[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)\n[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)\n[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)\n[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)\n[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)\n[    0.000000] Using ACPI (MADT) for SMP configuration information\n[    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000\n[    0.000000] SMP: Allowing 1 CPUs, 0 hotplug CPUs\n[    0.000000] PM: Registered nosave memory: 000000000009f000 - 00000000000a0000\n[    0.000000] PM: Registered nosave memory: 00000000000a0000 - 00000000000f0000\n[    0.000000] PM: Registered nosave memory: 00000000000f0000 - 0000000000100000\n[    0.000000] Allocating PCI resources starting at 4000000 (gap: 4000000:fbfc0000)\n[    0.000000] Booting paravirtualized kernel on bare hardware\n[    0.000000] setup_pe
-2015-12-08 20:47:28,124 27633 DEBUG    [tempest.scenario.manager] Console output for 3e7fe0db-8c09-4486-bd47-553377a45927
+2015-12-09 03:30:35,384 32668 DEBUG    [tempest.scenario.manager] Console output for 78d832f7-a972-4fcf-b96d-9de1f3c25fb8
 body=
 [    0.000000] Initializing cgroup subsys cpuset
 [    0.000000] Initializing cgroup subsys cpu
@@ -717,201 +718,199 @@ body=
 [    0.000000] Fast TSC calibration failed
 [    0.000000] TSC: Unable to calibrate against PIT
 [    0.000000] TSC: using HPET reference calibration
-[    0.000000] Detected 2293.736 MHz processor.
-[    0.032825] Calibrating delay loop (skipped), value calculated using timer frequency.. 4587.47 BogoMIPS (lpj=9174944)
-[    0.036221] pid_max: default: 32768 minimum: 301
-[    0.044538] Security Framework initialized
-[    0.049767] AppArmor: AppArmor initialized
-[    0.051148] Yama: becoming mindful.
-[    0.058829] Dentry cache hash table entries: 8192 (order: 4, 65536 bytes)
-[    0.061309] Inode-cache hash table entries: 4096 (order: 3, 32768 bytes)
-[    0.064314] Mount-cache hash table entries: 256
-[    0.081118] Initializing cgroup subsys cpuacct
-[    0.081846] Initializing cgroup subsys memory
-[    0.083369] Initializing cgroup subsys devices
-[    0.084196] Initializing cgroup subsys freezer
-[    0.084899] Initializing cgroup subsys blkio
-[    0.085891] Initializing cgroup subsys perf_event
-[    0.090984] mce: CPU supports 10 MCE banks
-[    0.094037] SMP alternatives: switching to UP code
-[    0.496318] Freeing SMP alternatives: 24k freed
-[    0.498603] ACPI: Core revision 20110623
-[    0.552483] ftrace: allocating 26610 entries in 105 pages
-[    0.589901] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
-[    0.592665] CPU0: AMD QEMU Virtual CPU version 2.0.0 stepping 03
-[    0.600036] APIC calibration not consistent with PM-Timer: 103ms instead of 100ms
-[    0.600036] APIC delta adjusted to PM-Timer: 6249927 (6494789)
-[    0.600036] Performance Events: Broken PMU hardware detected, using software events only.
-[    0.609260] NMI watchdog disabled (cpu0): hardware events not enabled
-[    0.610716] Brought up 1 CPUs
-[    0.611450] Total of 1 processors activated (4587.47 BogoMIPS).
-[    0.636550] devtmpfs: initialized
-[    0.669922] EVM: security.selinux
-[    0.670565] EVM: security.SMACK64
-[    0.671043] EVM: security.capability
-[    0.693553] print_constraints: dummy: 
-[    0.696449] RTC time: 20:45:06, date: 12/08/15
-[    0.698882] NET: Registered protocol family 16
-[    0.707232] ACPI: bus type pci registered
-[    0.712761] PCI: Using configuration type 1 for base access
-[    0.748411] bio: create slab &lt;bio-0&gt; at 0
-[    0.757331] ACPI: Added _OSI(Module Device)
-[    0.758139] ACPI: Added _OSI(Processor Device)
-[    0.758717] ACPI: Added _OSI(3.0 _SCP Extensions)
-[    0.760109] ACPI: Added _OSI(Processor Aggregator Device)
-[    0.842260] ACPI: Interpreter enabled
-[    0.844656] ACPI: (supports S0 S3 S4 S5)
-[    0.848377] ACPI: Using IOAPIC for interrupt routing
-[    0.931324] ACPI: No dock devices found.
-[    0.932295] HEST: Table not found.
-[    0.932984] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
-[    0.939230] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
-[    0.945964] pci_root PNP0A03:00: host bridge window [io  0x0000-0x0cf7]
-[    0.946841] pci_root PNP0A03:00: host bridge window [io  0x0d00-0xadff]
-[    0.948125] pci_root PNP0A03:00: host bridge window [io  0xae0f-0xaeff]
-[    0.949125] pci_root PNP0A03:00: host bridge window [io  0xaf20-0xafdf]
-[    0.949987] pci_root PNP0A03:00: host bridge window [io  0xafe4-0xffff]
-[    0.950896] pci_root PNP0A03:00: host bridge window [mem 0x000a0000-0x000bffff]
-[    0.952108] pci_root PNP0A03:00: host bridge window [mem 0x04000000-0xfebfffff]
-[    0.974119] pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
-[    0.975069] pci 0000:00:01.3: quirk: [io  0xb100-0xb10f] claimed by PIIX4 SMB
-[    1.043508]  pci0000:00: Unable to request _OSC control (_OSC support mask: 0x1e)
-[    1.112134] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 *10 11)
-[    1.113922] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
-[    1.117289] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
-[    1.120499] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 10 *11)
-[    1.122168] ACPI: PCI Interrupt Link [LNKS] (IRQs *9)
-[    1.130318] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
-[    1.131343] vgaarb: loaded
-[    1.132150] vgaarb: bridge control possible 0000:00:02.0
-[    1.136342] i2c-core: driver [aat2870] using legacy suspend method
-[    1.137102] i2c-core: driver [aat2870] using legacy resume method
-[    1.140352] SCSI subsystem initialized
-[    1.144980] usbcore: registered new interface driver usbfs
-[    1.146092] usbcore: registered new interface driver hub
-[    1.147192] usbcore: registered new device driver usb
-[    1.153686] PCI: Using ACPI for IRQ routing
-[    1.166414] NetLabel: Initializing
-[    1.168340] NetLabel:  domain hash size = 128
-[    1.168893] NetLabel:  protocols = UNLABELED CIPSOv4
-[    1.170906] NetLabel:  unlabeled traffic allowed by default
-[    1.173610] HPET: 3 timers in total, 0 timers will be used for per-cpu timer
-[    1.174841] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
-[    1.176630] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
-[    1.191077] Switching to clocksource hpet
-[    1.443156] AppArmor: AppArmor Filesystem Enabled
-[    1.446471] pnp: PnP ACPI init
-[    1.447015] ACPI: bus type pnp registered
-[    1.467656] pnp: PnP ACPI: found 9 devices
-[    1.469183] ACPI: ACPI bus type pnp unregistered
-[    1.535450] NET: Registered protocol family 2
-[    1.584997] IP route cache hash table entries: 512 (order: 0, 4096 bytes)
-[    1.592954] TCP established hash table entries: 2048 (order: 3, 32768 bytes)
-[    1.593942] TCP bind hash table entries: 2048 (order: 3, 32768 bytes)
-[    1.594870] TCP: Hash tables configured (established 2048 bind 2048)
-[    1.595757] TCP reno registered
-[    1.597168] UDP hash table entries: 128 (order: 0, 4096 bytes)
-[    1.598148] UDP-Lite hash table entries: 128 (order: 0, 4096 bytes)
-[    1.601938] NET: Registered protocol family 1
-[    1.602854] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
-[    1.603896] pci 0000:00:01.0: PIIX3: Enabling Passive Release
-[    1.606045] pci 0000:00:01.0: Activating ISA DMA hang workarounds
-[    1.611111] ACPI: PCI Interrupt Link [LNKD] enabled at IRQ 11
-[    1.612580] pci 0000:00:01.2: PCI INT D -&gt; Link[LNKD] -&gt; GSI 11 (level, high) -&gt; IRQ 11
-[    1.615486] pci 0000:00:01.2: PCI INT D disabled
-[    1.645418] Trying to unpack rootfs image as initramfs...
-[    1.662841] audit: initializing netlink socket (disabled)
-[    1.665124] type=2000 audit(1449607506.660:1): initialized
-[    1.971084] HugeTLB registered 2 MB page size, pre-allocated 0 pages
-[    2.051131] VFS: Disk quotas dquot_6.5.2
-[    2.053490] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
-[    2.067610] fuse init (API version 7.17)
-[    2.074576] msgmni has been set to 84
-[    2.111462] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
-[    2.126333] io scheduler noop registered
-[    2.126938] io scheduler deadline registered (default)
-[    2.127949] io scheduler cfq registered
-[    2.133231] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
-[    2.135118] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
-[    2.142219] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
-[    2.145441] ACPI: Power Button [PWRF]
-[    2.202682] ERST: Table is not found!
-[    2.203213] GHES: HEST is not enabled!
-[    2.215455] ACPI: PCI Interrupt Link [LNKC] enabled at IRQ 10
-[    2.217107] virtio-pci 0000:00:03.0: PCI INT A -&gt; Link[LNKC] -&gt; GSI 10 (level, high) -&gt; IRQ 10
-[    2.221085] virtio-pci 0000:00:04.0: PCI INT A -&gt; Link[LNKD] -&gt; GSI 11 (level, high) -&gt; IRQ 11
-[    2.230596] ACPI: PCI Interrupt Link [LNKA] enabled at IRQ 10
-[    2.231329] virtio-pci 0000:00:05.0: PCI INT A -&gt; Link[LNKA] -&gt; GSI 10 (level, high) -&gt; IRQ 10
-[    2.245905] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
-[    2.289043] serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
-[    2.378350] serial8250: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
-[    2.526115] 00:05: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
-[    2.612445] 00:06: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
-[    2.621384] Refined TSC clocksource calibration: 2293.911 MHz.
-[    2.622292] Switching to clocksource tsc
-[    2.661766] Linux agpgart interface v0.103
-[    2.737938] brd: module loaded
-[    2.764744] loop: module loaded
-[    2.817988]  vda: unknown partition table
-[    2.877663] scsi0 : ata_piix
-[    2.880203] scsi1 : ata_piix
-[    2.882703] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc0a0 irq 14
-[    2.883714] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc0a8 irq 15
-[    2.895212] Fixed MDIO Bus: probed
-[    2.896111] tun: Universal TUN/TAP device driver, 1.6
-[    2.897334] tun: (C) 1999-2004 Max Krasnyansky &lt;maxk@qualcomm.com&gt;
-[    2.923494] PPP generic driver version 2.4.2
-[    2.954930] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
-[    2.956204] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
-[    2.958158] uhci_hcd: USB Universal Host Controller Interface driver
-[    2.959166] uhci_hcd 0000:00:01.2: PCI INT D -&gt; Link[LNKD] -&gt; GSI 11 (level, high) -&gt; IRQ 11
-[    2.962401] uhci_hcd 0000:00:01.2: UHCI Host Controller
-[    2.971018] uhci_hcd 0000:00:01.2: new USB bus registered, assigned bus number 1
-[    2.975635] uhci_hcd 0000:00:01.2: irq 11, io base 0x0000c040
-[    3.006992] hub 1-0:1.0: USB hub found
-[    3.008726] hub 1-0:1.0: 2 ports detected
-[    3.016771] usbcore: registered new interface driver libusual
-[    3.020600] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
-[    3.031546] serio: i8042 KBD port at 0x60,0x64 irq 1
-[    3.033162] serio: i8042 AUX port at 0x60,0x64 irq 12
-[    3.074321] mousedev: PS/2 mouse device common for all mice
-[    3.092585] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
-[    3.106156] rtc_cmos 00:01: RTC can wake from S4
-[    3.122542] rtc_cmos 00:01: rtc core: registered rtc_cmos as rtc0
-[    3.127588] rtc0: alarms up to one day, 114 bytes nvram, hpet irqs
-[    3.130697] device-mapper: uevent: version 1.0.3
-[    3.157250] ata2.01: ATAPI: QEMU DVD-ROM, 2.0.0, max UDMA/100
-[    3.163377] ata2.01: configured for MWDMA2
-[    3.167570] device-mapper: ioctl: 4.22.0-ioctl (2011-10-19) initialised: dm-devel@redhat.com
-[    3.170455] cpuidle: using governor ladder
-[    3.171367] cpuidle: using governor menu
-[    3.171908] EFI Variables Facility v0.08 2004-May-17
-[    3.191095] TCP cubic registered
-[    3.195356] NET: Registered protocol family 10
-[    3.224875] NET: Registered protocol family 17
-[    3.227075] Registering the dns_resolver key type
-[    3.278406] scsi 1:0:1:0: CD-ROM            QEMU     QEMU DVD-ROM     2.0. PQ: 0 ANSI: 5
-[    3.297592] sr0: scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
-[    3.300612] cdrom: Uniform CD-ROM driver Revision: 3.20
-[    3.316846] sr 1:0:1:0: Attached scsi generic sg0 type 5
-[    3.374133] registered taskstats version 1
-[    3.426019] Freeing initrd memory: 3656k freed
-[    3.915930]   Magic number: 11:994:800
-[    3.928977] rtc_cmos 00:01: setting system clock to 2015-12-08 20:45:09 UTC (1449607509)
-[    3.931419] powernow-k8: Processor cpuid 663 not supported
-[    3.937432] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
-[    3.938773] EDD information not available.
-[    3.997379] Freeing unused kernel memory: 928k freed
-[    4.005160] Write protecting the kernel read-only data: 12288k
-[    4.143285] Freeing unused kernel memory: 1596k freed
-[    4.209490] Freeing unused kernel memory: 1184k freed
+[    0.000000] Detected 2294.315 MHz processor.
+[    0.025288] Calibrating delay loop (skipped), value calculated using timer frequency.. 4588.63 BogoMIPS (lpj=9177260)
+[    0.028001] pid_max: default: 32768 minimum: 301
+[    0.038276] Security Framework initialized
+[    0.042491] AppArmor: AppArmor initialized
+[    0.044177] Yama: becoming mindful.
+[    0.051332] Dentry cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.052416] Inode-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.054054] Mount-cache hash table entries: 256
+[    0.069933] Initializing cgroup subsys cpuacct
+[    0.070854] Initializing cgroup subsys memory
+[    0.072061] Initializing cgroup subsys devices
+[    0.072624] Initializing cgroup subsys freezer
+[    0.073432] Initializing cgroup subsys blkio
+[    0.074030] Initializing cgroup subsys perf_event
+[    0.079096] mce: CPU supports 10 MCE banks
+[    0.082426] SMP alternatives: switching to UP code
+[    0.449624] Freeing SMP alternatives: 24k freed
+[    0.451036] ACPI: Core revision 20110623
+[    0.498533] ftrace: allocating 26610 entries in 105 pages
+[    0.530932] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.532340] CPU0: AMD QEMU Virtual CPU version 2.0.0 stepping 03
+[    0.536032] Performance Events: Broken PMU hardware detected, using software events only.
+[    0.542646] NMI watchdog disabled (cpu0): hardware events not enabled
+[    0.544733] Brought up 1 CPUs
+[    0.545293] Total of 1 processors activated (4588.63 BogoMIPS).
+[    0.568913] devtmpfs: initialized
+[    0.603171] EVM: security.selinux
+[    0.604078] EVM: security.SMACK64
+[    0.604519] EVM: security.capability
+[    0.622882] print_constraints: dummy: 
+[    0.625118] RTC time:  3:28:08, date: 12/09/15
+[    0.628221] NET: Registered protocol family 16
+[    0.640708] ACPI: bus type pci registered
+[    0.644894] PCI: Using configuration type 1 for base access
+[    0.686122] bio: create slab &lt;bio-0&gt; at 0
+[    0.690990] ACPI: Added _OSI(Module Device)
+[    0.692139] ACPI: Added _OSI(Processor Device)
+[    0.692677] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.693247] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.765014] ACPI: Interpreter enabled
+[    0.765728] ACPI: (supports S0 S3 S4 S5)
+[    0.767617] ACPI: Using IOAPIC for interrupt routing
+[    0.837143] ACPI: No dock devices found.
+[    0.837688] HEST: Table not found.
+[    0.838397] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.849861] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.861093] pci_root PNP0A03:00: host bridge window [io  0x0000-0x0cf7]
+[    0.862395] pci_root PNP0A03:00: host bridge window [io  0x0d00-0xadff]
+[    0.864131] pci_root PNP0A03:00: host bridge window [io  0xae0f-0xaeff]
+[    0.865568] pci_root PNP0A03:00: host bridge window [io  0xaf20-0xafdf]
+[    0.868107] pci_root PNP0A03:00: host bridge window [io  0xafe4-0xffff]
+[    0.869110] pci_root PNP0A03:00: host bridge window [mem 0x000a0000-0x000bffff]
+[    0.870008] pci_root PNP0A03:00: host bridge window [mem 0x04000000-0xfebfffff]
+[    0.893989] pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+[    0.894783] pci 0000:00:01.3: quirk: [io  0xb100-0xb10f] claimed by PIIX4 SMB
+[    0.962660]  pci0000:00: Unable to request _OSC control (_OSC support mask: 0x1e)
+[    1.025885] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 *10 11)
+[    1.029273] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+[    1.032435] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+[    1.034278] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 10 *11)
+[    1.036324] ACPI: PCI Interrupt Link [LNKS] (IRQs *9)
+[    1.042504] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+[    1.044188] vgaarb: loaded
+[    1.044594] vgaarb: bridge control possible 0000:00:02.0
+[    1.048393] i2c-core: driver [aat2870] using legacy suspend method
+[    1.049135] i2c-core: driver [aat2870] using legacy resume method
+[    1.052301] SCSI subsystem initialized
+[    1.056194] usbcore: registered new interface driver usbfs
+[    1.057529] usbcore: registered new interface driver hub
+[    1.058586] usbcore: registered new device driver usb
+[    1.062010] PCI: Using ACPI for IRQ routing
+[    1.073333] NetLabel: Initializing
+[    1.073830] NetLabel:  domain hash size = 128
+[    1.074305] NetLabel:  protocols = UNLABELED CIPSOv4
+[    1.076608] NetLabel:  unlabeled traffic allowed by default
+[    1.078941] HPET: 3 timers in total, 0 timers will be used for per-cpu timer
+[    1.080451] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    1.081289] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+[    1.090527] Switching to clocksource hpet
+[    1.338422] AppArmor: AppArmor Filesystem Enabled
+[    1.339840] pnp: PnP ACPI init
+[    1.341137] ACPI: bus type pnp registered
+[    1.359406] pnp: PnP ACPI: found 9 devices
+[    1.359937] ACPI: ACPI bus type pnp unregistered
+[    1.434862] NET: Registered protocol family 2
+[    1.472017] IP route cache hash table entries: 512 (order: 0, 4096 bytes)
+[    1.479807] TCP established hash table entries: 2048 (order: 3, 32768 bytes)
+[    1.482489] TCP bind hash table entries: 2048 (order: 3, 32768 bytes)
+[    1.483389] TCP: Hash tables configured (established 2048 bind 2048)
+[    1.485075] TCP reno registered
+[    1.485642] UDP hash table entries: 128 (order: 0, 4096 bytes)
+[    1.486521] UDP-Lite hash table entries: 128 (order: 0, 4096 bytes)
+[    1.489797] NET: Registered protocol family 1
+[    1.490637] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    1.491418] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    1.493550] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    1.498690] ACPI: PCI Interrupt Link [LNKD] enabled at IRQ 11
+[    1.499622] pci 0000:00:01.2: PCI INT D -&gt; Link[LNKD] -&gt; GSI 11 (level, high) -&gt; IRQ 11
+[    1.502647] pci 0000:00:01.2: PCI INT D disabled
+[    1.521857] Trying to unpack rootfs image as initramfs...
+[    1.536137] audit: initializing netlink socket (disabled)
+[    1.538768] type=2000 audit(1449631688.536:1): initialized
+[    1.806178] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    1.851215] VFS: Disk quotas dquot_6.5.2
+[    1.853734] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.886723] fuse init (API version 7.17)
+[    1.889744] msgmni has been set to 84
+[    1.927441] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    1.930047] io scheduler noop registered
+[    1.930596] io scheduler deadline registered (default)
+[    1.931865] io scheduler cfq registered
+[    1.935667] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    1.938746] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    1.943762] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    1.946107] ACPI: Power Button [PWRF]
+[    1.999848] ERST: Table is not found!
+[    2.001974] GHES: HEST is not enabled!
+[    2.010911] ACPI: PCI Interrupt Link [LNKC] enabled at IRQ 10
+[    2.011646] virtio-pci 0000:00:03.0: PCI INT A -&gt; Link[LNKC] -&gt; GSI 10 (level, high) -&gt; IRQ 10
+[    2.015468] virtio-pci 0000:00:04.0: PCI INT A -&gt; Link[LNKD] -&gt; GSI 11 (level, high) -&gt; IRQ 11
+[    2.030581] ACPI: PCI Interrupt Link [LNKA] enabled at IRQ 10
+[    2.031427] virtio-pci 0000:00:05.0: PCI INT A -&gt; Link[LNKA] -&gt; GSI 10 (level, high) -&gt; IRQ 10
+[    2.042639] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    2.083815] serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+[    2.178057] serial8250: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+[    2.328576] 00:05: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+[    2.415845] 00:06: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+[    2.466607] Linux agpgart interface v0.103
+[    2.509433] Refined TSC clocksource calibration: 2294.326 MHz.
+[    2.510287] Switching to clocksource tsc
+[    2.544100] brd: module loaded
+[    2.575010] loop: module loaded
+[    2.626837]  vda: unknown partition table
+[    2.694014] scsi0 : ata_piix
+[    2.696954] scsi1 : ata_piix
+[    2.698210] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc0a0 irq 14
+[    2.699061] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc0a8 irq 15
+[    2.708251] Fixed MDIO Bus: probed
+[    2.709931] tun: Universal TUN/TAP device driver, 1.6
+[    2.710482] tun: (C) 1999-2004 Max Krasnyansky &lt;maxk@qualcomm.com&gt;
+[    2.722235] PPP generic driver version 2.4.2
+[    2.747247] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.748937] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.749883] uhci_hcd: USB Universal Host Controller Interface driver
+[    2.751007] uhci_hcd 0000:00:01.2: PCI INT D -&gt; Link[LNKD] -&gt; GSI 11 (level, high) -&gt; IRQ 11
+[    2.754635] uhci_hcd 0000:00:01.2: UHCI Host Controller
+[    2.761495] uhci_hcd 0000:00:01.2: new USB bus registered, assigned bus number 1
+[    2.763338] uhci_hcd 0000:00:01.2: irq 11, io base 0x0000c040
+[    2.793256] hub 1-0:1.0: USB hub found
+[    2.794776] hub 1-0:1.0: 2 ports detected
+[    2.811828] usbcore: registered new interface driver libusual
+[    2.815624] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    2.823122] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    2.824088] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    2.862677] mousedev: PS/2 mouse device common for all mice
+[    2.870715] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+[    2.878376] rtc_cmos 00:01: RTC can wake from S4
+[    2.891904] rtc_cmos 00:01: rtc core: registered rtc_cmos as rtc0
+[    2.895044] rtc0: alarms up to one day, 114 bytes nvram, hpet irqs
+[    2.898721] device-mapper: uevent: version 1.0.3
+[    2.920543] ata2.01: ATAPI: QEMU DVD-ROM, 2.0.0, max UDMA/100
+[    2.925593] device-mapper: ioctl: 4.22.0-ioctl (2011-10-19) initialised: dm-devel@redhat.com
+[    2.928039] cpuidle: using governor ladder
+[    2.929931] cpuidle: using governor menu
+[    2.931176] EFI Variables Facility v0.08 2004-May-17
+[    2.948813] TCP cubic registered
+[    2.952579] NET: Registered protocol family 10
+[    2.994919] NET: Registered protocol family 17
+[    2.996111] Registering the dns_resolver key type
+[    3.019754] ata2.01: configured for MWDMA2
+[    3.075639] scsi 1:0:1:0: CD-ROM            QEMU     QEMU DVD-ROM     2.0. PQ: 0 ANSI: 5
+[    3.107299] sr0: scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+[    3.109189] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    3.128874] sr 1:0:1:0: Attached scsi generic sg0 type 5
+[    3.167150] registered taskstats version 1
+[    3.255756] Freeing initrd memory: 3656k freed
+[    3.789338]   Magic number: 11:952:461
+[    3.798847] rtc_cmos 00:01: setting system clock to 2015-12-09 03:28:11 UTC (1449631691)
+[    3.802428] powernow-k8: Processor cpuid 663 not supported
+[    3.810952] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    3.812235] EDD information not available.
+[    3.893874] Freeing unused kernel memory: 928k freed
+[    3.897321] Write protecting the kernel read-only data: 12288k
+[    3.981744] Freeing unused kernel memory: 1596k freed
+[    4.042244] Freeing unused kernel memory: 1184k freed
 
-info: initramfs: up at 4.40
+info: initramfs: up at 4.23
 modprobe: module virtio_blk not found in modules.dep
 modprobe: module virtio_net not found in modules.dep
 info: copying initramfs to /dev/vda
 info: initramfs loading root from /dev/vda
-info: /etc/init.d/rc.sysinit: up at 8.98
+info: /etc/init.d/rc.sysinit: up at 9.15
 info: container: none
 Starting logging: OK
 modprobe: module virtio_blk not found in modules.dep
@@ -919,7 +918,7 @@ modprobe: module virtio_net not found in modules.dep
 WARN: /etc/rc3.d/S10-load-modules failed
 Initializing random number generator... done.
 Starting acpid: OK
-cirros-ds 'local' up at 11.56
+cirros-ds 'local' up at 11.81
 found datasource (configdrive, local)
 Starting network...
 udhcpc (v1.20.1) started
@@ -934,7 +933,7 @@ no userdata for datasource
 Platform: OpenStack Foundation OpenStack Nova
 Container: none
 Arch: x86_64
-CPU(s): 1 @ 2293.736 MHz
+CPU(s): 1 @ 2294.315 MHz
 Cores/Sockets/Threads: 1/1/1
 Virt-type: AMD-V
 RAM Size: 49MB
@@ -944,22 +943,22 @@ vda  253:0   25165824 cirros-rootfs /
 sr0   11:0     428032 config-2      
 === sshd host keys ===
 -----BEGIN SSH HOST KEY KEYS-----
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgnvSosf8MNYAcHgrHTdv09+2NPAH/lfwq0j/BDu2ekpsIEETr1u0Ie7cnMp/5T8laiw2uTwCgEq3jO/QoRHUTlXl/twOIKXa3yQi8B4IqXY5fpQ4KCCGk4e7TTrpMH+e/4sCLcyy7z6LkbkMkbBmeMx3bH4UNb/Wpeg7yI+vb9VbSIU= root@tempest
-ssh-dss AAAAB3NzaC1kc3MAAACBAKCMO4S96p3xq+1dRf6tWhR0HmqXhX/fV7819rsZo6DjqWW3ZbevxFFhIXin9J1+xEfOob4g1uOt6pM4B3D7JKEJtjBxYae+WL0k66tho0X6j+OsrCF3cBKv3tgMRT/jeZ0pZIKgmcFarb/dDjjlL68i6pNjQe5u1rMTvBEmYaAfAAAAFQCu3KVm0CMWdLgZycLSGw+A4kkiRQAAAIEAkpDNsRxo1fQOo7ENb4yH+Y7YFnYmZKsyPRbcyIFrPD5q0m3edwu3qjP6FDCZTH08QO1FiNy4Wombg9aCCFutcun3x89fJrhAgGryTwqTFx90ecNhfjchWBYXEhP0Czv+z3p9BUO0zZu+yO5K+KwnPYfFgnAEtwyE4smPY53XRTYAAACAdFKPSGCzzFJ9h89anJaTBzYZrmD5jA8I4sRHPrvaQI3tcd7bQAGKUKiNUs0VRJSZ+ex9IKEVZIloC9ZlldFKygNNrw2dZmYiXN+3KTVGhh1ODsR3r9mthvpMd/aF1zKgRHvuWx1yqSqzIlWaVWCZS5ZmY/HSn0Fo7hRMpw4frZc= root@tempest
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgk2nQfaPCa888vTxyftLXouzpOcWj6bLdlMQbbIbkjSCOpr4lScZzPXbaSXKkl7mC00E3Ks/qqMupMEi1tPCSjPoS/T0pKeQd3PO8ThCPv6NGV85IxXCjGZfBIrXN6gCOMEPJdX7+5ctbYLy72vuVE1EJqt6wx/ae8oScUMzvILp0fk= root@tempest
+ssh-dss AAAAB3NzaC1kc3MAAACBALnsuF8BXpBvtedJ+Gau+ewEtl0FLg5bx9pSuwyH0OrrsMJW8N0t7/wgGLPyN0BLTZICl6cM8Q528VxcQ7RrYmYz+trhqT/cG614fF99E/Ux1psmfAUjOqkNq4R1FEPy0QJe7LIWAzYqH8HhmJo2BcJl8NNf1NA7I7RtFW7ty8wjAAAAFQD3J+xZ4DEDcIBNpAqGhekg2hdm/QAAAIEAl++yENYDlqS+XHzzI0LHfNAAqZuW6flHYr3RbeXuqW4+ZSUDdRM3wrX+OQXzq/NBBJ4wJSMVQUQAU7B5r1+g7IJ3+/8ciYoft5z9YSKGCWJZZXyc9ti0yiU9PWzlpqmaVMy8kbIcukIA5YWqycZysV/5fNtUm2hZvYgNfUkNJzkAAACAIIzrJIbklTlUg9lff5cLqf1XU2pG3m/WCqyUcJj6N+mWLzZb5xOR4KAgSTV5Q4jOU0Z1S5T+fUVtVJL2j9xMOKTmMBiYEuL2Yo6zh/4VcmblCkPssS+zfpTyV0jg1YP06Ig6wWZEyZcu22WMe8VaT/5rAynMRaXcyfjSlKMFf1A= root@tempest
 -----END SSH HOST KEY KEYS-----
 === network info ===
 if-info: lo,up,127.0.0.1,8,::1
-if-info: eth0,up,10.100.0.3,28,fe80::f816:3eff:fe27:c3d5
+if-info: eth0,up,10.100.0.3,28,fe80::f816:3eff:feb4:623
 ip-route:default via 10.100.0.1 dev eth0 
 ip-route:10.100.0.0/28 dev eth0  src 10.100.0.3 
 ip-route:169.254.169.254 via 10.100.0.1 dev eth0 
 === datasource: configdrive local ===
-instance-id: 3e7fe0db-8c09-4486-bd47-553377a45927
-name: tempest.common.compute-instance-1872437584
+instance-id: 78d832f7-a972-4fcf-b96d-9de1f3c25fb8
+name: tempest.common.compute-instance-1532565690
 availability-zone: nova
-local-hostname: tempest.common.compute-instance-1872437584.novalocal
+local-hostname: tempest.common.compute-instance-1532565690.novalocal
 launch-index: 0
-=== cirros: current=0.3.4 uptime=21.94 ===
+=== cirros: current=0.3.4 uptime=27.59 ===
   ____               ____  ____
  / __/ __ ____ ____ / __ \/ __/
 / /__ / // __// __// /_/ /\ \ 
@@ -969,106 +968,106 @@ launch-index: 0
 
 login as 'cirros' user. default password: 'cubswin:)'. use 'sudo' for root.
 tempest login: 
-2015-12-08 20:47:28,392 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/floatingips/c701b802-9c40-4872-95ce-a2c89fb96000 0.262s
-2015-12-08 20:47:28,392 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:35,586 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/floatingips/001f5723-a868-4019-94f7-ca84f80c3ff8 0.196s
+2015-12-09 03:30:35,587 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:28 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-cf3accda-ef03-4281-908b-70a63014b172'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:35 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-47d3dae3-5f60-411a-9764-cdc046721bbe'}
         Body: 
-2015-12-08 20:47:28,796 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927 0.403s
-2015-12-08 20:47:28,797 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:35,796 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.209s
+2015-12-09 03:30:35,797 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '204', 'content-length': '0', 'x-compute-request-id': 'req-2c02d1ed-c58b-4b36-97c9-b15ba641c04c', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:47:28 GMT', 'content-type': 'application/json'}
+    Response - Headers: {'status': '204', 'content-length': '0', 'x-compute-request-id': 'req-9619e870-7ebc-4e76-bb35-be5f67b85b3f', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:30:35 GMT', 'content-type': 'application/json'}
         Body: 
-2015-12-08 20:47:29,025 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 200 GET http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927 0.226s
-2015-12-08 20:47:29,025 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:36,050 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 200 GET http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.252s
+2015-12-09 03:30:36,051 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '1776', 'content-location': 'http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927', 'x-compute-request-id': 'req-6715231c-a2a0-4940-a399-4686fff7d292', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:47:29 GMT', 'content-type': 'application/json'}
-        Body: {"server": {"status": "ACTIVE", "updated": "2015-12-08T20:47:28Z", "hostId": "af5d5dd1e68bed381e5777909d18c14aa6b40451549b65f843ee2e93", "addresses": {"tempest-network-smoke--32123973": [{"OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:27:c3:d5", "version": 4, "addr": "10.100.0.3", "OS-EXT-IPS:type": "fixed"}, {"OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:27:c3:d5", "version": 4, "addr": "172.24.4.18", "OS-EXT-IPS:type": "floating"}]}, "links": [{"href": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "self"}, {"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1316733939", "image": {"id": "eb463a7b-fb86-47cd-a354-5cc4e350b304", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/images/eb463a7b-fb86-47cd-a354-5cc4e350b304", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "deleting", "OS-EXT-STS:vm_state": "active", "OS-SRV-USG:launched_at": "2015-12-08T20:45:02.000000", "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/flavors/42", "rel": "bookmark"}]}, "id": "3e7fe0db-8c09-4486-bd47-553377a45927", "security_groups": [{"name": "tempest-secgroup-smoke-1069932254"}], "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "118a621812a144f3aed445a4f073977a", "name": "tempest.common.compute-instance-1872437584", "created": "2015-12-08T20:45:00Z", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 1, "config_drive": "True", "metadata": {}}}
-2015-12-08 20:47:30,187 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 200 GET http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927 0.141s
-2015-12-08 20:47:30,187 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '1777', 'content-location': 'http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8', 'x-compute-request-id': 'req-13c50b58-3a53-4a79-96d8-8684a4d5d690', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:30:36 GMT', 'content-type': 'application/json'}
+        Body: {"server": {"status": "ACTIVE", "updated": "2015-12-09T03:30:35Z", "hostId": "b8c42b300d9696164d2051df4bd26011cf225388a629c0bc203fcc7f", "addresses": {"tempest-network-smoke--1781440557": [{"OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:b4:06:23", "version": 4, "addr": "10.100.0.3", "OS-EXT-IPS:type": "fixed"}, {"OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:b4:06:23", "version": 4, "addr": "172.24.4.18", "OS-EXT-IPS:type": "floating"}]}, "links": [{"href": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "self"}, {"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1199365393", "image": {"id": "08f3306b-f95b-430a-b7cf-14c7b9431b85", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/images/08f3306b-f95b-430a-b7cf-14c7b9431b85", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "deleting", "OS-EXT-STS:vm_state": "active", "OS-SRV-USG:launched_at": "2015-12-09T03:28:04.000000", "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/flavors/42", "rel": "bookmark"}]}, "id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "security_groups": [{"name": "tempest-secgroup-smoke-931937808"}], "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "8d75de1de4b14acfa3e6b8c56ef43427", "name": "tempest.common.compute-instance-1532565690", "created": "2015-12-09T03:28:02Z", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 1, "config_drive": "True", "metadata": {}}}
+2015-12-09 03:30:37,237 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 200 GET http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.174s
+2015-12-09 03:30:37,237 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '1441', 'content-location': 'http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927', 'x-compute-request-id': 'req-5d070bf8-170e-4831-9841-178a75893855', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:47:30 GMT', 'content-type': 'application/json'}
-        Body: {"server": {"status": "ACTIVE", "updated": "2015-12-08T20:47:29Z", "hostId": "af5d5dd1e68bed381e5777909d18c14aa6b40451549b65f843ee2e93", "addresses": {}, "links": [{"href": "http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "self"}, {"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1316733939", "image": {"id": "eb463a7b-fb86-47cd-a354-5cc4e350b304", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/images/eb463a7b-fb86-47cd-a354-5cc4e350b304", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "deleting", "OS-EXT-STS:vm_state": "active", "OS-SRV-USG:launched_at": "2015-12-08T20:45:02.000000", "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/a1d0d7bdb17b41d0adae30a727d64ce4/flavors/42", "rel": "bookmark"}]}, "id": "3e7fe0db-8c09-4486-bd47-553377a45927", "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "118a621812a144f3aed445a4f073977a", "name": "tempest.common.compute-instance-1872437584", "created": "2015-12-08T20:45:00Z", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 1, "config_drive": "True", "metadata": {}}}
-2015-12-08 20:47:31,277 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 404 GET http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927 0.080s
-2015-12-08 20:47:31,278 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '1441', 'content-location': 'http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8', 'x-compute-request-id': 'req-dc1abcda-c90d-431b-a9a2-9f326cb58240', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:30:37 GMT', 'content-type': 'application/json'}
+        Body: {"server": {"status": "ACTIVE", "updated": "2015-12-09T03:30:36Z", "hostId": "b8c42b300d9696164d2051df4bd26011cf225388a629c0bc203fcc7f", "addresses": {}, "links": [{"href": "http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "self"}, {"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "rel": "bookmark"}], "key_name": "tempest-TestNetworkBasicOps-1199365393", "image": {"id": "08f3306b-f95b-430a-b7cf-14c7b9431b85", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/images/08f3306b-f95b-430a-b7cf-14c7b9431b85", "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "deleting", "OS-EXT-STS:vm_state": "active", "OS-SRV-USG:launched_at": "2015-12-09T03:28:04.000000", "flavor": {"id": "42", "links": [{"href": "http://10.0.2.15:8774/3673b47fae71484c81e42d59ae4c8030/flavors/42", "rel": "bookmark"}]}, "id": "78d832f7-a972-4fcf-b96d-9de1f3c25fb8", "OS-SRV-USG:terminated_at": null, "OS-EXT-AZ:availability_zone": "nova", "user_id": "8d75de1de4b14acfa3e6b8c56ef43427", "name": "tempest.common.compute-instance-1532565690", "created": "2015-12-09T03:28:02Z", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "OS-DCF:diskConfig": "MANUAL", "os-extended-volumes:volumes_attached": [], "accessIPv4": "", "accessIPv6": "", "progress": 0, "OS-EXT-STS:power_state": 1, "config_drive": "True", "metadata": {}}}
+2015-12-09 03:30:38,326 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 404 GET http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.077s
+2015-12-09 03:30:38,326 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '404', 'content-length': '111', 'x-compute-request-id': 'req-83bb8bc4-6d9a-451a-81e8-a4b2751364c3', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:47:31 GMT', 'content-type': 'application/json; charset=UTF-8'}
-        Body: {"itemNotFound": {"message": "Instance 3e7fe0db-8c09-4486-bd47-553377a45927 could not be found.", "code": 404}}
-2015-12-08 20:47:31,299 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 202 DELETE http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/os-keypairs/tempest-TestNetworkBasicOps-1316733939 0.019s
-2015-12-08 20:47:31,299 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '404', 'content-length': '111', 'x-compute-request-id': 'req-60feccdc-6074-49e6-ab4d-1ec6f61a5371', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:30:38 GMT', 'content-type': 'application/json; charset=UTF-8'}
+        Body: {"itemNotFound": {"message": "Instance 78d832f7-a972-4fcf-b96d-9de1f3c25fb8 could not be found.", "code": 404}}
+2015-12-09 03:30:38,349 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 202 DELETE http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/os-keypairs/tempest-TestNetworkBasicOps-1199365393 0.021s
+2015-12-09 03:30:38,350 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '202', 'content-length': '0', 'x-compute-request-id': 'req-9d84ba62-80d3-4a5e-9e99-3a11cb921b00', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:47:31 GMT', 'content-type': 'application/json'}
+    Response - Headers: {'status': '202', 'content-length': '0', 'x-compute-request-id': 'req-730b18c7-9495-4076-930c-25911c15ed6e', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:30:38 GMT', 'content-type': 'application/json'}
         Body: 
-2015-12-08 20:47:31,653 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 200 PUT http://10.0.2.15:9696/v2.0/routers/76e6bbcb-000e-4284-8a40-278909dd23b5/remove_router_interface 0.352s
-2015-12-08 20:47:31,655 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"subnet_id": "8e6c0cd5-9523-4585-b1e5-616ca284dc6f"}
-    Response - Headers: {'status': '200', 'content-length': '255', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:47:31 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-b64365a3-65df-497d-a011-2cbe3d08eedf'}
-        Body: {"subnet_id": "8e6c0cd5-9523-4585-b1e5-616ca284dc6f", "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "subnet_ids": ["8e6c0cd5-9523-4585-b1e5-616ca284dc6f"], "port_id": "78f466c5-9f72-406a-9e33-342584aad055", "id": "76e6bbcb-000e-4284-8a40-278909dd23b5"}
-2015-12-08 20:47:32,019 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/subnets/8e6c0cd5-9523-4585-b1e5-616ca284dc6f 0.363s
-2015-12-08 20:47:32,020 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:38,698 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 200 PUT http://10.0.2.15:9696/v2.0/routers/ac471172-e925-4881-8b2c-4f65ae53e9e7/remove_router_interface 0.346s
+2015-12-09 03:30:38,699 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"subnet_id": "f1928663-4b84-430f-91ad-383c1f724287"}
+    Response - Headers: {'status': '200', 'content-length': '255', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:30:38 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-7090248b-5547-49f2-a237-c8e9365dcbe8'}
+        Body: {"subnet_id": "f1928663-4b84-430f-91ad-383c1f724287", "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "subnet_ids": ["f1928663-4b84-430f-91ad-383c1f724287"], "port_id": "aab04168-13ea-4a49-8c9e-73154f831b72", "id": "ac471172-e925-4881-8b2c-4f65ae53e9e7"}
+2015-12-09 03:30:39,077 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/subnets/f1928663-4b84-430f-91ad-383c1f724287 0.377s
+2015-12-09 03:30:39,078 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:32 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-fbb9efe7-0ab4-4a21-a353-dc525deaa523'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:39 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-c86096ff-3fcc-4041-965a-5d686aec4290'}
         Body: 
-2015-12-08 20:47:32,065 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 200 GET http://10.0.2.15:9696/v2.0/routers/76e6bbcb-000e-4284-8a40-278909dd23b5 0.044s
-2015-12-08 20:47:32,065 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:39,121 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 200 GET http://10.0.2.15:9696/v2.0/routers/ac471172-e925-4881-8b2c-4f65ae53e9e7 0.042s
+2015-12-09 03:30:39,122 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '200', 'content-length': '501', 'content-location': 'http://10.0.2.15:9696/v2.0/routers/76e6bbcb-000e-4284-8a40-278909dd23b5', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:47:32 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-c8913694-37a2-4d13-8964-0edd667447c2'}
-        Body: {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "5471b1a1-b641-4c0c-ab18-f4aa605ec5b7", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "3d4539ed-6c35-4866-9ec1-5f1a24007e44", "ip_address": "172.24.4.17"}, {"subnet_id": "a4897e1f-ed06-4e6e-9359-adf3f749960c", "ip_address": "2001:db8::12"}]}, "name": "tempest-router-smoke-53082853", "admin_state_up": true, "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "routes": [], "id": "76e6bbcb-000e-4284-8a40-278909dd23b5"}}
-2015-12-08 20:47:32,419 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 200 PUT http://10.0.2.15:9696/v2.0/routers/76e6bbcb-000e-4284-8a40-278909dd23b5 0.353s
-2015-12-08 20:47:32,421 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
-        Body: {"router": {"external_gateway_info": {}, "name": "tempest-router-smoke-53082853", "admin_state_up": true}}
-    Response - Headers: {'status': '200', 'content-length': '237', 'connection': 'close', 'date': 'Tue, 08 Dec 2015 20:47:32 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-9e6e56ea-296f-4ad0-90c8-eb8f1c5b79b3'}
-        Body: {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "tempest-router-smoke-53082853", "admin_state_up": true, "tenant_id": "a1d0d7bdb17b41d0adae30a727d64ce4", "routes": [], "id": "76e6bbcb-000e-4284-8a40-278909dd23b5"}}
-2015-12-08 20:47:32,620 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/routers/76e6bbcb-000e-4284-8a40-278909dd23b5 0.198s
-2015-12-08 20:47:32,621 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+    Response - Headers: {'status': '200', 'content-length': '502', 'content-location': 'http://10.0.2.15:9696/v2.0/routers/ac471172-e925-4881-8b2c-4f65ae53e9e7', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:30:39 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-c9532450-ad11-4ace-8f85-407214f401b4'}
+        Body: {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "3fcabeb3-580e-4753-8b6d-06e74fefc2c7", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "e83c8aee-9886-4896-ace4-91f18d70e864", "ip_address": "172.24.4.17"}, {"subnet_id": "33c9889c-8117-461a-825c-73407933c28c", "ip_address": "2001:db8::11"}]}, "name": "tempest-router-smoke-461939224", "admin_state_up": true, "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "routes": [], "id": "ac471172-e925-4881-8b2c-4f65ae53e9e7"}}
+2015-12-09 03:30:39,457 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 200 PUT http://10.0.2.15:9696/v2.0/routers/ac471172-e925-4881-8b2c-4f65ae53e9e7 0.334s
+2015-12-09 03:30:39,457 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"router": {"external_gateway_info": {}, "name": "tempest-router-smoke-461939224", "admin_state_up": true}}
+    Response - Headers: {'status': '200', 'content-length': '238', 'connection': 'close', 'date': 'Wed, 09 Dec 2015 03:30:39 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-17bccefa-b403-45bf-95d9-9956c86d2146'}
+        Body: {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "tempest-router-smoke-461939224", "admin_state_up": true, "tenant_id": "3673b47fae71484c81e42d59ae4c8030", "routes": [], "id": "ac471172-e925-4881-8b2c-4f65ae53e9e7"}}
+2015-12-09 03:30:39,672 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/routers/ac471172-e925-4881-8b2c-4f65ae53e9e7 0.214s
+2015-12-09 03:30:39,673 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:32 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-76f40823-2188-4636-91b4-63b060e1de4d'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:39 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-b5299e6b-87cb-48e6-9ddb-d3556e89405e'}
         Body: 
-2015-12-08 20:47:32,784 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/networks/851afad0-3a8a-4f36-97fb-f545bd6e4bce 0.163s
-2015-12-08 20:47:32,785 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:39,971 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/networks/43b4f651-e299-4117-89c3-00b2386b26ca 0.297s
+2015-12-09 03:30:39,971 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:32 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-0545910e-bc85-49b6-8bd7-11f3c527ea79'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:39 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-add45dbc-d619-4b7f-b52e-62083d021de4'}
         Body: 
-2015-12-08 20:47:32,845 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/881986cb-b931-4812-8b1a-5f9a19b712d9 0.058s
-2015-12-08 20:47:32,845 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:40,023 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/09e9abbd-2979-4b2a-87ee-598fdbc5c099 0.050s
+2015-12-09 03:30:40,023 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:32 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-f782e09f-4338-42ca-8fc3-a6bac6ea6c13'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:40 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-b0c9fcf1-3702-4c6a-bded-dec8a4d30004'}
         Body: 
-2015-12-08 20:47:32,902 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/d451179e-0b6a-466e-b568-5c7e4fdc408e 0.055s
-2015-12-08 20:47:32,903 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:40,076 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/2937b87d-3e57-488d-a676-48068e61adae 0.051s
+2015-12-09 03:30:40,076 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:32 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-5328e5a0-9572-4696-b3fa-06fa0b97e176'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:40 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-578d5a1f-82fb-48ce-be47-b5c734501eb7'}
         Body: 
-2015-12-08 20:47:32,952 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/c212178e-fe0d-4543-8f44-c17c58e6f5a5 0.049s
-2015-12-08 20:47:32,953 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:40,132 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/146ac382-86a0-4bb7-af54-f7ff6d3729b6 0.055s
+2015-12-09 03:30:40,133 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:32 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-a3bef6bb-bfad-4251-9707-05b87c6caa46'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:40 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-ffe6e5ab-7548-41cc-9cb0-cb0cc55d05b7'}
         Body: 
-2015-12-08 20:47:33,011 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/0db38544-e885-48eb-9fea-6371e64a4fbe 0.057s
-2015-12-08 20:47:33,011 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:40,182 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/1c274a97-f1c3-42e5-9773-a4612cc1c198 0.048s
+2015-12-09 03:30:40,183 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:33 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-3c1f41a3-d8b4-4be2-92f3-6d16a6204156'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:40 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-0652244b-a17f-46ba-94e5-30cd8840503f'}
         Body: 
-2015-12-08 20:47:33,067 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/7c59792b-446a-4d59-a23c-a239939e2933 0.054s
-2015-12-08 20:47:33,067 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:40,238 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/0b2021cd-7449-4afb-9d75-1bfe6e697155 0.054s
+2015-12-09 03:30:40,238 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:33 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-cfab3ac7-981c-4c60-8bf0-5915b1ad9bd0'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:40 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-45b7a7fe-7372-4773-9cf0-51ba8e1e5677'}
         Body: 
-2015-12-08 20:47:33,165 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/3e52e1c5-c5d2-4ff8-8962-2e9153b67c26 0.097s
-2015-12-08 20:47:33,166 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:40,281 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-group-rules/d16e6283-88d7-455d-be36-6ca8c63fe1af 0.041s
+2015-12-09 03:30:40,281 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:33 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-d98549c1-cc5d-4ea6-8cde-c62b52584057'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:40 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-c306569f-6a2f-4d2f-a343-f16c8b5ee502'}
         Body: 
-2015-12-08 20:47:33,242 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-groups/1763c7b1-ddbf-46fc-9633-99dbad0cdf83 0.075s
-2015-12-08 20:47:33,244 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:40,364 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 204 DELETE http://10.0.2.15:9696/v2.0/security-groups/4762ba55-b417-45fa-a67e-418a493bc67e 0.081s
+2015-12-09 03:30:40,365 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'date': 'Tue, 08 Dec 2015 20:47:33 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-d979948e-6ed0-476a-bd39-07759fec46a3'}
+    Response - Headers: {'date': 'Wed, 09 Dec 2015 03:30:40 GMT', 'status': '204', 'connection': 'close', 'content-length': '0', 'x-openstack-request-id': 'req-81d33e86-7b53-46e5-8b4d-6c8fe8ffbe52'}
         Body: 
-2015-12-08 20:47:33,324 27633 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 404 GET http://10.0.2.15:8774/v2.1/a1d0d7bdb17b41d0adae30a727d64ce4/servers/3e7fe0db-8c09-4486-bd47-553377a45927 0.079s
-2015-12-08 20:47:33,324 27633 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+2015-12-09 03:30:40,460 32668 INFO     [tempest_lib.common.rest_client] Request (TestNetworkBasicOps:_run_cleanups): 404 GET http://10.0.2.15:8774/v2.1/3673b47fae71484c81e42d59ae4c8030/servers/78d832f7-a972-4fcf-b96d-9de1f3c25fb8 0.095s
+2015-12-09 03:30:40,461 32668 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
         Body: None
-    Response - Headers: {'status': '404', 'content-length': '111', 'x-compute-request-id': 'req-948188fb-cf8f-4ffb-a455-220136822ab8', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Tue, 08 Dec 2015 20:47:33 GMT', 'content-type': 'application/json; charset=UTF-8'}
-        Body: {"itemNotFound": {"message": "Instance 3e7fe0db-8c09-4486-bd47-553377a45927 could not be found.", "code": 404}}
+    Response - Headers: {'status': '404', 'content-length': '111', 'x-compute-request-id': 'req-5f8fdc31-e4f6-4588-8454-2b99eb4c99e4', 'vary': 'X-OpenStack-Nova-API-Version', 'connection': 'close', 'x-openstack-nova-api-version': '2.1', 'date': 'Wed, 09 Dec 2015 03:30:40 GMT', 'content-type': 'application/json; charset=UTF-8'}
+        Body: {"itemNotFound": {"message": "Instance 78d832f7-a972-4fcf-b96d-9de1f3c25fb8 could not be found.", "code": 404}}
 }}}
 
 Traceback (most recent call last):
