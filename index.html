@@ -117,6 +117,12 @@
                 var apiChart7= new Chart(ctx).Pie(pieData7);
                 var ctx = document.getElementById('chart8').getContext('2d');
                 var apiChart8= new Chart(ctx).Pie(pieData8);
+                
+                $.get('master/basicops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        alert(data);
+                });
+
 
         };      
     </script> 
@@ -442,6 +448,7 @@
                 var apiChart3= new Chart(ctx).Pie(pieData3);
                 var ctx = document.getElementById('chart4').getContext('2d');
                 var apiChart4= new Chart(ctx).Pie(pieData4);
+                
         };      
     </script> 
 
