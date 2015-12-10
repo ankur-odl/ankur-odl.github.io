@@ -28,7 +28,6 @@
                 $.get('master/api/test.txt', function ( data ) {
                         $(".result").html(data);
 			var temp = data.split(' ');
-			alert(temp);
 			for(var i = 0; i < temp.length; i++){
 		            if(temp[i] == 'Failure'){
 				masterapiFailed += parseInt(temp[i+1]);
@@ -40,8 +39,6 @@
 				masterapiPass += parseInt(temp[i+1]);
 			    }
 			}
-			alert(masterapiPass + " and " + masterapiFailed);
-
                         var pieData1 = [
                                         { 
                                           value: masterapiFailed,
