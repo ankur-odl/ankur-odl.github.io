@@ -18,30 +18,95 @@
 	window.onload = function () { 
        		var masterbasicopsFailed = 0;
 		var masterbasicopsPass = 0;
-                
-                $.get('master/basicops/test.txt', function ( data ) {
+		var masterapiFailed = 0;
+		var masterapiPass = 0;
+		var masteripv6Failed = 0;
+		var masteripv6Pass = 0;
+		var masteradvopsFailed = 0;
+		var masteradvopsPass = 0;        
+        
+                $.get('master/api/test.txt', function ( data ) {
                         $(".result").html(data);
 			var temp = data.split(' ');
 			
 			for(var i = 0; i < temp.length; i++){
 		            if(temp[i] == 'Failure'){
-				masterbasicopsFailed += parseInt(temp[i+1]);
+				masterapiFailed += parseInt(temp[i+1]);
 			    }
 			    if(temp[i] == 'Pass' ){
-				masterbasicopsPass += parseInt(temp[i+1]);		
+				masterapiPass += parseInt(temp[i+1]);		
 			    }
 		            if(temp[i] == 'Skip'){
-				masterbasicopsPass += parseInt(temp[i+1]);
+				masterapiPass += parseInt(temp[i+1]);
 			    }
-			} 			
+			}
+		}); 			
+
+        
+                $.get('master/basicops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                masterbasicopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                masterbasicopsPass += parseInt(temp[i+1]);              
+                            }
+                            if(temp[i] == 'Skip'){
+                                masterbasicopsPass += parseInt(temp[i+1]);
+                            }
+                        }                       
+		});
+        
+                $.get('master/ipv6/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                masteripv6Failed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                masteripv6Pass += parseInt(temp[i+1]);              
+                            }
+                            if(temp[i] == 'Skip'){
+                                masteripv6Pass += parseInt(temp[i+1]);
+                            }
+                        }                       
+		});
+        
+                $.get('master/advops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                masteradvopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                masteradvopsPass += parseInt(temp[i+1]);              
+                            }
+                            if(temp[i] == 'Skip'){
+                                masteradvopsPass += parseInt(temp[i+1]);
+                            }
+                        }                       
+		});
+
+
+
+
+
+
 
 		        var pieData1 = [
        		 	                { 
-		                          value: 0,
+		                          value: masterapiFailed,
         	                	  color: '#F7464A',
                		 	        },
         	       		        {
-	                        	  value: 256,
+	                        	  value: masterapiPass,
 	                        	  color: '#46BFBD',
         	        	        }
         		];
@@ -57,21 +122,21 @@
 		        ];
 		        var pieData3 = [
 		                        { 
-		                          value: 6,
+		                          value: masteripv6Failed,
 		                          color: '#F7464A',
 		                        },
                 		        {
-		                          value: 2,
+		                          value: masteripv6Pass,
 		                          color: '#46BFBD',
 		                        }
 		        ];
 		        var pieData4 = [
 		                        { 
-                		          value: 0,
+                		          value: masteradvopsFailed,
 		                          color: '#F7464A',
                 		        },
 		                        {
-		                          value: 6,
+		                          value: masteradvopsPass,
                        			   color: '#46BFBD',
                 		        }
 		        ];
@@ -87,10 +152,9 @@
 	    	        var apiChart4= new Chart(ctx).Pie(pieData4);
 
            
-			alert(masterbasicopsFailed + "And" + masterbasicopsPass);
-                });
+                };
 
-        };      
+       // });      
     </script> 
   </head>
 
@@ -323,10 +387,42 @@
     <script type="text/javascript">       
 	var masterbasicopsPass = 0
 	var masterbasicopsFailed = 0
-
+        var masterapiFailed = 0;
+        var masterapiPass = 0;
+        var masteripv6Failed = 0;
+        var masteripv6Pass = 0;
+        var masteradvopsFailed = 0;
+        var masteradvopsPass = 0;        
+        
         jQuery(document).ready = function () { 
+	        var masterbasicopsPass = 0
+	        var masterbasicopsFailed = 0	
+	        var masterapiFailed = 0;
+	        var masterapiPass = 0;
+	        var masteripv6Failed = 0;
+	        var masteripv6Pass = 0;
+        	var masteradvopsFailed = 0;
+	        var masteradvopsPass = 0;       
+
+                $.get('master/api/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                masterapiFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                masterapiPass += parseInt(temp[i+1]);              
+                            }
+                            if(temp[i] == 'Skip'){
+                                masterapiPass += parseInt(temp[i+1]);
+                            }
+                        }
+		});
 
 
+        
                 $.get('master/basicops/test.txt', function ( data ) {
                         $(".result").html(data);
                         var temp = data.split(' ');
@@ -342,16 +438,54 @@
                                 masterbasicopsPass += parseInt(temp[i+1]);
                             }
                         }                       
+		});
+        
+                $.get('master/ipv6/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                masteripv6Failed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                masteripv6Pass += parseInt(temp[i+1]);              
+                            }
+                            if(temp[i] == 'Skip'){
+                                masteripv6Pass += parseInt(temp[i+1]);
+                            }
+                        }                       
+		});
+        
+                $.get('master/advops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                masteradvopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                masteradvopsPass += parseInt(temp[i+1]);              
+                            }
+                            if(temp[i] == 'Skip'){
+                                masteradvopsPass += parseInt(temp[i+1]);
+                            }
+                        }                       
+		});
 
-                });
+
+                              
+
+                //});
 
         var pieData1 = [
                         { 
-                          value: 0,
+                          value: masterapiFailed,
                           color: '#F7464A',
                         },
                         {
-                          value: 256,
+                          value: masterapiPass,
                           color: '#46BFBD',
                         }
         ];
@@ -367,21 +501,21 @@
         ];
         var pieData3 = [
                         { 
-                          value: 6,
+                          value: masteripv6Failed,
                           color: '#F7464A',
                         },
                         {
-                          value: 2,
+                          value: masteripv6Pass,
                           color: '#46BFBD',
                         }
         ];
         var pieData4 = [
                         { 
-                          value: 0,
+                          value: masteradvopsFailed,
                           color: '#F7464A',
                         },
                         {
-                          value: 6,
+                          value: masteradvopsPass,
                           color: '#46BFBD',
                         }
         ];
