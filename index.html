@@ -28,7 +28,7 @@
                 $.get('master/api/test.txt', function ( data ) {
                         $(".result").html(data);
 			var temp = data.split(' ');
-			alert(temp);			
+			alert(temp);
 			for(var i = 0; i < temp.length; i++){
 		            if(temp[i] == 'Failure'){
 				masterapiFailed += parseInt(temp[i+1]);
@@ -41,6 +41,20 @@
 			    }
 			}
 			alert(masterapiPass + " and " + masterapiFailed);
+
+                        var pieData1 = [
+                                        { 
+                                          value: masterapiFailed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: masterapiPass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+                        var ctx = document.getElementById('chart1').getContext('2d');
+                        var apiChart1= new Chart(ctx).Pie(pieData1);
+
 		}); 			
 
         
@@ -58,7 +72,23 @@
                             if(temp[i] == 'Skip'){
                                 masterbasicopsPass += parseInt(temp[i+1]);
                             }
-                        }                       
+                        }
+
+                        var pieData2 = [
+                                        { 
+                                          value: masterbasicopsFailed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: masterbasicopsPass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+
+                        var ctx = document.getElementById('chart2').getContext('2d');
+                        var apiChart2= new Chart(ctx).Pie(pieData2);
+
+                       
 		});
         
                 $.get('master/ipv6/test.txt', function ( data ) {
@@ -75,7 +105,21 @@
                             if(temp[i] == 'Skip'){
                                 masteripv6Pass += parseInt(temp[i+1]);
                             }
-                        }                       
+                        }
+
+                        var pieData3 = [
+                                        { 
+                                          value: masteripv6Failed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: masteripv6Pass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+                        var ctx = document.getElementById('chart3').getContext('2d');
+                        var apiChart3= new Chart(ctx).Pie(pieData3);
+                       
 		});
         
                 $.get('master/advops/test.txt', function ( data ) {
@@ -93,44 +137,6 @@
                                 masteradvopsPass += parseInt(temp[i+1]);
                             }
                         }                       
-		});
-
-
-
-
-
-
-
-		        var pieData1 = [
-       		 	                { 
-		                          value: masterapiFailed,
-        	                	  color: '#F7464A'
-               		 	        },
-        	       		        {
-	                        	  value: masterapiPass,
-	                        	  color: '#46BFBD'
-        	        	        }
-        		];
-	       		var pieData2 = [
-	                	        { 
-                        		  value: masterbasicopsFailed,
-                	       		  color: '#F7464A'
-	        	                },
-		                        {
-                	        	  value: masterbasicopsPass,
-                		          color: '#46BFBD'
-	        	                }
-		        ];
-		        var pieData3 = [
-		                        { 
-		                          value: masteripv6Failed,
-		                          color: '#F7464A'
-		                        },
-                		        {
-		                          value: masteripv6Pass,
-		                          color: '#46BFBD'
-		                        }
-		        ];
 		        var pieData4 = [
 		                        { 
                 		          value: masteradvopsFailed,
@@ -142,17 +148,11 @@
                 		        }
 		        ];
 
-
-           	     	var ctx = document.getElementById('chart1').getContext('2d');
-               	    	var apiChart1= new Chart(ctx).Pie(pieData1);
-               	     	var ctx = document.getElementById('chart2').getContext('2d');
-                	var apiChart2= new Chart(ctx).Pie(pieData2);
-	                var ctx = document.getElementById('chart3').getContext('2d');
-       	        	var apiChart3= new Chart(ctx).Pie(pieData3);
-       		        var ctx = document.getElementById('chart4').getContext('2d');
+			var ctx = document.getElementById('chart4').getContext('2d');
 	    	        var apiChart4= new Chart(ctx).Pie(pieData4);
+                });
 
-          		alert(masterapiFailed + " and "+ masterapiPass); 
+
                 };
 
        // });      
@@ -388,14 +388,14 @@
     <script type="text/javascript">       
         
         jQuery(document).ready = function () { 
-//	        var masterbasicopsPass = 0
-//	        var masterbasicopsFailed = 0	
-//	        var masterapiFailed = 0;
-//	        var masterapiPass = 0;
-//	        var masteripv6Failed = 0;
-//	        var masteripv6Pass = 0;
-//       	var masteradvopsFailed = 0;
-//	        var masteradvopsPass = 0;       
+	        var masterbasicopsPass = 0
+	        var masterbasicopsFailed = 0	
+	        var masterapiFailed = 0;
+	        var masterapiPass = 0;
+	        var masteripv6Failed = 0;
+	        var masteripv6Pass = 0;
+	       	var masteradvopsFailed = 0;
+	        var masteradvopsPass = 0;       
 
                 $.get('master/api/test.txt', function ( data ) {
                         $(".result").html(data);
@@ -466,11 +466,6 @@
                             }
                         }                       
 		});
-
-
-                              
-
-                //});
 
         var pieData1 = [
                         { 
@@ -555,7 +550,7 @@
 
 
 
-                var ctx = document.getElementById('chart1').getContext('2d');
+/**                var ctx = document.getElementById('chart1').getContext('2d');
                 var apiChart1= new Chart(ctx).Pie(pieData1);
                 var ctx = document.getElementById('chart2').getContext('2d');
                 var apiChart2= new Chart(ctx).Pie(pieData2);
@@ -563,7 +558,7 @@
                 var apiChart3= new Chart(ctx).Pie(pieData3);
                 var ctx = document.getElementById('chart4').getContext('2d');
                 var apiChart4= new Chart(ctx).Pie(pieData4);
-
+**/
         }; 
  
     </script> 
