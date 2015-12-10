@@ -24,7 +24,17 @@
 		var masteripv6Pass = 0;
 		var masteradvopsFailed = 0;
 		var masteradvopsPass = 0;        
-        
+       
+                var libertybasicopsFailed = 0;
+                var libertybasicopsPass = 0;
+                var libertyapiFailed = 0;
+                var libertyapiPass = 0;
+                var libertyipv6Failed = 0;
+                var libertyipv6Pass = 0;
+                var libertyadvopsFailed = 0;
+                var libertyadvopsPass = 0;        
+
+ 
                 $.get('master/api/test.txt', function ( data ) {
                         $(".result").html(data);
 			var temp = data.split(' ');
@@ -148,6 +158,38 @@
 			var ctx = document.getElementById('chart4').getContext('2d');
 	    	        var apiChart4= new Chart(ctx).Pie(pieData4);
                 });
+
+        
+                $.get('liberty/api/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                libertyapiFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                libertyapiPass += parseInt(temp[i+1]);           
+                            }
+                            if(temp[i] == 'Skip'){
+                                libertyapiPass += parseInt(temp[i+1]);
+                            }
+                        }
+                        var pieData1 = [
+                                        { 
+                                          value: libertyapiFailed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: libertyapiPass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+                        var ctx = document.getElementById('chart5').getContext('2d');
+                        var apiChart5= new Chart(ctx).Pie(pieData1);
+
+                });                     
+
+        
 
 
                 };
