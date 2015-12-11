@@ -174,7 +174,7 @@
                                 libertyapiPass += parseInt(temp[i+1]);
                             }
                         }
-                        var pieData1 = [
+                        var pieData5 = [
                                         { 
                                           value: libertyapiFailed,
                                           color: '#F7464A'
@@ -185,19 +185,96 @@
                                         }
                         ];
                         var ctx = document.getElementById('chart5').getContext('2d');
-                        var apiChart5= new Chart(ctx).Pie(pieData1);
-
+                        var apiChart5= new Chart(ctx).Pie(pieData5);
                 });                     
+               
+                $.get('liberty/basicops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                libertybasicopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                libertybasicopsPass += parseInt(temp[i+1]);           
+                            }
+                            if(temp[i] == 'Skip'){
+                                libertybasicopsPass += parseInt(temp[i+1]);
+                            }
+                        }
+                        var pieData6 = [
+                                        { 
+                                          value: libertybasicopsFailed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: libertybasicopsPass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+                        var ctx = document.getElementById('chart6').getContext('2d');
+                        var apiChart6= new Chart(ctx).Pie(pieData6);
+                });                  
 
-        
+               
+                $.get('liberty/ipv6/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                libertyipv6Failed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                libertyipv6Pass += parseInt(temp[i+1]);           
+                            }
+                            if(temp[i] == 'Skip'){
+                                libertyipv6Pass += parseInt(temp[i+1]);
+                            }
+                        }
+                        var pieData7 = [
+                                        { 
+                                          value: libertyipv6Failed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: libertyipv6Pass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+                        var ctx = document.getElementById('chart7').getContext('2d');
+                        var apiChart7= new Chart(ctx).Pie(pieData7);
+                });                  
 
+    		$.get('liberty/advops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                libertyadvopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                libertyadvopsPass += parseInt(temp[i+1]);           
+                            }
+                            if(temp[i] == 'Skip'){
+                                libertyadvopsPass += parseInt(temp[i+1]);
+                            }
+                        }
+                        var pieData8 = [
+                                        { 
+                                          value: libertyadvopsFailed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: libertyadvopsPass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+                        var ctx = document.getElementById('chart8').getContext('2d');
+                        var apiChart8= new Chart(ctx).Pie(pieData8);
+                });                  
 
-                };
-
-       // });      
-    </script> 
-  </head>
-
+		};
+	</script> 
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
