@@ -34,6 +34,15 @@
                 var libertyadvopsFailed = 0;
                 var libertyadvopsPass = 0;        
 
+
+                var l3basicopsFailed = 0;
+                var l3basicopsPass = 0;
+                var l3apiFailed = 0;
+                var l3apiPass = 0;
+                var l3ipv6Failed = 0;
+                var l3ipv6Pass = 0;
+                var l3advopsFailed = 0;
+                var l3advopsPass = 0;
  
                 $.get('master/api/test.txt', function ( data ) {
                         $(".result").html(data);
@@ -272,6 +281,129 @@
                         var ctx = document.getElementById('chart8').getContext('2d');
                         var apiChart8= new Chart(ctx).Pie(pieData8);
                 });                  
+
+
+                $.get('l3/api/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                l3apiFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                l3apiPass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                l3apiPass += parseInt(temp[i+1]);
+                            }
+                        }
+                        var pieData9 = [
+                                        {
+                                          value: l3apiFailed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: l3apiPass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+                        var ctx = document.getElementById('chart9').getContext('2d');
+                        var apiChart9= new Chart(ctx).Pie(pieData9);
+
+                });
+
+
+
+                $.get('l3/basicops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                l3basicopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                l3basicopsPass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                l3basicopsPass += parseInt(temp[i+1]);
+                            }
+                        }
+                        var pieData10 = [
+                                        {
+                                          value: l3basicopsFailed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: l3basicopsPass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+                        var ctx = document.getElementById('chart10').getContext('2d');
+                        var apiChart10= new Chart(ctx).Pie(pieData10);
+                });
+
+
+                $.get('l3/ipv6/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                l3ipv6Failed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                l3ipv6Pass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                l3ipv6Pass += parseInt(temp[i+1]);
+                            }
+                        }
+                        var pieData11 = [
+                                        {
+                                          value: l3ipv6Failed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: l3ipv6Pass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+                        var ctx = document.getElementById('chart11').getContext('2d');
+                        var apiChart11= new Chart(ctx).Pie(pieData11);
+                });
+
+
+
+                $.get('l3/advops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                l3advopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                l3advopsPass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                l3advopsPass += parseInt(temp[i+1]);
+                            }
+                        }
+                        var pieData12 = [
+                                        {
+                                          value: l3advopsFailed,
+                                          color: '#F7464A'
+                                        },
+                                        {
+                                          value: l3advopsPass,
+                                          color: '#46BFBD'
+                                        }
+                        ];
+                        var ctx = document.getElementById('chart12').getContext('2d');
+                        var apiChart12= new Chart(ctx).Pie(pieData12);
+                });
+
+
+
+
 
 		};
 	</script> 
@@ -594,14 +726,6 @@
     <script type="text/javascript">       
         
         jQuery(document).ready = function () { 
-	        var masterbasicopsPass = 0
-	        var masterbasicopsFailed = 0	
-	        var masterapiFailed = 0;
-	        var masterapiPass = 0;
-	        var masteripv6Failed = 0;
-	        var masteripv6Pass = 0;
-	       	var masteradvopsFailed = 0;
-	        var masteradvopsPass = 0;       
 
                 $.get('master/api/test.txt', function ( data ) {
                         $(".result").html(data);
@@ -715,57 +839,89 @@
         ];
         var pieData5 = [
                         { 
-                          value: 3,
+                          value: libertyapiFailed,
                           color: '#F7464A'
                         },
                         {
-                          value: 258,
+                          value: libertyapiPass,
                           color: '#46BFBD'
                         }
         ];
        var pieData6 = [
                         { 
-                          value: 1,
+                          value: libertybasicopsFailed,
                           color: '#F7464A'
                         },
                         {
-                          value: 7,
+                          value: libertybasicopsPass,
                           color: '#46BFBD'
                         }
         ];
         var pieData7 = [
                         { 
-                          value: 6,
+                          value: libertyipv6Failed,
                           color: '#F7464A'
                         },
                         {
-                          value: 2,
+                          value: libertyipv6Pass,
                           color: '#46BFBD'
                         }
         ];
         var pieData8 = [
                         { 
-                          value: 0,
+                          value: libertyadvopsFailed,
                           color: '#F7464A'
                         },
                         {
-                          value: 6,
+                          value: libertyadvopsPass,
                           color: '#46BFBD'
                         }
         ];
 
 
+      
+	var pieData9 = [
+                        {
+                          value: l3apiFailed,
+                          color: '#F7464A'
+                        },
+                        {
+                          value: l3apiPass,
+                          color: '#46BFBD'
+                        }
+        ];
+       var pieData10 = [
+                        {
+                          value: l3basicopsFailed,
+                          color: '#F7464A'
+                        },
+                        {
+                          value: l3basicopsPass,
+                          color: '#46BFBD'
+                        }
+        ];
+        var pieData11 = [
+                        {
+                          value: l3ipv6Failed,
+                          color: '#F7464A'
+                        },
+                        {
+                          value: l3ipv6Pass,
+                          color: '#46BFBD'
+                        }
+        ];
+        var pieData12 = [
+                        {
+                          value: l3advopsFailed,
+                          color: '#F7464A'
+                        },
+                        {
+                          value: l3advopsPass,
+                          color: '#46BFBD'
+                        }
+        ];
 
-/**                var ctx = document.getElementById('chart1').getContext('2d');
-                var apiChart1= new Chart(ctx).Pie(pieData1);
-                var ctx = document.getElementById('chart2').getContext('2d');
-                var apiChart2= new Chart(ctx).Pie(pieData2);
-                var ctx = document.getElementById('chart3').getContext('2d');
-                var apiChart3= new Chart(ctx).Pie(pieData3);
-                var ctx = document.getElementById('chart4').getContext('2d');
-                var apiChart4= new Chart(ctx).Pie(pieData4);
-**/
-        }; 
+}; 
  
     </script> 
 
