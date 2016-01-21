@@ -797,6 +797,151 @@
                         }                       
 		});
 
+
+                $.get('liberty/api/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                libertyapiFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                libertyapiPass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                libertyapiPass += parseInt(temp[i+1]);
+                            }
+                        }
+                });
+
+
+
+                $.get('liberty/basicops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                libertybasicopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                libertybasicopsPass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                libertybasicopsPass += parseInt(temp[i+1]);
+                            }
+                        }
+                });
+
+                $.get('liberty/ipv6/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                libertyipv6Failed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                libertyipv6Pass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                libertyipv6Pass += parseInt(temp[i+1]);
+                            }
+                        }
+                });
+
+
+                $.get('liberty/advops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                libertyadvopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                libertyadvopsPass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                libertyadvopsPass += parseInt(temp[i+1]);
+                            }
+                        }
+                });
+
+
+
+
+                $.get('l3/api/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                l3apiFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                l3apiPass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                l3apiPass += parseInt(temp[i+1]);
+                            }
+                        }
+                });
+
+                $.get('l3/basicops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                l3basicopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                l3basicopsPass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                l3basicopsPass += parseInt(temp[i+1]);
+                            }
+                        }
+                });
+
+                $.get('l3/ipv6/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                l3ipv6Failed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                l3ipv6Pass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                l3ipv6Pass += parseInt(temp[i+1]);
+                            }
+                        }
+                });
+
+                $.get('l3/advops/test.txt', function ( data ) {
+                        $(".result").html(data);
+                        var temp = data.split(' ');
+
+                        for(var i = 0; i < temp.length; i++){
+                            if(temp[i] == 'Failure'){
+                                l3advopsFailed += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Pass' ){
+                                l3advopsPass += parseInt(temp[i+1]);
+                            }
+                            if(temp[i] == 'Skip'){
+                                l3advopsPass += parseInt(temp[i+1]);
+                            }
+                        }
+                });
+
+
+
         var pieData1 = [
                         { 
                           value: masterapiFailed,
