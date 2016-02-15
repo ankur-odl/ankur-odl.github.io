@@ -190,7 +190,7 @@ function showOutput(id, name) {
 <div class='heading'>
 <h1>Unit Test Report</h1>
 
-<p class='attribute'><strong>Status:</strong> Pass 257 Skip 5</p>
+<p class='attribute'><strong>Status:</strong> Pass 255 Failure 2 Skip 5</p>
 
 <p class='description'></p>
 </div>
@@ -1612,11 +1612,11 @@ pt16.1: tempest.api.network.test_extensions.ExtensionsTestJSON.test_list_show_ex
     </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='failClass'>
     <td class="testname">tempest.api.network.test_extra_dhcp_options.ExtraDHCPOptionsIpV6TestJSON</td>
     <td class="small">2</td>
-    <td class="small">2</td>
-    <td class="small">0</td>
+    <td class="small">1</td>
+    <td class="small">1</td>
     <td class="small">0</td>
     <td class="small">0</td>
     <td class="small"><a href="javascript:showClassDetail('c17',2)"
@@ -1624,24 +1624,52 @@ pt16.1: tempest.api.network.test_extensions.ExtensionsTestJSON.test_list_show_ex
     <td> </td>
 </tr>
 
-<tr id='pt17.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_create_list_port_with_extra_dhcp_options[id-d2c17063-3767-4a24-be4f-a23dbfa133c9]</div></td>
+<tr id='ft17.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_create_list_port_with_extra_dhcp_options[id-d2c17063-3767-4a24-be4f-a23dbfa133c9]</div></td>
     <td colspan='7' align='left'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();'
-    href="javascript:showTestDetail('div_pt17.1')" >
-        pass</a>
+    href="javascript:showTestDetail('div_ft17.1')" >
+        fail</a>
 
-    <div id='div_pt17.1' class="popup_window">
+    <div id='div_ft17.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
         <a onfocus='this.blur();'
-onclick="document.getElementById('div_pt17.1').style.display = 'none' " >
+onclick="document.getElementById('div_ft17.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt17.1: tempest.api.network.test_extra_dhcp_options.ExtraDHCPOptionsIpV6TestJSON.test_create_list_port_with_extra_dhcp_options[id-d2c17063-3767-4a24-be4f-a23dbfa133c9]
+ft17.1: tempest.api.network.test_extra_dhcp_options.ExtraDHCPOptionsIpV6TestJSON.test_create_list_port_with_extra_dhcp_options[id-d2c17063-3767-4a24-be4f-a23dbfa133c9]_StringException: Empty attachments:
+  stderr
+  stdout
+
+pythonlogging:'': {{{
+2016-02-15 18:45:39,460 17753 INFO     [tempest_lib.common.rest_client] Request (ExtraDHCPOptionsIpV6TestJSON:test_create_list_port_with_extra_dhcp_options): 500 POST http://10.4.1.3:9696/v2.0/ports 1.180s
+2016-02-15 18:45:39,460 17753 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"port": {"network_id": "4e1fb45d-6d6f-4216-b286-ea52e187c4a6", "extra_dhcp_opts": [{"opt_value": "pxelinux.0", "opt_name": "bootfile-name"}, {"opt_value": "2015::dead", "opt_name": "tftp-server"}, {"opt_value": "2015::badd", "opt_name": "server-ip-address"}]}}
+    Response - Headers: {'status': '500', 'content-length': '109', 'connection': 'close', 'date': 'Mon, 15 Feb 2016 18:45:39 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-08225bce-0682-45bd-b358-164081d49d43'}
+        Body: {"NeutronError": {"message": "create_port_postcommit failed.", "type": "MechanismDriverError", "detail": ""}}
+}}}
+
+Traceback (most recent call last):
+  File "tempest/api/network/test_extra_dhcp_options.py", line 62, in test_create_list_port_with_extra_dhcp_options
+    extra_dhcp_opts=self.extra_dhcp_opts)
+  File "/usr/local/lib/python2.7/dist-packages/tempest_lib/services/network/ports_client.py", line 21, in create_port
+    return self.create_resource(uri, post_data)
+  File "/usr/local/lib/python2.7/dist-packages/tempest_lib/services/network/base.py", line 60, in create_resource
+    resp, body = self.post(req_uri, req_post_data)
+  File "/usr/local/lib/python2.7/dist-packages/tempest_lib/common/rest_client.py", line 259, in post
+    return self.request('POST', url, extra_headers, headers, body)
+  File "/usr/local/lib/python2.7/dist-packages/tempest_lib/common/rest_client.py", line 642, in request
+    resp, resp_body)
+  File "/usr/local/lib/python2.7/dist-packages/tempest_lib/common/rest_client.py", line 761, in _error_checker
+    message=message)
+tempest_lib.exceptions.ServerFault: Got server fault
+Details: create_port_postcommit failed.
+
+
 
         </pre>
     </div>
@@ -1676,11 +1704,11 @@ pt17.2: tempest.api.network.test_extra_dhcp_options.ExtraDHCPOptionsIpV6TestJSON
     </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='failClass'>
     <td class="testname">tempest.api.network.test_extra_dhcp_options.ExtraDHCPOptionsTestJSON</td>
     <td class="small">2</td>
-    <td class="small">2</td>
-    <td class="small">0</td>
+    <td class="small">1</td>
+    <td class="small">1</td>
     <td class="small">0</td>
     <td class="small">0</td>
     <td class="small"><a href="javascript:showClassDetail('c18',2)"
@@ -1688,24 +1716,52 @@ pt17.2: tempest.api.network.test_extra_dhcp_options.ExtraDHCPOptionsIpV6TestJSON
     <td> </td>
 </tr>
 
-<tr id='pt18.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_create_list_port_with_extra_dhcp_options[id-d2c17063-3767-4a24-be4f-a23dbfa133c9]</div></td>
+<tr id='ft18.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_create_list_port_with_extra_dhcp_options[id-d2c17063-3767-4a24-be4f-a23dbfa133c9]</div></td>
     <td colspan='7' align='left'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();'
-    href="javascript:showTestDetail('div_pt18.1')" >
-        pass</a>
+    href="javascript:showTestDetail('div_ft18.1')" >
+        fail</a>
 
-    <div id='div_pt18.1' class="popup_window">
+    <div id='div_ft18.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
         <a onfocus='this.blur();'
-onclick="document.getElementById('div_pt18.1').style.display = 'none' " >
+onclick="document.getElementById('div_ft18.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt18.1: tempest.api.network.test_extra_dhcp_options.ExtraDHCPOptionsTestJSON.test_create_list_port_with_extra_dhcp_options[id-d2c17063-3767-4a24-be4f-a23dbfa133c9]
+ft18.1: tempest.api.network.test_extra_dhcp_options.ExtraDHCPOptionsTestJSON.test_create_list_port_with_extra_dhcp_options[id-d2c17063-3767-4a24-be4f-a23dbfa133c9]_StringException: Empty attachments:
+  stderr
+  stdout
+
+pythonlogging:'': {{{
+2016-02-15 18:45:47,000 17753 INFO     [tempest_lib.common.rest_client] Request (ExtraDHCPOptionsTestJSON:test_create_list_port_with_extra_dhcp_options): 500 POST http://10.4.1.3:9696/v2.0/ports 1.547s
+2016-02-15 18:45:47,001 17753 DEBUG    [tempest_lib.common.rest_client] Request - Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'X-Auth-Token': '&lt;omitted&gt;'}
+        Body: {"port": {"network_id": "daee1362-a637-482a-be4f-01135fd0ab02", "extra_dhcp_opts": [{"opt_value": "pxelinux.0", "opt_name": "bootfile-name"}, {"opt_value": "123.123.123.123", "opt_name": "tftp-server"}, {"opt_value": "123.123.123.45", "opt_name": "server-ip-address"}]}}
+    Response - Headers: {'status': '500', 'content-length': '109', 'connection': 'close', 'date': 'Mon, 15 Feb 2016 18:45:46 GMT', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-7506e388-2f43-4fe6-b034-a9a0ac4fcb7e'}
+        Body: {"NeutronError": {"message": "create_port_postcommit failed.", "type": "MechanismDriverError", "detail": ""}}
+}}}
+
+Traceback (most recent call last):
+  File "tempest/api/network/test_extra_dhcp_options.py", line 62, in test_create_list_port_with_extra_dhcp_options
+    extra_dhcp_opts=self.extra_dhcp_opts)
+  File "/usr/local/lib/python2.7/dist-packages/tempest_lib/services/network/ports_client.py", line 21, in create_port
+    return self.create_resource(uri, post_data)
+  File "/usr/local/lib/python2.7/dist-packages/tempest_lib/services/network/base.py", line 60, in create_resource
+    resp, body = self.post(req_uri, req_post_data)
+  File "/usr/local/lib/python2.7/dist-packages/tempest_lib/common/rest_client.py", line 259, in post
+    return self.request('POST', url, extra_headers, headers, body)
+  File "/usr/local/lib/python2.7/dist-packages/tempest_lib/common/rest_client.py", line 642, in request
+    resp, resp_body)
+  File "/usr/local/lib/python2.7/dist-packages/tempest_lib/common/rest_client.py", line 761, in _error_checker
+    message=message)
+tempest_lib.exceptions.ServerFault: Got server fault
+Details: create_port_postcommit failed.
+
+
 
         </pre>
     </div>
@@ -7519,8 +7575,8 @@ pt40.12: tempest.api.network.test_security_groups_negative.NegativeSecGroupTest.
 <tr id='total_row'>
     <td>Total</td>
     <td>262</td>
-    <td>257</td>
-    <td>0</td>
+    <td>255</td>
+    <td>2</td>
     <td>0</td>
     <td>5</td>
     <td>&nbsp;</td>
