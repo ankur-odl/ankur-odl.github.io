@@ -401,7 +401,10 @@
                         var apiChart12= new Chart(ctx).Pie(pieData12);
                 });
 
-
+		$.get('l3/master/api/test.txt', function (data){
+			$(".result").html(data);
+			var ctx = document.getElementById('time8').getContext('2d');
+		});
 
 
 
@@ -509,7 +512,7 @@
                   <td>Master</td>
                   <td>L3</td>
                   <td>Api</td>
-		  <td></td>
+		  <td id='time8'></td>
                   <td><a class="btn btn-default" href="l3/api/index.html">Api Results</a></td>
                 </tr>
                 <tr>
