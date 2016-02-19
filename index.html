@@ -401,7 +401,7 @@
                         var apiChart12= new Chart(ctx).Pie(pieData12);
                 });
 
-		$.get('l3/master/api/test.txt', function (data){
+		$.get('l3/master/api/time.txt', function (data){
 			$(".result").html(data);
 			var ctx = document.getElementById('time8').innerHTML(data);
 		});
@@ -948,15 +948,13 @@
                         }
                 });
 
-
-
-		$.get('l3/api/test.txt', function (data) {
-  	        	$("result").html(data);
-                        var ctx = document.getElementById('time8').getContext('2d');
+                $.get('l3/master/api/time.txt', function (data){
+                        $(".result").html(data);
+                        var ctx = document.getElementById('time8').innerHTML(data);
                 });
 
 
-ar pieData1 = [
+	var pieData1 = [
                         { 
                           value: masterapiFailed,
                           color: '#F7464A'
